@@ -95,6 +95,7 @@ type
     procedure ListViewPesquisaItemClickEx(const Sender: TObject; ItemIndex: Integer; const LocalClickPos: TPointF;
       const ItemObject: TListItemDrawable);
     procedure Button4Click(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
   private
     FPresenter : TPresenterProdutos;
     FPresenterGrupoProdutos : TPresenterGrupoProdutos;
@@ -166,6 +167,16 @@ begin
   inherited;
   FPresenter.DisposeOf;
   FPresenterGrupoProdutos.DisposeOf;
+end;
+
+procedure TViewProdutos.FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
+begin
+  inherited;
+  if Key = vkReturn then
+  begin
+    Key := vkTab;
+    KeyDown(Key, KeyChar, Shift);
+  end;
 end;
 
 function TViewProdutos.Instancia: TComponent;
