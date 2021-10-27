@@ -23,15 +23,17 @@ type
 implementation
 
 uses
-  System.SysUtils, cliente.infra.repository.grupos.produtos, cliente.infra.conexao;
+  System.SysUtils,
+  cliente.infra.repository.grupos.produtos,
+  cliente.infra.conexao;
 
 { TPresenterGrupoProdutos }
 
 procedure TPresenterGrupoProdutos.BuscarPorIDEmpresa(aID: string);
 begin
   var lProdutos := FModelGrupoProdutos.BuscarPorIDEmpresa(aID.ToInteger);
-//  if Assigned(FView) then
-//    FView.CarregarGruposProdutos(lProdutos);
+  if Assigned(FView) then
+    FView.CarregarGruposProdutos(lProdutos);
 end;
 
 constructor TPresenterGrupoProdutos.Create(aView : iPresenterGrupoProdutosView);

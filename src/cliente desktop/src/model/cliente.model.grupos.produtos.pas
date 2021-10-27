@@ -38,7 +38,9 @@ end;
 
 function TModelGrupoProdutos.BuscarPorIDEmpresa(aID: integer): TObjectList<TGrupoProduto>;
 begin
-  Result := FRepository.BuscarPorIDEmpresa(aID.ToString);
+  if Assigned(Entidades) then Entidades.DisposeOf;
+  Entidades := FRepository.BuscarPorIDEmpresa(aID.ToString);
+  Result := Entidades;
 end;
 
 constructor TModelGrupoProdutos.Create(aRepository: iRepositoryGrupoProdutos);

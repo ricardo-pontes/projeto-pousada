@@ -4,7 +4,8 @@ interface
 
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Controls.Presentation, FMX.StdCtrls, FMX.TabControl;
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Controls.Presentation, FMX.StdCtrls, FMX.TabControl,
+  FMX.Edit, FMX.ListBox;
 
 type
   TViewStyles = class(TForm)
@@ -13,6 +14,8 @@ type
     Button2: TButton;
     TabControl1: TTabControl;
     Button3: TButton;
+    Edit1: TEdit;
+    ComboBox1: TComboBox;
   private
     { Private declarations }
   public

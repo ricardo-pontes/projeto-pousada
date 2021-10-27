@@ -26,7 +26,8 @@ type
 implementation
 
 uses
-  System.SysUtils, conversores.notacoes.factory;
+  System.SysUtils,
+  conversores.notacoes.factory;
 
 { TRepositoryGrupoProdutosDB }
 
@@ -34,7 +35,7 @@ function TRepositoryGrupoProdutosDB.BuscarPorIDEmpresa(aIDEmpresa : integer) : T
 begin
   Result := nil;
   FConexao.DataSet.SQL('select * from ' + PG_TABELA + ' where ' + PG_IDEMPRESA + ' = ' + aIDEmpresa.ToString).Open;
-  if FConexao.DataSet.RecordCount > 0 then Exit;
+  if FConexao.DataSet.RecordCount = 0 then Exit;
 
   Result := TObjectList<TGrupoProduto>.Create;
   FNotacao.AddObject(Result, TGrupoProduto).AddDataSet(FConexao.DataSet.DataSet).ResolveToObject;

@@ -36,23 +36,27 @@ uses
   cliente.presenter.grupos.produtos.interfaces,
   cliente.presenter.produtos,
   cliente.presenter.grupos.produtos,
-  Orion.Bindings.Attributes;
+  Orion.Bindings.Attributes, FMX.EditBox, FMX.NumberBox;
 
 type
   TViewProdutos = class(TViewBase, iPresenterProdutosView, iPresenterGrupoProdutosView)
+
     [OrionBindingComponent('ID')]
     EditCodigo: TEdit;
+
     [OrionBindingComponent('Descricao')]
     EditDescricao: TEdit;
-    Label7: TLabel;
+
     [OrionBindingComponent('ValorCusto')]
-    EditValorCusto: TEdit;
-    Label8: TLabel;
+    NumberBoxValorVenda: TNumberBox;
+
     [OrionBindingComponent('ValorVenda')]
-    EditValorVenda: TEdit;
-    Label9: TLabel;
+    NumberBoxValorCusto: TNumberBox;
+
+    [OrionBindingComponent('IDCategoria')]
     ComboBoxGrupoProduto: TComboBox;
 
+    Label7: TLabel;
     Rectangle1: TRectangle;
     Rectangle2: TRectangle;
     Button1: TButton;
@@ -81,6 +85,9 @@ type
     Label10: TLabel;
     Button4: TButton;
     Label11: TLabel;
+
+    Label8: TLabel;
+    Label9: TLabel;
     procedure ButtonNovoClick(Sender: TObject);
     procedure ListViewPesquisaUpdateObjects(const Sender: TObject; const AItem: TListViewItem);
     procedure FormCreate(Sender: TObject);
@@ -92,7 +99,6 @@ type
     FPresenter : TPresenterProdutos;
     FPresenterGrupoProdutos : TPresenterGrupoProdutos;
     procedure CarregarProdutos(aProdutos : TObjectList<TProduto>);
-    procedure Carregar;
     procedure CarregarGruposProdutos(aGruposProdutos : TObjectList<TGrupoProduto>);
     function Instancia : TComponent;
   public
@@ -118,27 +124,16 @@ begin
   ChangeTabPesquisa.Execute;
 end;
 
-procedure TViewProdutos.Carregar;
-begin
-  ListViewPesquisa.Items.Clear;
-  var lItem := ListViewPesquisa.Items.Add;
-  TListItemText(lItem.Objects.FindDrawable('ID')).Text         := '1';
-  TListItemText(lItem.Objects.FindDrawable('Descricao')).Text  := 'Teste';
-  TListItemText(lItem.Objects.FindDrawable('Grupo')).Text      := lProduto.NomeGrupo;
-  TListItemText(lItem.Objects.FindDrawable('Preco')).Text      := FormatFloat(',#0.00', lProduto.ValorVenda);
-  TListItemText(lItem.Objects.FindDrawable('PrecoCusto')).Text := FormatFloat(',#0.00', lProduto.ValorCusto);
-  TListItemImage(lItem.Objects.FindDrawable('Editar')).Bitmap  := imgBtnEditar.Bitmap;
-
-end;
-
 procedure TViewProdutos.CarregarGruposProdutos(aGruposProdutos: TObjectList<TGrupoProduto>);
 begin
   ComboBoxGrupoProduto.Clear;
   for var lGrupoProduto in aGruposProdutos do
   begin
-    var lItem  := TListBoxItem.Create(ComboBoxGrupoProduto);
-    lItem.Text := lGrupoProduto.Descricao;
-    lItem.Tag  := lGrupoProduto.ID;
+    var lItem    := TListBoxItem.Create(ComboBoxGrupoProduto);
+    lItem.Parent := ComboBoxGrupoProduto;
+    lItem.Name   := 'item' + lGrupoProduto.ID.ToString;
+    lItem.Text   := lGrupoProduto.Descricao;
+    lItem.Tag    := lGrupoProduto.ID;
   end;
 end;
 
@@ -164,7 +159,6 @@ begin
   FPresenter := TPresenterProdutos.Create(Self);
   FPresenterGrupoProdutos := TPresenterGrupoProdutos.Create(Self);
   FPresenter.BuscarPorIDEmpresa(1);
-  Carregar;
 end;
 
 procedure TViewProdutos.FormDestroy(Sender: TObject);
