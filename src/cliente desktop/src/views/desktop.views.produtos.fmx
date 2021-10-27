@@ -1,0 +1,503 @@
+inherited ViewProdutos: TViewProdutos
+  Caption = 'ViewBase1'
+  ClientWidth = 806
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  inherited lytPrincipal: TLayout
+    Size.Width = 806.000000000000000000
+    object Rectangle3: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Padding.Left = 20.000000000000000000
+      Padding.Right = 20.000000000000000000
+      Padding.Bottom = 20.000000000000000000
+      Size.Width = 806.000000000000000000
+      Size.Height = 480.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      XRadius = 20.000000000000000000
+      YRadius = 20.000000000000000000
+      object Rectangle1: TRectangle
+        Align = Top
+        Fill.Color = claWhite
+        Position.X = 20.000000000000000000
+        Size.Width = 766.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object Button1: TButton
+          Align = Right
+          Margins.Top = 14.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 14.000000000000000000
+          Position.X = 717.000000000000000000
+          Position.Y = 14.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonminimizar'
+          TabOrder = 1
+        end
+        object Button2: TButton
+          Align = Right
+          Margins.Top = 14.000000000000000000
+          Margins.Bottom = 14.000000000000000000
+          Position.X = 744.000000000000000000
+          Position.Y = 14.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonclose'
+          TabOrder = 0
+        end
+        object Label1: TLabel
+          Align = Left
+          StyledSettings = []
+          Size.Width = 585.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.Font.StyleExt = {00050000000000000004000000}
+          TextSettings.FontColor = claDarkslategray
+          Text = 'Cadastro -> Produtos'
+          TabOrder = 2
+        end
+      end
+      object Rectangle2: TRectangle
+        Align = Client
+        Fill.Color = claWhite
+        Size.Width = 766.000000000000000000
+        Size.Height = 410.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object TabControl1: TTabControl
+          Align = Client
+          Size.Width = 766.000000000000000000
+          Size.Height = 410.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'tabcontroltransparente'
+          TabIndex = 1
+          TabOrder = 0
+          TabPosition = None
+          Sizes = (
+            766s
+            410s
+            766s
+            410s)
+          object TabItemPesquisa: TTabItem
+            CustomIcon = <
+              item
+              end>
+            IsSelected = False
+            Size.Width = 8.000000000000000000
+            Size.Height = 8.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = 'TabItemPesquisa'
+            ExplicitSize.cx = 8.000000000000000000
+            ExplicitSize.cy = 8.000000000000000000
+            object Rectangle4: TRectangle
+              Align = Top
+              Fill.Color = claWhite
+              Size.Width = 766.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Kind = None
+              object ButtonNovo: TButton
+                Align = Right
+                Margins.Top = 10.000000000000000000
+                Margins.Bottom = 10.000000000000000000
+                Position.X = 686.000000000000000000
+                Position.Y = 10.000000000000000000
+                Size.Width = 80.000000000000000000
+                Size.Height = 30.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'button1'
+                TabOrder = 0
+                Text = 'Novo'
+                OnClick = ButtonNovoClick
+              end
+            end
+            object ListViewPesquisa: TListView
+              ItemAppearanceClassName = 'TDynamicAppearance'
+              ItemEditAppearanceClassName = 'TDynamicAppearance'
+              HeaderAppearanceClassName = 'TCustomizeItemObjects'
+              FooterAppearanceClassName = 'TCustomizeItemObjects'
+              OnUpdateObjects = ListViewPesquisaUpdateObjects
+              Align = Client
+              Size.Width = 766.000000000000000000
+              Size.Height = 333.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              ItemAppearance.ItemHeight = 50
+              ItemAppearance.HeaderHeight = 1
+              ItemAppearance.FooterHeight = 1
+              ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+                item
+                  AppearanceObjectName = 'ID'
+                  AppearanceClassName = 'TTextObjectAppearance'
+                  Appearance.TextAlign = Leading
+                  Appearance.Width = 55.000000000000000000
+                  Appearance.Height = 50.000000000000000000
+                end
+                item
+                  AppearanceObjectName = 'Descricao'
+                  AppearanceClassName = 'TTextObjectAppearance'
+                  Appearance.TextAlign = Leading
+                  Appearance.WordWrap = True
+                  Appearance.Width = 281.000000000000000000
+                  Appearance.Height = 50.000000000000000000
+                  Appearance.PlaceOffset.X = 62.000000000000000000
+                end
+                item
+                  AppearanceObjectName = 'Grupo'
+                  AppearanceClassName = 'TTextObjectAppearance'
+                  Appearance.TextAlign = Leading
+                  Appearance.Width = 145.000000000000000000
+                  Appearance.Height = 50.000000000000000000
+                  Appearance.Align = Trailing
+                  Appearance.PlaceOffset.X = -248.000000000000000000
+                end
+                item
+                  AppearanceObjectName = 'Preco'
+                  AppearanceClassName = 'TTextObjectAppearance'
+                  Appearance.TextAlign = Trailing
+                  Appearance.Width = 67.000000000000000000
+                  Appearance.Height = 50.000000000000000000
+                  Appearance.Align = Trailing
+                  Appearance.PlaceOffset.X = -66.000000000000000000
+                end
+                item
+                  AppearanceObjectName = 'Editar'
+                  AppearanceClassName = 'TImageObjectAppearance'
+                  Appearance.Width = 24.000000000000000000
+                  Appearance.Height = 24.000000000000000000
+                  Appearance.Align = Trailing
+                  Appearance.PlaceOffset.Y = 9.000000000000000000
+                end
+                item
+                  AppearanceObjectName = 'PrecoCusto'
+                  AppearanceClassName = 'TTextObjectAppearance'
+                  Appearance.TextAlign = Trailing
+                  Appearance.Width = 69.000000000000000000
+                  Appearance.Height = 50.000000000000000000
+                  Appearance.Align = Trailing
+                  Appearance.PlaceOffset.X = -163.000000000000000000
+                end>
+              ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+                item
+                  AppearanceObjectName = 'Text1'
+                  AppearanceClassName = 'TTextObjectAppearance'
+                end>
+              StyleLookup = 'ListViewPesquisaStyle1'
+              OnItemClickEx = ListViewPesquisaItemClickEx
+              ShowSelection = False
+              SearchVisible = True
+              object imgBtnEditar: TImage
+                MultiResBitmap.Height = 96
+                MultiResBitmap.Width = 96
+                MultiResBitmap = <
+                  item
+                    Width = 96
+                    Height = 96
+                    PNG = {
+                      89504E470D0A1A0A0000000D4948445200000060000000600806000000E29877
+                      38000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                      05F949444154785EED9C5B6C14551880FF99D91BD0E90D2CB5A5201763E405B9
+                      341588ED9644348DF186893126484810091A0215C39309890131504C88182E09
+                      1263A286070C9220B716B94791071EC05A0A6A2B2A20F4B6BA3BBBE778CEEE59
+                      28EDECCECCEEB4DD9DF9BF9799F3CF53BF6FCEEC6EDA2E200882200882200882
+                      2088AB90C41149C3CDB56BD5482CF62148D20B40692F1B6DAE6C6ADA9DB89A1D
+                      18C080DF56AF2E5564F9283B9D999824A0947ECC22AC6102A91865040648432A
+                      F94998F91D955BB6ACC826822C8EC8007E5DB7AE843D728EB0535DF91C267E79
+                      6763E3A7CC7EC6373206D061FFA9536AFB8C9ACD549653CA4FC223FCD1D8F891
+                      585A06030CE0AB43674A69045ABAC6972DBD3C3F785A8BC688B8948E773BD6AC
+                      D999C94EC878EB38112EDFE723472490668911F87BBACE3FDE7CB8DAAB288637
+                      2B7B61DE55A9AA6F49EBD79B8916070308F4E427F1F774B308DF0D49047C0431
+                      D2C9E784D5C29ACBB50B7FD224C9F0DD8E2449CB3A7B7BDF144B435C1FE0EBE6
+                      E602BF8FEE4F253F49B8B8684EEBDCDAB31A988800D0284E0D717500BA1D4A5E
+                      FE65E1F1515A47408CD2122A193BAFB57681E14E8802148B53435C1B80CB673F
+                      FD118568D5C1B6D7678D8A74FC202EA525A416CD6E7D2A7D040FA5FBC4A921AE
+                      0C9094CF4E67F3B54F892AF56DAFCD1AAD5D3BC3D746F00857E6D75FD48D40E9
+                      599FA2BC27568628E2E81A06CA4FA2C8549E786B7F45A75A7F4EF3945489714A
+                      A281C0C377CA2B2F945E6B2B57D82B6F7C48480B14163E5BBE61435F7C6D0257
+                      0548253F493CC26DF311627E7FC59D8A098908949E9065F9B98A8D1B43E2B229
+                      5C13C0487E121EA1EAF6818A1BEA828B9AA7A8428C53C223848AC77D59F8FBB5
+                      C5555BB7F688B1695CF1418CEC8252290687D9695AF9FDD1A272AC65CADEF3A1
+                      C0947962A40FA5DFFAC2DDAF34343484C5C4128E7F11E6F289667CE70FC4EB21
+                      4AB0FD8D9A82F0D5D36234982CE5731C1D20295F9121ED87AC54F008B557973C
+                      59106E1B1CC106F91CC73E82B295DF1FFE38FA7EEA9E73BDFE69F3F99A1272D0
+                      1FE95994AD7C8E2303D8293F8906323939E9B333DDDEC95D76C9E738EE114476
+                      83CAE47F63A77C8E17881CBCBE541B1D0BBD6A977C8EA376C050DCF949088583
+                      520416C9ABC036F91CC704C847F91C4704C857F99CBC0F90CFF239791D20DFE5
+                      73F2368013E473F232405C7E0C8E2A69FE682A5386533E27EF0238493E27AF02
+                      384D3E276F0238513E272F0238553E27E70338593E87FD5CB90BD9066389E45C
+                      F99C9CDD0171F95EF63E7F68E41F9542F0BCDC08FF8AD188919301DC229F9373
+                      01DC249F935301DC269F933301E2F23DEC05578227C4C83672553E272702B855
+                      3E67C403B8593E674403B85D3E67C402A0FC04231200E5DF67D803A0FC0719D6
+                      00287F30C31600E5EB332C01507E6A863C00CA4FCF900640F9C60C5900946F0E
+                      451C6D85EE8071F1DF64A17C436CDF015C7E8C4962656788916D384D3EC7D600
+                      28DF3AB60540F999614B00949F39590740F9D9915500949F3D190740F9F69051
+                      00F1AFA0C7D8FBFC6A31B28D18C049250A0DD2DBC0BFA3D9F164F67FC2D3022F
+                      29555E4B5FCB62067EE7CB7DF08C5BE473320A4025120455AE8309DE13629435
+                      6E7AECF427A300241A0BC64F6C8AE056F91CCBAF01E4586092E4A1D7C532410F
+                      39011D5A9D5859C2CDF239D677800712777F7F32DC096E97CFB11C8002D1BFD3
+                      2D4640F9092C07B8F7FCD7C36404947F1F4B01F66E7A6C4E6757D164B1D48745
+                      2055DE16B11A04CA7F104B013A6E172C5BFE790D5CBDA98A893E72811CD48B80
+                      F2076329C0DF3DFEFABB211FACFCA2DA720494AF8F228EA6183F797A535FD823
+                      FFA72970FC4A39CC9D7A0B4AC744C4D5C1483EE911324A6EA15DA40DE5EB637A
+                      076C5B3F73EE5FDD018F5882D14E88025C2640B74BAAF48934065E44F9FA980E
+                      70B70F968AD37B2423FC7C43A5ECFDE90536DA04049EA64AB8D05B179EAED445
+                      56CAB5917DF26230FD5DCA6EC3F427E1552BE6B59E6B7FE851B184627F449B58
+                      D6DB5EA6869BFD12D9F97ED38F17C525C402A6032C5912FCA77874E4CFB2C2D0
+                      21D513DBF3CE07972E894B088220088220088220088220A600F81F9EFA5AA089
+                      BF34580000000049454E44AE426082}
+                    FileName = 'E:\Projetos\Pousada\src\imagens\edit_96px.png'
+                  end>
+                Position.Y = 283.000000000000000000
+                Visible = False
+              end
+            end
+            object Layout1: TLayout
+              Align = Top
+              Position.Y = 50.000000000000000000
+              Size.Width = 766.000000000000000000
+              Size.Height = 27.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              object Label2: TLabel
+                Align = Left
+                StyledSettings = [Family, Size]
+                Size.Width = 65.000000000000000000
+                Size.Height = 27.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = xFF29C24F
+                Text = 'C'#243'digo'
+                TabOrder = 4
+              end
+              object Label3: TLabel
+                Align = Left
+                StyledSettings = [Family, Size]
+                Margins.Left = 8.000000000000000000
+                Position.X = 73.000000000000000000
+                Size.Width = 288.000000000000000000
+                Size.Height = 27.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = xFF29C24F
+                Text = 'Descri'#231#227'o'
+                TabOrder = 3
+              end
+              object Label4: TLabel
+                Align = Right
+                StyledSettings = [Family, Size]
+                Position.X = 363.000000000000000000
+                Size.Width = 119.000000000000000000
+                Size.Height = 27.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = xFF29C24F
+                Text = 'Grupo'
+                TabOrder = 2
+              end
+              object Label5: TLabel
+                Align = Right
+                StyledSettings = [Family, Size]
+                Margins.Left = 8.000000000000000000
+                Position.X = 490.000000000000000000
+                Size.Width = 102.000000000000000000
+                Size.Height = 27.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = xFF29C24F
+                TextSettings.HorzAlign = Trailing
+                Text = 'Pre'#231'o Custo R$'
+                TabOrder = 1
+              end
+              object Label11: TLabel
+                Align = Right
+                StyledSettings = [Family, Size]
+                Margins.Right = 82.000000000000000000
+                Position.X = 592.000000000000000000
+                Size.Width = 92.000000000000000000
+                Size.Height = 27.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = xFF29C24F
+                TextSettings.HorzAlign = Trailing
+                Text = 'Pre'#231'o VendaR$'
+                TabOrder = 0
+              end
+            end
+          end
+          object TabItemCadastro: TTabItem
+            CustomIcon = <
+              item
+              end>
+            IsSelected = True
+            Size.Width = 8.000000000000000000
+            Size.Height = 8.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = 'TabItemCadastro'
+            ExplicitSize.cx = 8.000000000000000000
+            ExplicitSize.cy = 8.000000000000000000
+            object Layout2: TLayout
+              Align = Top
+              Size.Width = 766.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object ButtonSalvar: TButton
+                Align = Right
+                Margins.Top = 10.000000000000000000
+                Margins.Bottom = 10.000000000000000000
+                Position.X = 686.000000000000000000
+                Position.Y = 10.000000000000000000
+                Size.Width = 80.000000000000000000
+                Size.Height = 30.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'button1'
+                TabOrder = 0
+                Text = 'Salvar'
+                OnClick = ButtonNovoClick
+              end
+              object Button4: TButton
+                Align = Left
+                Margins.Top = 10.000000000000000000
+                Margins.Bottom = 10.000000000000000000
+                Position.Y = 10.000000000000000000
+                Size.Width = 30.000000000000000000
+                Size.Height = 30.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'arrowlefttoolbuttonbordered'
+                TabOrder = 1
+                Text = 'Button4'
+                OnClick = Button4Click
+              end
+            end
+            object FlowLayout1: TFlowLayout
+              Align = Client
+              Padding.Top = 20.000000000000000000
+              Size.Width = 766.000000000000000000
+              Size.Height = 360.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              Justify = Left
+              JustifyLastLine = Left
+              FlowDirection = LeftToRight
+              HorizontalGap = 20.000000000000000000
+              VerticalGap = 30.000000000000000000
+              object EditCodigo: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                TabOrder = 3
+                Position.Y = 20.000000000000000000
+                object Label6: TLabel
+                  Align = Top
+                  Margins.Top = -18.000000000000000000
+                  Position.Y = -18.000000000000000000
+                  Size.Width = 100.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'C'#243'digo'
+                  TabOrder = 0
+                end
+              end
+              object EditDescricao: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                TabOrder = 0
+                Position.X = 120.000000000000000000
+                Position.Y = 20.000000000000000000
+                Size.Width = 305.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                object Label7: TLabel
+                  Align = Top
+                  Margins.Top = -18.000000000000000000
+                  Position.Y = -18.000000000000000000
+                  Size.Width = 305.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Descri'#231#227'o'
+                  TabOrder = 0
+                end
+              end
+              object EditValorCusto: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                TabOrder = 2
+                Position.X = 445.000000000000000000
+                Position.Y = 20.000000000000000000
+                Size.Width = 112.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                object Label8: TLabel
+                  Align = Top
+                  Margins.Top = -18.000000000000000000
+                  Position.Y = -18.000000000000000000
+                  Size.Width = 112.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Valor de Custo(R$)'
+                  TabOrder = 0
+                end
+              end
+              object EditValorVenda: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                TabOrder = 1
+                Position.X = 577.000000000000000000
+                Position.Y = 20.000000000000000000
+                Size.Width = 108.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                object Label9: TLabel
+                  Align = Top
+                  Margins.Top = -18.000000000000000000
+                  Position.Y = -18.000000000000000000
+                  Size.Width = 108.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Valor de Venda(R$)'
+                  TabOrder = 0
+                end
+              end
+              object ComboBoxGrupoProduto: TComboBox
+                Position.Y = 72.000000000000000000
+                Size.Width = 169.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 4
+                object Label10: TLabel
+                  Align = Top
+                  Margins.Top = -18.000000000000000000
+                  Position.Y = -18.000000000000000000
+                  Size.Width = 169.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Grupo de Produto'
+                  TabOrder = 85
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Left = 64
+    Top = 56
+    object ChangeTabPesquisa: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabItemPesquisa
+    end
+    object ChangeTabCadastro: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabItemCadastro
+    end
+  end
+end

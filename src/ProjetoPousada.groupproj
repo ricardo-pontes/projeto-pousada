@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8F9F3CA0-44A0-45E8-9832-D2947E2E5037}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="servidor\src\ServidorPousada.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="servidor\tests\ServidorPousadaTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="cliente desktop\src\ClienteDesktopPousada.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ServidorPousada">
+        <MSBuild Projects="servidor\src\ServidorPousada.dproj"/>
+    </Target>
+    <Target Name="ServidorPousada:Clean">
+        <MSBuild Projects="servidor\src\ServidorPousada.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ServidorPousada:Make">
+        <MSBuild Projects="servidor\src\ServidorPousada.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ServidorPousadaTest">
+        <MSBuild Projects="servidor\tests\ServidorPousadaTest.dproj"/>
+    </Target>
+    <Target Name="ServidorPousadaTest:Clean">
+        <MSBuild Projects="servidor\tests\ServidorPousadaTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ServidorPousadaTest:Make">
+        <MSBuild Projects="servidor\tests\ServidorPousadaTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ClienteDesktopPousada">
+        <MSBuild Projects="cliente desktop\src\ClienteDesktopPousada.dproj"/>
+    </Target>
+    <Target Name="ClienteDesktopPousada:Clean">
+        <MSBuild Projects="cliente desktop\src\ClienteDesktopPousada.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ClienteDesktopPousada:Make">
+        <MSBuild Projects="cliente desktop\src\ClienteDesktopPousada.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ServidorPousada;ServidorPousadaTest;ClienteDesktopPousada"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ServidorPousada:Clean;ServidorPousadaTest:Clean;ClienteDesktopPousada:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ServidorPousada:Make;ServidorPousadaTest:Make;ClienteDesktopPousada:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

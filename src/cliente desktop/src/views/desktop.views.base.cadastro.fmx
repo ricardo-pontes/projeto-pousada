@@ -1,0 +1,205 @@
+inherited ViewBaseCadastro: TViewBaseCadastro
+  Caption = 'ViewBase1'
+  DesignerMasterStyle = 0
+  inherited lytPrincipal: TLayout
+    object Rectangle1: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Padding.Left = 20.000000000000000000
+      Padding.Right = 20.000000000000000000
+      Padding.Bottom = 20.000000000000000000
+      Size.Width = 784.000000000000000000
+      Size.Height = 480.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      XRadius = 20.000000000000000000
+      YRadius = 20.000000000000000000
+      object Rectangle2: TRectangle
+        Align = Top
+        Fill.Color = claWhite
+        Position.X = 20.000000000000000000
+        Size.Width = 744.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object Button1: TButton
+          Align = Right
+          Margins.Top = 14.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 14.000000000000000000
+          Position.X = 695.000000000000000000
+          Position.Y = 14.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonminimizar'
+          TabOrder = 1
+        end
+        object Button2: TButton
+          Align = Right
+          Margins.Top = 14.000000000000000000
+          Margins.Bottom = 14.000000000000000000
+          Position.X = 722.000000000000000000
+          Position.Y = 14.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonclose'
+          TabOrder = 0
+        end
+        object Label1: TLabel
+          Align = Left
+          StyledSettings = []
+          Size.Width = 585.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.Font.StyleExt = {00050000000000000004000000}
+          TextSettings.FontColor = claDarkslategray
+          Text = 'Descri'#231#227'o da Tela'
+          TabOrder = 2
+        end
+      end
+      object TabControl1: TTabControl
+        Align = Client
+        Size.Width = 744.000000000000000000
+        Size.Height = 410.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'tabcontroltransparente'
+        TabIndex = 0
+        TabOrder = 0
+        TabPosition = None
+        Sizes = (
+          744s
+          410s
+          744s
+          410s)
+        object TabItemPesquisa: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = True
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'TabItemPesquisa'
+          object Layout1: TLayout
+            Align = Top
+            Size.Width = 744.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object ButtonNovo: TButton
+              Align = Right
+              Margins.Top = 10.000000000000000000
+              Margins.Bottom = 10.000000000000000000
+              Position.X = 664.000000000000000000
+              Position.Y = 10.000000000000000000
+              Size.Width = 80.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'button1'
+              TabOrder = 0
+              Text = 'Novo'
+              OnClick = ButtonNovoClick
+            end
+          end
+          object Layout2: TLayout
+            Align = Top
+            Position.Y = 50.000000000000000000
+            Size.Width = 744.000000000000000000
+            Size.Height = 27.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+          end
+          object ListViewPesquisa: TListView
+            ItemAppearanceClassName = 'TListItemAppearance'
+            ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            Align = Client
+            Size.Width = 744.000000000000000000
+            Size.Height = 333.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+          end
+        end
+        object TabItemCadastro: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'TabItemCadastro'
+          object Layout3: TLayout
+            Align = Top
+            Size.Width = 744.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object ButtonSalvar: TButton
+              Align = Right
+              Margins.Top = 10.000000000000000000
+              Margins.Bottom = 10.000000000000000000
+              Position.X = 664.000000000000000000
+              Position.Y = 10.000000000000000000
+              Size.Width = 80.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'button1'
+              TabOrder = 0
+              Text = 'Salvar'
+              OnClick = ButtonSalvarClick
+            end
+            object Button4: TButton
+              Align = Left
+              Margins.Top = 10.000000000000000000
+              Margins.Bottom = 10.000000000000000000
+              Position.Y = 10.000000000000000000
+              Size.Width = 30.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'arrowlefttoolbuttonbordered'
+              TabOrder = 1
+              Text = 'Button4'
+            end
+          end
+          object FlowLayout1: TFlowLayout
+            Align = Client
+            Padding.Top = 30.000000000000000000
+            Size.Width = 744.000000000000000000
+            Size.Height = 360.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Justify = Left
+            JustifyLastLine = Left
+            FlowDirection = LeftToRight
+            HorizontalGap = 10.000000000000000000
+            VerticalGap = 30.000000000000000000
+          end
+        end
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Left = 208
+    Top = 32
+    object ChangeTabActionCadastro: TChangeTabAction
+      Category = 'Tab'
+      CustomText = 'Salvar'
+      Tab = TabItemCadastro
+    end
+    object ChangeTabActionPesquisa: TChangeTabAction
+      Category = 'Tab'
+      CustomText = 'Novo'
+      Tab = TabItemPesquisa
+    end
+  end
+end

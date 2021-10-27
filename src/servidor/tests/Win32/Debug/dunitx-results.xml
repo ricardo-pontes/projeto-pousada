@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<test-results name="E:\Projetos\Pousada\src\servidor\tests\Win32\Debug\ServidorPousadaTest.exe" total="31" errors="0" failures="1" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2021-10-20" time="26.721">
+  <culture-info current-culture="en" current-uiculture="en" />
+  <test-suite type="Assembly" name="ServidorPousadaTest.exe" executed="true" result="Failure" success="False" time="26.721" asserts="0">
+    <results>
+        <test-suite type="Namespace" name="tests" executed="true" result="Failure" success="False" time="106.866" asserts="0" >
+          <results>
+              <test-suite type="Namespace" name="unidadehabitacional" executed="true" result="Success" success="True" time="80.153" asserts="0" >
+                <results>
+                    <test-suite type="Fixture" name="TTestUnidadeHabitacionalValidacoesbase" executed="True" result="Success" success="True" time="26.720" >
+                      <results>
+                        <test-case name="InserirCorretamente" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="IDDeveSerZeradoAoInserir" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="IDDeveSerPreenchidoAoAlterar" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="IDEmpresaSoPodeSerMaiorQueZero" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="DescricaoNaoPodeSerVazio" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="AtivoNaoPodeSerVazio" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="AtivoSoPodeReceberLetrasSeN" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                      </results>
+                    </test-suite>
+                    <test-suite type="Fixture" name="TTestUnidadeHabitacionalCategoriaValidacoesbase" executed="True" result="Success" success="True" time="26.718" >
+                      <results>
+                        <test-case name="InserirCorretamente" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="IDDeveSerZeradoAoInserir" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="IDDeveSerPreenchidoAoAlterar" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="IDEmpresaSoPodeSerMaiorQueZero" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                        <test-case name="DescricaoNaoPodeSerVazio" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="AtivoNaoPodeSerVazio" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="AtivoSoPodeReceberLetrasSeN" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                      </results>
+                    </test-suite>
+                    <test-suite type="Fixture" name="TTestUnidadeHabitacionalCaracteristicasValidacoesbase" executed="True" result="Success" success="True" time="26.715" >
+                      <results>
+                        <test-case name="InserirCorretamente" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="IDDeveSerZeradoAoInserir" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="IDDeveSerPreenchidoAoAlterar" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="IDEmpresaSoPodeSerMaiorQueZero" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="DescricaoNaoPodeSerVazio" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="AtivoNaoPodeSerVazio" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="AtivoSoPodeReceberLetrasSeN" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                      </results>
+                    </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="Fixture" name="TTestProdutosInserir" executed="True" result="Failure" success="False" time="26.714" >
+                <results>
+                  <test-case name="InserirCorretamente" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="AlterarCorretamente" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="IDDeveSerZerado" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="IDEmpresaSoPodeSerMaiorQueZero" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="DescricaoNaoPodeSerVazio" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="ValorCustoSoPodeSerMaiorQueZero" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="ValorVendaSoPodeSerMaiorQueZero" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="IDCategoriaSoPodeSerMaiorQueZero" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="AtivoNaoPodeSerVazio" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="AtivoSoPodeReceberLetrasSeN" executed="True" result="Failure" success="False" time="26.710" asserts="0" >
+                    <failure>
+                      <message>
+                        <![CDATA[ Expected  is not equal to actual Só são aceitos S ou N no campo Ativo  ]]>
+                      </message>
+                      <stack-trace>
+                        <![CDATA[  ]]>
+                      </stack-trace>
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+          </results>
+        </test-suite>
+    </results>
+  </test-suite>
+</test-results>

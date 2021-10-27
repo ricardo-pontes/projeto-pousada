@@ -1,0 +1,124 @@
+inherited ViewGrupoProdutos: TViewGrupoProdutos
+  Caption = 'ViewBaseCadastro1'
+  DesignerMasterStyle = 0
+  inherited lytPrincipal: TLayout
+    inherited Rectangle1: TRectangle
+      inherited Rectangle2: TRectangle
+        inherited Label1: TLabel
+          TextSettings.Font.StyleExt = {00050000000000000004000000}
+        end
+      end
+      inherited TabControl1: TTabControl
+        Sizes = (
+          744s
+          410s
+          744s
+          410s)
+        inherited TabItemPesquisa: TTabItem
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          inherited ListViewPesquisa: TListView
+            ItemAppearanceClassName = 'TDynamicAppearance'
+            ItemEditAppearanceClassName = 'TDynamicAppearance'
+            HeaderAppearanceClassName = 'TCustomizeItemObjects'
+            FooterAppearanceClassName = 'TCustomizeItemObjects'
+            ItemAppearance.HeaderHeight = 1
+            ItemAppearance.FooterHeight = 1
+            ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+              item
+                AppearanceObjectName = 'Codigo'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.TextAlign = Leading
+                Appearance.Width = 79.000000000000000000
+                Appearance.Height = 44.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'Descricao'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.TextAlign = Leading
+                Appearance.Width = 247.000000000000000000
+                Appearance.Height = 44.000000000000000000
+                Appearance.PlaceOffset.X = 104.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'Editar'
+                AppearanceClassName = 'TImageObjectAppearance'
+                Appearance.Width = 32.000000000000000000
+                Appearance.Height = 32.000000000000000000
+                Appearance.Align = Trailing
+                Appearance.PlaceOffset.Y = 8.000000000000000000
+              end>
+            ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+              item
+                AppearanceObjectName = 'Text1'
+                AppearanceClassName = 'TTextObjectAppearance'
+              end>
+            ItemAppearanceObjects.HeaderObjects.Text.Width = 719.000000000000000000
+            ItemAppearanceObjects.HeaderObjects.Text.Height = 44.000000000000000000
+          end
+        end
+        inherited TabItemCadastro: TTabItem
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          inherited Layout3: TLayout
+            inherited Button4: TButton
+              OnClick = nil
+            end
+          end
+          inherited FlowLayout1: TFlowLayout
+            object Edit1: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              TabOrder = 1
+              Position.Y = 30.000000000000000000
+              object Label0: TLabel
+                Align = Top
+                Margins.Top = -20.000000000000000000
+                Position.Y = -20.000000000000000000
+                Size.Width = 100.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'C'#243'digo'
+                TabOrder = 0
+              end
+            end
+            object Edit2: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              TabOrder = 0
+              Position.X = 110.000000000000000000
+              Position.Y = 30.000000000000000000
+              Size.Width = 235.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              object Label2: TLabel
+                Align = Top
+                Margins.Top = -20.000000000000000000
+                Position.Y = -20.000000000000000000
+                Size.Width = 235.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Descri'#231#227'o'
+                TabOrder = 0
+              end
+            end
+            object Switch1: TSwitch
+              IsChecked = False
+              Position.X = 355.000000000000000000
+              Position.Y = 30.000000000000000000
+              TabOrder = 2
+              object Label4: TLabel
+                Align = Top
+                Margins.Top = -20.000000000000000000
+                Position.Y = -20.000000000000000000
+                Size.Width = 78.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Ativo'
+                TabOrder = 0
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+end
