@@ -18,6 +18,8 @@ type
     destructor Destroy; override;
     procedure BuscarPorIDEmpresa(aID : integer);
     procedure BuscarPorID(aID : integer);
+    procedure Inserir;
+    procedure Alterar;
   end;
 
 implementation
@@ -28,6 +30,12 @@ uses
   cliente.infra.repository.produtos,
   cliente.infra.conexao,
   cliente.infra.binds;
+
+procedure TPresenterProdutos.Alterar;
+begin
+  FBinds.Entity(FModelProdutos.Entidade).BindToEntity;
+  FModelProdutos.Alterar(FModelProdutos.Entidade);
+end;
 
 procedure TPresenterProdutos.BuscarPorID(aID: integer);
 begin
@@ -54,6 +62,13 @@ end;
 destructor TPresenterProdutos.Destroy;
 begin
   FModelProdutos.DisposeOf;
+end;
+
+procedure TPresenterProdutos.Inserir;
+begin
+  FBinds.Entity(FModelProdutos.Entidade).BindToEntity;
+  FModelProdutos.Entidade.IDEmpresa := 1;
+  FModelProdutos.Inserir(FModelProdutos.Entidade);
 end;
 
 end.

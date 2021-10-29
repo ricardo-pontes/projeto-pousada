@@ -17,13 +17,14 @@ implementation
 
 uses
   Router4D,
-  desktop.views.produtos;
+  desktop.views.produtos, desktop.views.grupos.produtos;
 
 { TRouters }
 
 constructor TRouters.Create;
 begin
   TRouter4D.Switch.Router('produtos', TViewProdutos);
+  TRouter4D.Switch.Router('gruposprodutos', TViewGrupoProdutos);
 end;
 
 initialization

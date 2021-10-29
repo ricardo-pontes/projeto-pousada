@@ -28,7 +28,7 @@ implementation
 uses
   System.SysUtils,
   servidor.model.clientes,
-  servidor.exceptions,
+  shared.exceptions,
   entidades.clientes.validacoes.basicas,
   servidor.infra.fabricas.repositories;
 

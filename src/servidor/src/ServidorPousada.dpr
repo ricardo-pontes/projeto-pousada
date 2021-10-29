@@ -39,7 +39,7 @@ uses
   servidor.infra.repository.produtos in 'infra\repository\servidor.infra.repository.produtos.pas',
   servidor.infra.routes.produtos in 'infra\routes\servidor.infra.routes.produtos.pas',
   servidor.controller.produtos.interfaces in 'controller\servidor.controller.produtos.interfaces.pas',
-  servidor.exceptions in 'infra\exceptions\servidor.exceptions.pas',
+  shared.exceptions.server in '..\..\shared\shared.exceptions.server.pas',
   servidor.infra.repository.unidadehabitacional.interfaces in 'infra\repository\servidor.infra.repository.unidadehabitacional.interfaces.pas',
   entidades.unidadehabitacional in '..\..\entidades\entidades.unidadehabitacional.pas',
   servidor.infra.repository.unidadehabitacional in 'infra\repository\servidor.infra.repository.unidadehabitacional.pas',
@@ -127,7 +127,9 @@ uses
   servidor.model.estadias.acompanhantes.interfaces in 'model\servidor.model.estadias.acompanhantes.interfaces.pas',
   servidor.model.estadias.acompanhantes in 'model\servidor.model.estadias.acompanhantes.pas',
   servidor.controller.estadias.acompanhantes.interfaces in 'controller\servidor.controller.estadias.acompanhantes.interfaces.pas',
-  servidor.controller.estadias.acompanhantes in 'controller\servidor.controller.estadias.acompanhantes.pas';
+  servidor.controller.estadias.acompanhantes in 'controller\servidor.controller.estadias.acompanhantes.pas',
+  shared.exceptions in '..\..\shared\shared.exceptions.pas',
+  entidades.grupos.produtos.validacoes.basicas in '..\..\entidades\validacoes\entidades.grupos.produtos.validacoes.basicas.pas';
 
 begin
   ReportMemoryLeaksOnShutdown := True;

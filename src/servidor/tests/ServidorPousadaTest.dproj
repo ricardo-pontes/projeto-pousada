@@ -162,7 +162,7 @@
         <DCCReference Include="..\src\infra\conversores\conversores.notacoes.factory.pas"/>
         <DCCReference Include="..\src\infra\conversores\conversores.notacoes.interfaces.pas"/>
         <DCCReference Include="..\src\infra\conversores\conversores.notacoes.pas"/>
-        <DCCReference Include="..\src\infra\exceptions\servidor.exceptions.pas"/>
+        <DCCReference Include="..\..\shared\shared.exceptions.server.pas"/>
         <DCCReference Include="..\src\infra\repository\servidor.infra.repository.base.crud.interfaces.pas"/>
         <DCCReference Include="..\src\infra\repository\servidor.infra.repository.base.crud.pas"/>
         <DCCReference Include="..\src\infra\repository\servidor.infra.repository.empresa.interfaces.pas"/>

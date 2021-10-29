@@ -27,7 +27,7 @@ implementation
 
 uses
   System.SysUtils,
-  servidor.exceptions;
+  shared.exceptions;
 
 { TRepositoryEmpresaContatosDB }
 

@@ -14,78 +14,33 @@ inherited ViewBaseCadastro: TViewBaseCadastro
       Stroke.Kind = None
       XRadius = 20.000000000000000000
       YRadius = 20.000000000000000000
-      object Rectangle2: TRectangle
-        Align = Top
-        Fill.Color = claWhite
-        Position.X = 20.000000000000000000
-        Size.Width = 744.000000000000000000
-        Size.Height = 50.000000000000000000
-        Size.PlatformDefault = False
-        Stroke.Kind = None
-        object Button1: TButton
-          Align = Right
-          Margins.Top = 14.000000000000000000
-          Margins.Right = 5.000000000000000000
-          Margins.Bottom = 14.000000000000000000
-          Position.X = 695.000000000000000000
-          Position.Y = 14.000000000000000000
-          Size.Width = 22.000000000000000000
-          Size.Height = 22.000000000000000000
-          Size.PlatformDefault = False
-          StyleLookup = 'buttonminimizar'
-          TabOrder = 1
-        end
-        object Button2: TButton
-          Align = Right
-          Margins.Top = 14.000000000000000000
-          Margins.Bottom = 14.000000000000000000
-          Position.X = 722.000000000000000000
-          Position.Y = 14.000000000000000000
-          Size.Width = 22.000000000000000000
-          Size.Height = 22.000000000000000000
-          Size.PlatformDefault = False
-          StyleLookup = 'buttonclose'
-          TabOrder = 0
-        end
-        object Label1: TLabel
-          Align = Left
-          StyledSettings = []
-          Size.Width = 585.000000000000000000
-          Size.Height = 50.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.Font.Family = 'Roboto'
-          TextSettings.Font.Size = 16.000000000000000000
-          TextSettings.Font.StyleExt = {00050000000000000004000000}
-          TextSettings.FontColor = claDarkslategray
-          Text = 'Descri'#231#227'o da Tela'
-          TabOrder = 2
-        end
-      end
       object TabControl1: TTabControl
         Align = Client
         Size.Width = 744.000000000000000000
-        Size.Height = 410.000000000000000000
+        Size.Height = 408.000000000000000000
         Size.PlatformDefault = False
         StyleLookup = 'tabcontroltransparente'
-        TabIndex = 0
+        TabIndex = 1
         TabOrder = 0
         TabPosition = None
         Sizes = (
           744s
-          410s
+          408s
           744s
-          410s)
+          408s)
         object TabItemPesquisa: TTabItem
           CustomIcon = <
             item
             end>
-          IsSelected = True
+          IsSelected = False
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
           Text = 'TabItemPesquisa'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
           object Layout1: TLayout
             Align = Top
             Size.Width = 744.000000000000000000
@@ -120,24 +75,31 @@ inherited ViewBaseCadastro: TViewBaseCadastro
             ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
             HeaderAppearanceClassName = 'TListHeaderObjects'
             FooterAppearanceClassName = 'TListHeaderObjects'
+            AllowSelection = False
+            ItemSpaces.Left = 0.000000000000000000
+            ItemSpaces.Right = 0.000000000000000000
             Align = Client
             Size.Width = 744.000000000000000000
-            Size.Height = 333.000000000000000000
+            Size.Height = 331.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
+            ShowSelection = False
+            SearchVisible = True
           end
         end
         object TabItemCadastro: TTabItem
           CustomIcon = <
             item
             end>
-          IsSelected = False
+          IsSelected = True
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
           Text = 'TabItemCadastro'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
           object Layout3: TLayout
             Align = Top
             Size.Width = 744.000000000000000000
@@ -151,7 +113,7 @@ inherited ViewBaseCadastro: TViewBaseCadastro
               Position.X = 664.000000000000000000
               Position.Y = 10.000000000000000000
               Size.Width = 80.000000000000000000
-              Size.Height = 30.000000000000000000
+              Size.Height = 29.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'button1'
               TabOrder = 0
@@ -164,18 +126,28 @@ inherited ViewBaseCadastro: TViewBaseCadastro
               Margins.Bottom = 10.000000000000000000
               Position.Y = 10.000000000000000000
               Size.Width = 30.000000000000000000
-              Size.Height = 30.000000000000000000
+              Size.Height = 29.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'arrowlefttoolbuttonbordered'
               TabOrder = 1
               Text = 'Button4'
+              OnClick = Button4Click
+            end
+            object Line2: TLine
+              Align = MostBottom
+              LineType = Bottom
+              Position.Y = 49.000000000000000000
+              Size.Width = 744.000000000000000000
+              Size.Height = 1.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claSilver
             end
           end
           object FlowLayout1: TFlowLayout
             Align = Client
             Padding.Top = 30.000000000000000000
             Size.Width = 744.000000000000000000
-            Size.Height = 360.000000000000000000
+            Size.Height = 358.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
             Justify = Left
@@ -186,7 +158,130 @@ inherited ViewBaseCadastro: TViewBaseCadastro
           end
         end
       end
+      object Rectangle2: TRectangle
+        Align = Top
+        Fill.Color = claWhite
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 20.000000000000000000
+        Sides = []
+        Size.Width = 744.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claSilver
+        object Button1: TButton
+          Align = Right
+          Margins.Top = 14.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 14.000000000000000000
+          Position.X = 695.000000000000000000
+          Position.Y = 14.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 21.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonminimizar'
+          TabOrder = 1
+        end
+        object Button2: TButton
+          Align = Right
+          Margins.Top = 14.000000000000000000
+          Margins.Bottom = 14.000000000000000000
+          Position.X = 722.000000000000000000
+          Position.Y = 14.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 21.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonclose'
+          TabOrder = 0
+        end
+        object Label1: TLabel
+          Align = Left
+          StyledSettings = []
+          Size.Width = 585.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.Font.StyleExt = {00050000000000000004000000}
+          TextSettings.FontColor = claDarkslategray
+          Text = 'Descri'#231#227'o da Tela'
+          TabOrder = 2
+        end
+        object Line1: TLine
+          Align = MostBottom
+          LineType = Bottom
+          Position.Y = 49.000000000000000000
+          Size.Width = 744.000000000000000000
+          Size.Height = 1.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claSilver
+        end
+      end
     end
+  end
+  object imgBtnEditar: TImage
+    MultiResBitmap.Height = 96
+    MultiResBitmap.Width = 96
+    MultiResBitmap = <
+      item
+        Width = 96
+        Height = 96
+        PNG = {
+          89504E470D0A1A0A0000000D4948445200000060000000600806000000E29877
+          38000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+          060749444154785EED9C5B6C14551880FF99D95BB73B6DB768A9AD058A1A232F
+          CAA5212DB12D247869BC63628C09121244828640C5F064426240122926440C97
+          44893151C30317491AB9B444A0A022898440540AD596705143BBDBC59DED9EF1
+          9CDDB350DAD99D99DD69BB3BF37F2F33E7CCD37EDF9CB9A4DD05044110044110
+          04411004711402DF2219B8B976ADACC4E31F8120BC08AA1AA6531F57B7B5ED4A
+          1ECD0D0CA0C39FAB57974BA27898EECE4CCE245155F5131A610D15A8F2A9ACC0
+          001948273F0535BFBD7AF3E615B94410F9161941CFBA75417AC939447735E533
+          A8F8E57DADAD9F51FB599FC812DF22C3D87BFCB87CBB28D8E6BFD6FBAC47472E
+          3D3827D4D050DCD6D5C562990657C008BE693F59AE2AD0D93FB96269F7BCE613
+          E1C108E18732F15EEF9A353BB25909592F1D3BC2E47B3CE49000C22C3E05DE50
+          FFE9E9ED07EA027EBFEEC94A6FCC3BAB65F96D61FD7A23D11260008E96FC14DE
+          D0008DB07F4C22E0258892493E232A97CCED5EF8FC2F6141D07DDA110461595F
+          38FC161FEAE2F800DF767404BC1E756F3AF929A265A5737AEA1BBBC260200240
+          2BDFD5C5D101D46D107CE5F7A78E16C57A7D7C2A2391E0A4869EC605BA2B4101
+          28E3BBBA383600934F3FFD2189C4EAEACFBF31AB48E9FD891FCA48442E9DDDF3
+          64E6081E55DDC37775716480947CBA3B9B8D65FF90D470FEF559FED8E5936CAC
+          078B7079DEFCB39A1154B5CB2349EFF3912E8E7B111B293F85C7A38A93FBF656
+          5D0FCE3F1573056BF8745A867CBE074295D5678A2F9EAFF4B8DDC9A749423AA1
+          A4E499CA0D1B06136303382A403AF9291211AE1A8F10F77AAB4235D3921124E9
+          98288ACF556DDC18E1870DE198007AF253B00815570F54DD082E381B739556F1
+          E9B4B008CAA4CAAF4BFEBABCB866CB96109F368C235EC4C84E2817E2F03DDDCD
+          287F38E14131DEF5D8EED311DFF4063EA58DAA7EE7890EBCDAD2D212E533A6B0
+          FD4D98C92731FD337F24816222D55F78736E207AE9049F1A4D8EF219B6BE04A5
+          E44B22647CC94A47F272B4AFFA66796397E22A9FC2A79358209F61DB00B9CA4F
+          918CB0FF9E082A2107BD4A2867F90C5BDE03AC923F9C3088E4C7A95F9C1C70D7
+          F653F98BAC90CFB0DD3D80EC0299CADF67A57C460088D87C6569CC1F8FBC6695
+          7C86AD56C0589CF929880A0705051689ABC032F90CDB042844F90C5B042854F9
+          8C820F50C8F219051DA0D0E5330A36801DE4330A3240427E1C0ED3B7C8B4FF34
+          952DE3299F517001EC249F515001EC269F513001EC289F511001EC2A9F91F701
+          EC2C9F413F57FE42B6C22422D8573E236F574042BE9B3EE78F8DFCC342045E10
+          5BE1369F9A30F2328053E433F22E8093E433F22A80D3E433F2264042BE8BDE70
+          0578824F5946BECA67E44500A7CA674C780027CB674C6800A7CB674C5800949F
+          644202A0FCBB8C7B00947F2FE31A00E58F66DC02A07C6DC62500CA4FCF980740
+          F99919D300285F9F310B80F28D21F1ADA5A8DBE1BEC45FB250BE2E96AF00263F
+          4E25D1B28FF329CBB09B7C86A50150BE792C0B80F2B3C39200283F7B720E80F2
+          7323A700283F77B20E80F2AD21AB00FCABA047E8737E1D9FB28C38C00FD210B4
+          08EF00FB8D66DB93DDF7841FF6BD2CD5B84DFD2C8B11D8992F0EC2D34E91CFC8
+          2A802A906690C52678D07D8C4FE58C932E3BC3C92A00198A3727762C8AE054F9
+          0CD3F70072C4375570A957F83049881C83DE58131F99C2C9F219E657800B9267
+          FF70B25C094E97CF301D4005A27DA69B8C80F293980E70E7FAAF85C10828FF2E
+          A602ECDEF4E89CBEFED25A3ED486462035EE4E3E1A05CABF1753017AFF092C5B
+          FEE55CB87453E633DA8801B1592B02CA1F8DA9003742DEF9B7221E58F9559DE9
+          08285F1B896F0D31B97646DB60D425FE1793E0E8C54AA87FE86F282F56F8D1D1
+          081E611A29123BD57EF207CAD7C6F00AD8BA7E66FDF5019F8B0F416F250C015C
+          20A06E1364E153A1185E42F9DA180E706B1096F2DD3BA422FC7A4556E9F3E919
+          3AB509082C54A56889BB293A436A52568A8DCA1E713118FE2D65A761F84D78D5
+          8A86DF4E75DFFF081F42995B894DA90C7757C8D10EAF40767CD0F6F3597E0831
+          81E1004B9634FF5BE657AE559444DA6557FCF3773F3C778E1F42100441100441
+          10044110043104C0FF7A3B5B25E63218160000000049454E44AE426082}
+        FileName = 'E:\Projetos\Pousada\src\imagens\edit_96px.png'
+      end>
+    Position.X = 412.000000000000000000
+    Position.Y = 42.000000000000000000
+    Visible = False
   end
   object ActionList1: TActionList
     Left = 208

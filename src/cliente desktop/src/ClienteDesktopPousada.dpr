@@ -32,7 +32,6 @@ uses
   cliente.model.base in 'model\cliente.model.base.pas',
   cliente.model.produtos in 'model\cliente.model.produtos.pas',
   desktop.views.base in 'views\desktop.views.base.pas' {ViewBase},
-  desktop.views.produtos in 'views\desktop.views.produtos.pas' {ViewProdutos},
   cliente.infra.routes in 'infra\routes\cliente.infra.routes.pas',
   cliente.presenter.produtos.interfaces in 'presenters\cliente.presenter.produtos.interfaces.pas',
   cliente.presenter.produtos in 'presenters\cliente.presenter.produtos.pas',
@@ -45,16 +44,20 @@ uses
   cliente.presenter.grupos.produtos in 'presenters\cliente.presenter.grupos.produtos.pas',
   cliente.presenter.grupos.produtos.interfaces in 'presenters\cliente.presenter.grupos.produtos.interfaces.pas',
   desktop.views.base.cadastro in 'views\desktop.views.base.cadastro.pas' {ViewBaseCadastro},
-  desktop.views.grupos.produtos in 'views\desktop.views.grupos.produtos.pas' {ViewGrupoProdutos};
+  desktop.views.grupos.produtos in 'views\desktop.views.grupos.produtos.pas' {ViewGrupoProdutos},
+  desktop.views.produtos in 'views\desktop.views.produtos.pas' {ViewProdutos},
+  desktop.views.messagebox in 'views\desktop.views.messagebox.pas' {MessageBox},
+  shared.exceptions in '..\..\shared\shared.exceptions.pas';
 
 {$R *.res}
 
 begin
   ReportMemoryLeaksOnShutdown := True;
   Application.Initialize;
+
   Application.CreateForm(TViewPrincipal, ViewPrincipal);
   Application.CreateForm(TViewStyles, ViewStyles);
-  Application.CreateForm(TViewBaseCadastro, ViewBaseCadastro);
-  Application.CreateForm(TViewGrupoProdutos, ViewGrupoProdutos);
+  Application.CreateForm(TMessageBox, MessageBox);
+  //  Application.CreateForm(TMessageWarning, MessageWarning);
   Application.Run;
 end.

@@ -17,6 +17,9 @@ type
     Edit1: TEdit;
     ComboBox1: TComboBox;
     TabItem1: TTabItem;
+    Button4: TButton;
+    Label1: TLabel;
+    Label2: TLabel;
   private
     { Private declarations }
   public

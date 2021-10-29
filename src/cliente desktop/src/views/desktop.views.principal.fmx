@@ -57,8 +57,10 @@ object ViewPrincipal: TViewPrincipal
         object Rectangle1: TRectangle
           Align = Left
           Fill.Color = claWhite
-          Sides = []
-          Size.Width = 217.000000000000000000
+          Padding.Top = 15.000000000000000000
+          Padding.Bottom = 15.000000000000000000
+          Sides = [Right]
+          Size.Width = 233.000000000000000000
           Size.Height = 642.000000000000000000
           Size.PlatformDefault = False
           Stroke.Kind = None
@@ -67,31 +69,61 @@ object ViewPrincipal: TViewPrincipal
           object Rectangle5: TRectangle
             Align = Left
             Fill.Color = claWhite
-            Padding.Top = 20.000000000000000000
-            Padding.Right = 20.000000000000000000
-            Margins.Left = 20.000000000000000000
-            Position.X = 20.000000000000000000
+            Padding.Right = 1.000000000000000000
+            Position.Y = 15.000000000000000000
             Sides = [Right]
-            Size.Width = 217.000000000000000000
-            Size.Height = 642.000000000000000000
+            Size.Width = 229.000000000000000000
+            Size.Height = 612.000000000000000000
             Size.PlatformDefault = False
             Stroke.Color = claSilver
             Stroke.Join = Round
-            object Button1: TButton
-              Align = Scale
-              Position.Y = 20.000000000000000000
-              Size.Width = 197.000000000000000000
+            object ButtonProdutos: TButton
+              Align = Top
+              StyledSettings = [Family, Style, FontColor]
+              Position.Y = 33.000000000000000000
+              Size.Width = 228.000000000000000000
               Size.Height = 45.000000000000000000
               Size.PlatformDefault = False
+              StyleLookup = 'button2'
+              TabOrder = 1
+              Text = 'Produtos'
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.HorzAlign = Leading
+              OnClick = ButtonProdutosClick
+            end
+            object ButtonGrupoProdutos: TButton
+              Align = Top
+              StyledSettings = [Family, Style, FontColor]
+              Position.Y = 78.000000000000000000
+              Size.Width = 228.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'button2'
               TabOrder = 0
-              Text = 'Button1'
+              Text = 'Grupos de Produtos'
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.HorzAlign = Leading
+              OnClick = ButtonGrupoProdutosClick
+            end
+            object Label1: TLabel
+              Align = Top
+              StyledSettings = [Family]
+              Margins.Left = 15.000000000000000000
+              Position.X = 15.000000000000000000
+              Size.Width = 213.000000000000000000
+              Size.Height = 33.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 18.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claDarkslategray
+              Text = 'Cadastros'
+              TabOrder = 2
             end
           end
         end
         object lytForms: TLayout
           Align = Client
-          Margins.Left = 20.000000000000000000
-          Size.Width = 1047.000000000000000000
+          Size.Width = 1051.000000000000000000
           Size.Height = 642.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0

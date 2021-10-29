@@ -34,12 +34,18 @@ implementation
 { TModelBase<T> }
 
 uses
+  shared.exceptions,
   System.SysUtils,
   validador;
 
 procedure TModelBase<T>.Alterar(aEntidade: T);
 begin
-  FValidador.Executar(Entidade);
+  try
+    FValidador.Executar(Entidade);
+  except on E: Exception do
+    raise exceptionValidacao.Create(E.Message);
+  end;
+
   FRepository.Alterar(Entidade);
 end;
 
@@ -55,6 +61,8 @@ constructor TModelBase<T>.Create(aRepository : iRepositoryBaseCrud<T>);
 begin
   FValidador  := TValidador.Create;
   FRepository := aRepository;
+  FEntidade   := T.Create;
+  FEntidades  := TObjectList<T>.Create;
 end;
 
 procedure TModelBase<T>.Deletar(aID: integer);
@@ -72,7 +80,11 @@ end;
 
 procedure TModelBase<T>.Inserir(aEntidade: T);
 begin
-  FValidador.Executar(Entidade);
+  try
+    FValidador.Executar(Entidade);
+  except on E: Exception do
+    raise exceptionValidacao.Create(E.Message);
+  end;
   FRepository.Inserir(Entidade);
 end;
 

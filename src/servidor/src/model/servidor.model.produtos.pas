@@ -24,7 +24,7 @@ type
 implementation
 
 uses
-  servidor.exceptions,
+  shared.exceptions,
   System.SysUtils;
 
 function TModelProdutos.BuscarPorIDEmpresa(aIDEmpresa: integer): TObjectList<TProduto>;

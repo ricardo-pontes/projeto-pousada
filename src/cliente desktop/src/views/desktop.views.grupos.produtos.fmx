@@ -1,34 +1,59 @@
 inherited ViewGrupoProdutos: TViewGrupoProdutos
   Caption = 'ViewBaseCadastro1'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   DesignerMasterStyle = 0
   inherited lytPrincipal: TLayout
     inherited Rectangle1: TRectangle
-      inherited Rectangle2: TRectangle
-        inherited Label1: TLabel
-          TextSettings.Font.StyleExt = {00050000000000000004000000}
-        end
-      end
       inherited TabControl1: TTabControl
         Sizes = (
           744s
-          410s
+          408s
           744s
-          410s)
+          408s)
         inherited TabItemPesquisa: TTabItem
           ExplicitSize.cx = 8.000000000000000000
           ExplicitSize.cy = 8.000000000000000000
+          inherited Layout2: TLayout
+            object Label3: TLabel
+              Align = Left
+              StyledSettings = [Family, Size]
+              Size.Width = 79.000000000000000000
+              Size.Height = 27.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claDarkslategray
+              Text = 'C'#243'digo'
+              TabOrder = 4
+            end
+            object Label5: TLabel
+              Align = Left
+              StyledSettings = [Family, Size]
+              Margins.Left = 16.000000000000000000
+              Position.X = 95.000000000000000000
+              Size.Width = 257.000000000000000000
+              Size.Height = 27.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claDarkslategray
+              Text = 'Descri'#231#227'o'
+              TabOrder = 3
+            end
+          end
           inherited ListViewPesquisa: TListView
             ItemAppearanceClassName = 'TDynamicAppearance'
             ItemEditAppearanceClassName = 'TDynamicAppearance'
             HeaderAppearanceClassName = 'TCustomizeItemObjects'
             FooterAppearanceClassName = 'TCustomizeItemObjects'
+            ItemAppearance.ItemHeight = 40
             ItemAppearance.HeaderHeight = 1
             ItemAppearance.FooterHeight = 1
             ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
               item
-                AppearanceObjectName = 'Codigo'
+                AppearanceObjectName = 'ID'
                 AppearanceClassName = 'TTextObjectAppearance'
                 Appearance.TextAlign = Leading
+                Appearance.TextColor = claDimgray
                 Appearance.Width = 79.000000000000000000
                 Appearance.Height = 44.000000000000000000
               end
@@ -36,9 +61,10 @@ inherited ViewGrupoProdutos: TViewGrupoProdutos
                 AppearanceObjectName = 'Descricao'
                 AppearanceClassName = 'TTextObjectAppearance'
                 Appearance.TextAlign = Leading
-                Appearance.Width = 247.000000000000000000
+                Appearance.TextColor = claDimgray
+                Appearance.Width = 481.000000000000000000
                 Appearance.Height = 44.000000000000000000
-                Appearance.PlaceOffset.X = 104.000000000000000000
+                Appearance.PlaceOffset.X = 96.000000000000000000
               end
               item
                 AppearanceObjectName = 'Editar'
@@ -46,7 +72,16 @@ inherited ViewGrupoProdutos: TViewGrupoProdutos
                 Appearance.Width = 32.000000000000000000
                 Appearance.Height = 32.000000000000000000
                 Appearance.Align = Trailing
-                Appearance.PlaceOffset.Y = 8.000000000000000000
+                Appearance.PlaceOffset.Y = 4.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'Situacao'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.Font.StyleExt = {04040000000000000004000000}
+                Appearance.Width = 100.000000000000000000
+                Appearance.Height = 44.000000000000000000
+                Appearance.Align = Trailing
+                Appearance.PlaceOffset.X = -48.000000000000000000
               end>
             ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
               item
@@ -55,35 +90,36 @@ inherited ViewGrupoProdutos: TViewGrupoProdutos
               end>
             ItemAppearanceObjects.HeaderObjects.Text.Width = 719.000000000000000000
             ItemAppearanceObjects.HeaderObjects.Text.Height = 44.000000000000000000
+            OnItemClickEx = ListViewPesquisaItemClickEx
           end
         end
         inherited TabItemCadastro: TTabItem
           ExplicitSize.cx = 8.000000000000000000
           ExplicitSize.cy = 8.000000000000000000
-          inherited Layout3: TLayout
-            inherited Button4: TButton
-              OnClick = nil
-            end
-          end
           inherited FlowLayout1: TFlowLayout
-            object Edit1: TEdit
+            object NumberBoxCodigo: TNumberBox
               Touch.InteractiveGestures = [LongTap, DoubleTap]
-              TabOrder = 1
+              TabOrder = 2
+              Cursor = crIBeam
+              Max = 100000000.000000000000000000
               Position.Y = 30.000000000000000000
-              object Label0: TLabel
+              object Label6: TLabel
                 Align = Top
                 Margins.Top = -20.000000000000000000
                 Position.Y = -20.000000000000000000
                 Size.Width = 100.000000000000000000
                 Size.Height = 17.000000000000000000
                 Size.PlatformDefault = False
+                StyleLookup = 'label2'
                 Text = 'C'#243'digo'
                 TabOrder = 0
               end
             end
-            object Edit2: TEdit
+            object EditDescricao: TEdit
               Touch.InteractiveGestures = [LongTap, DoubleTap]
+              StyleLookup = 'edit1'
               TabOrder = 0
+              Text = 'edit1'
               Position.X = 110.000000000000000000
               Position.Y = 30.000000000000000000
               Size.Width = 235.000000000000000000
@@ -96,15 +132,19 @@ inherited ViewGrupoProdutos: TViewGrupoProdutos
                 Size.Width = 235.000000000000000000
                 Size.Height = 17.000000000000000000
                 Size.PlatformDefault = False
+                StyleLookup = 'label2'
                 Text = 'Descri'#231#227'o'
                 TabOrder = 0
               end
             end
-            object Switch1: TSwitch
+            object SwitchAtivo: TSwitch
               IsChecked = False
               Position.X = 355.000000000000000000
               Position.Y = 30.000000000000000000
-              TabOrder = 2
+              Size.Width = 78.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
               object Label4: TLabel
                 Align = Top
                 Margins.Top = -20.000000000000000000
@@ -112,6 +152,7 @@ inherited ViewGrupoProdutos: TViewGrupoProdutos
                 Size.Width = 78.000000000000000000
                 Size.Height = 17.000000000000000000
                 Size.PlatformDefault = False
+                StyleLookup = 'label2'
                 Text = 'Ativo'
                 TabOrder = 0
               end
@@ -119,6 +160,74 @@ inherited ViewGrupoProdutos: TViewGrupoProdutos
           end
         end
       end
+      inherited Rectangle2: TRectangle
+        inherited Label1: TLabel
+          TextSettings.Font.StyleExt = {00050000000000000004000000}
+          Text = 'Cadastros > Grupos de Produtos'
+        end
+      end
     end
+  end
+  inherited imgBtnEditar: TImage
+    MultiResBitmap.Height = 96
+    MultiResBitmap.Width = 96
+    MultiResBitmap = <
+      item
+        Width = 96
+        Height = 96
+        PNG = {
+          89504E470D0A1A0A0000000D4948445200000060000000600806000000E29877
+          38000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+          060249444154785EED9C5B6C14551880FF99D95B5B66DB5DA0D4D602F512135E
+          944B832DB12D24A236062F981863420809224143A06278322131208914132286
+          4BA2C498A8E181A244620B94886D0922319060BC50ACDB04AC1ADA691777B63B
+          E339BB67A1A5B33B979DB6BB33FFF73273CE3CEDF7CD994BDA5D401004411004
+          411004411057C1B12D9285816DDB443991780F38EE3950D56132F57E556BEBE1
+          D4D1DCC0003AF46DD9121678BE83EC2E4CCDA45055F50312612B11A8B2294B60
+          802C64929F86983F50B567CFC65C22F06C8BDCC31FDBB787C825A79DEC6ACAA7
+          10F11BFA5B5A3E22F62D9FC802DB22633876EE9C78BB28D45A7423F28C4F472E
+          39B844AAAF2F69EDEEA6B14C832BE01EBE38D9155665E81C9C53BEAE7759D3F7
+          D2F088C20E65E3ADC8D6AD07ADAC04CB4BC78950F93E9FD2CE01B7884D815F1A
+          3C5FF3CDF15AB1A444F7642537E64355A2F83AB763879168493000434B7E1ABF
+          344422B44D4A04BC0411B2C9A7C4C4E0D2DE95AB7E94384EF76987E3B8F5FDC3
+          C3AFB1A12EAE0FF0E5993333FC3EF55826F9696265A54BFAEA1ABA25301001A0
+          85EDEAE2EA00EA7E08BDF8EBCAD345F148804D65251A9A59DFD7B0427725C800
+          656C5717D706A0F2C9A76F179478EDE3575E5D5424472EB04359898AA58BFB9E
+          C81EC1A7AA47D9AE2EAE0C90964F7617D371B06454A8BBF2CAA2E2786F171DEB
+          41235C5FB6FC92660455EDF609C2DB6CA48BEB5EC4EE959F86DC07F8F2C8B1CA
+          9BA1E53D714FA89A4D67643410B84FAAA8BA587CF54A85DFEB4D3D4D2A4A2704
+          834F57ECDC39921C1BC0550132C94F938CD06F3C42C2EFAF94E6CE4F451084B3
+          3CCF3F5BB96B57941D36846B02E8C94F4323CCEEFFAA7220B4E252DC535AC9A6
+          334223C8B32A3E0FFED9BBA67AEF5E894D1BC6152F62CA21087309F896EC6695
+          3F1669984FF42C38723E1A78A09E4D69A3AA5FFB62432F353737C7D88C291CBF
+          02A87C250EED3C675C3E2575396AAB1C083776CB9EF05C363D9E1CE5531C1D20
+          2D5FE021EB4B56265297A3B6AA8170C3C40836C8A7383640AEF2D3A4221C1F17
+          415594137E59CA593EC591F700BBE48F45025EB930EF93AE216FCD2091BFDA0E
+          F914C7BD8829874124F2DBEC944F1141E19BAEAF8B1727A22FDB259FE2A81530
+          19677E1A4585139C0CABF9CD609B7C8A630214A27C8A230214AA7C4AC1072864
+          F994820E50E8F229051BC009F229051920293F011DE42D32E33F4D59652AE553
+          0A2E8093E4530A2A80D3E4530A268013E5530A228053E553F23E8093E553C8E7
+          CA5F947D3053E19C2B9F92B72B2029DF4B9EF327477E071785557C0BDC6653D3
+          465E06708B7C4ADE0570937C4A5E05709B7C4ADE0448CAF7901B2E078FB129DB
+          C857F994BC08E056F994690FE066F994690DE076F994690B80F2534C4B00947F
+          97290F80F2C733A50150FE44A62C00CAD7664A02A0FCCC4C7A00949F9D490D80
+          F2F599B40028DF1802DBDA8A7A006625FF9285F275B17D0550F9092289947D94
+          4DD986D3E4536C0D80F2CD635B00946F0D5B02A07CEBE41C00E5E7464E01507E
+          EE580E80F2EDC15200F655D053E439BF964DD94602E03B61149AB93780FE46B3
+          E3B1F63DE187022F08D55E533FCB62047AE6F323F0945BE4532C055039A50944
+          BE11EEF79E655339E3A6CBCE582C055046134DC91D9B22B8553EC5F43D403915
+          98C779D4EB6C984252CE4224DEC846A670B37C8AF915E081D4D93F168B2BC1ED
+          F229A603A8A0689FE92623A0FC14A603DCB9FE6B613002CABF8BA90047763FB2
+          A47FB0B4860DB52111946A6F271B4D00E58FC75480C83F33D66FF87429FC3E20
+          B2196DF8197C935604943F115301FE92FCCB6F457DB0E9B35AD31150BE3602DB
+          1A624ECD82D6919887FF2F2EC0E99F2BA0EEC1BF215C22B3A313E17CDC7CA588
+          EF540795DF50BE368657C0BE1D0BEB6E0E053C6C087A2B6114E0AA02EA7E4EE4
+          3EE44AE07994AF8DE100B746601DDBBD433AC24FBDA24A9E4F2F92A9DDA0C093
+          AA100B7A1B630B84467913DF201FE5D780E1DF52761B86DF84376FACFFA5E7DA
+          EC87D910CABC727C6EC5F0B5723176C6CF2907DF69FDE1123B8498C07080B56B
+          9BFE2D2B966F9407A327454FE2E337DFBD7C991D421004411004411004411004
+          3104C0FF99725BBF528934A10000000049454E44AE426082}
+        FileName = 'E:\Projetos\Pousada\src\imagens\edit_96px.png'
+      end>
   end
 end

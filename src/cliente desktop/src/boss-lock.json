@@ -9,6 +9,14 @@
 			"artifacts": {},
 			"failed": false,
 			"changed": false
+		},
+		"https://github.com/mateusvicente100/fmx-toast": {
+			"name": "fmx-toast",
+			"version": "1.0.0",
+			"hash": "fe184b518f23bc3a22b580cc372cd592",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
 		}
 	}
 }

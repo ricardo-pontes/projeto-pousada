@@ -27,12 +27,16 @@ implementation
 uses
   System.SysUtils,
   servidor.model.grupoprodutos,
-  servidor.infra.fabricas.repositories;
+  servidor.infra.fabricas.repositories,
+  entidades.grupos.produtos.validacoes.basicas;
 
 { TControllerGrupoProdutos }
 
 function TControllerGrupoProdutos.Alterar(aBody: string): string;
 begin
+  FModel.Validador.Clear;
+  FModel.Validador.Add(TGrupoProdutosValidacoesBasicas.New);
+  FModel.Validador.Add(TGrupoProdutosValidacoesBasicasAlterar.New);
   inherited;
 end;
 
@@ -59,7 +63,10 @@ end;
 
 function TControllerGrupoProdutos.Inserir(aBody: string): string;
 begin
-  inherited;
+  FModel.Validador.Clear;
+  FModel.Validador.Add(TGrupoProdutosValidacoesBasicas.New);
+  FModel.Validador.Add(TGrupoProdutosValidacoesBasicasInserir.New);
+  Result := inherited;
 end;
 
 class function TControllerGrupoProdutos.New : iControllerGrupoProdutos;

@@ -31,7 +31,7 @@ uses
   conversores.notacoes.factory in '..\src\infra\conversores\conversores.notacoes.factory.pas',
   conversores.notacoes.interfaces in '..\src\infra\conversores\conversores.notacoes.interfaces.pas',
   conversores.notacoes in '..\src\infra\conversores\conversores.notacoes.pas',
-  servidor.exceptions in '..\src\infra\exceptions\servidor.exceptions.pas',
+  shared.exceptions.server in '..\..\shared\shared.exceptions.server.pas',
   servidor.infra.repository.base.crud.interfaces in '..\src\infra\repository\servidor.infra.repository.base.crud.interfaces.pas',
   servidor.infra.repository.base.crud in '..\src\infra\repository\servidor.infra.repository.base.crud.pas',
   servidor.infra.repository.empresa.interfaces in '..\src\infra\repository\servidor.infra.repository.empresa.interfaces.pas',

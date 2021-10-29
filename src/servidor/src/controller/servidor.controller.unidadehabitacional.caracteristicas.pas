@@ -29,7 +29,8 @@ uses
   System.SysUtils,
   servidor.model.unidadehabitacional.caracteristicas,
   entidades.unidadehabitacional.caracteristicas.validacoes.basicas,
-  servidor.exceptions, servidor.infra.fabricas.repositories;
+  shared.exceptions,
+  servidor.infra.fabricas.repositories;
 
 { TControllerUnidadeHabitacionalCaracteristicas }
 

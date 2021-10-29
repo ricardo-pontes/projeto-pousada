@@ -37,7 +37,7 @@ implementation
 { TControllerBaseCrud<T> }
 
 uses
-  servidor.exceptions,
+  shared.exceptions,
   System.SysUtils,
   shared.json;
 

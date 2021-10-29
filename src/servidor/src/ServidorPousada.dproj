@@ -210,7 +210,7 @@
         <DCCReference Include="infra\repository\servidor.infra.repository.produtos.pas"/>
         <DCCReference Include="infra\routes\servidor.infra.routes.produtos.pas"/>
         <DCCReference Include="controller\servidor.controller.produtos.interfaces.pas"/>
-        <DCCReference Include="infra\exceptions\servidor.exceptions.pas"/>
+        <DCCReference Include="..\..\shared\shared.exceptions.server.pas"/>
         <DCCReference Include="infra\repository\servidor.infra.repository.unidadehabitacional.interfaces.pas"/>
         <DCCReference Include="..\..\entidades\entidades.unidadehabitacional.pas"/>
         <DCCReference Include="infra\repository\servidor.infra.repository.unidadehabitacional.pas"/>
@@ -299,6 +299,8 @@
         <DCCReference Include="model\servidor.model.estadias.acompanhantes.pas"/>
         <DCCReference Include="controller\servidor.controller.estadias.acompanhantes.interfaces.pas"/>
         <DCCReference Include="controller\servidor.controller.estadias.acompanhantes.pas"/>
+        <DCCReference Include="..\..\shared\shared.exceptions.pas"/>
+        <DCCReference Include="..\..\entidades\validacoes\entidades.grupos.produtos.validacoes.basicas.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

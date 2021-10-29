@@ -28,7 +28,7 @@ implementation
 
 uses
   System.SysUtils,
-  servidor.exceptions,
+  shared.exceptions,
   servidor.model.unidadehabitacional,
   entidades.unidadehabitacional.validacoes.base.alterar,
   entidades.unidadehabitacional.validacoes.base.inserir,

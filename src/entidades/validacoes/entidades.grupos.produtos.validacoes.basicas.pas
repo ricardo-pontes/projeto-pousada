@@ -72,7 +72,7 @@ begin
   if not Assigned(FEntidade) then
     raise Exception.Create(Self.QualifiedClassName + ': Nenhum dado para validar.');
 
-  TValidacoes.NumeroDeveSerMaiorQueZero(FEntidade.IDEmpresa, 'ID');
+  TValidacoes.NumeroDeveSerMaiorQueZero(FEntidade.IDEmpresa, 'ID Empresa');
   TValidacoes.StringNaoPodeSerVazia(FEntidade.Descricao, 'Descrição');
   TValidacoes.CampoAtivoPadrao(FEntidade.Ativo, 'Ativo');
 end;

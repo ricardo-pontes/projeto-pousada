@@ -27,32 +27,29 @@ type
 implementation
 
 uses
-  System.SysUtils, shared.json;
+  System.SysUtils,
+  shared.json,
+  shared.exceptions;
 
 { TRepositoryGrupoProdutos }
 
 procedure TRepositoryGrupoProdutos.Alterar(aValue: TGrupoProduto);
 begin
   var lResponse := FConexao.Resource('/empresa/gruposprodutos').AddBody(TJSONConverter.ObjectToJson(aValue)).Put;
-  if lResponse.StatusCode <> 204 then
-    raise Exception.Create(lResponse.Content);
+  TSharedExceptionsRest.Checar(lResponse.StatusCode, lResponse.Content);
 end;
 
 function TRepositoryGrupoProdutos.BuscarPorID(aID: string): TGrupoProduto;
 begin
   var lResponse := FConexao.Resource('/empresa/gruposprodutos/' + aID).Get;
-  if lResponse.StatusCode <> 200 then
-    raise Exception.Create(lResponse.Content);
-
+  TSharedExceptionsRest.Checar(lResponse.StatusCode, lResponse.Content);
   Result := TJSONConverter.JsonToObject<TGrupoProduto>(lResponse.Content);
 end;
 
 function TRepositoryGrupoProdutos.BuscarPorIDEmpresa(aID: string): TObjectList<TGrupoProduto>;
 begin
   var lResponse := FConexao.Resource('/empresa/' + aID + '/gruposprodutos').Get;
-  if lResponse.StatusCode <> 200 then
-    raise Exception.Create(lResponse.Content);
-
+  TSharedExceptionsRest.Checar(lResponse.StatusCode, lResponse.Content);
   Result := TJSONConverter.JsonToObjectList<TGrupoProduto>(lResponse.Content);
 end;
 
@@ -70,8 +67,8 @@ end;
 procedure TRepositoryGrupoProdutos.Inserir(aValue: TGrupoProduto);
 begin
   var lResponse := FConexao.Resource('/empresa/gruposprodutos').AddBody(TJSONConverter.ObjectToJson(aValue)).Post;
-  if lResponse.StatusCode <> 201 then
-    raise Exception.Create(lResponse.Content);
+  TSharedExceptionsRest.Checar(lResponse.StatusCode, lResponse.Content);
+  aValue.ID := lResponse.Content.ToInteger;
 end;
 
 class function TRepositoryGrupoProdutos.New (aConexao : iRequest) : iRepositoryGrupoProdutos;

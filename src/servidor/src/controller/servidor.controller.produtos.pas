@@ -32,7 +32,7 @@ uses
   shared.json,
   entidades.produtos.validacoes.basicas,
   entidades.produtos.validacoes.db,
-  servidor.exceptions,
+  shared.exceptions,
   servidor.infra.fabricas.repositories;
 
 function TControllerProdutos.Alterar(aBody: string): string;

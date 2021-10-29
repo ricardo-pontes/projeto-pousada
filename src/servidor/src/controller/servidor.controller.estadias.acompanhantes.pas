@@ -31,7 +31,7 @@ uses
   conversores.notacoes.factory,
   servidor.model.estadias.acompanhantes,
   servidor.infra.fabricas.repositories,
-  servidor.exceptions;
+  shared.exceptions;
 
 { TControllerEstadiasAcompanhantes }
 

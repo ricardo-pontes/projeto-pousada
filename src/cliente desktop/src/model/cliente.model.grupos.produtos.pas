@@ -31,6 +31,7 @@ uses
 
 procedure TModelGrupoProdutos.Alterar(aGrupoProduto: TGrupoProduto);
 begin
+  Validador.Clear;
   Validador.Add(TGrupoProdutosValidacoesBasicas.New);
   Validador.Add(TGrupoProdutosValidacoesBasicasAlterar.New);
   inherited;
@@ -46,6 +47,7 @@ end;
 constructor TModelGrupoProdutos.Create(aRepository: iRepositoryGrupoProdutos);
 begin
   FRepository := aRepository;
+  inherited Create(FRepository);
 end;
 
 destructor TModelGrupoProdutos.Destroy;
@@ -56,6 +58,7 @@ end;
 
 procedure TModelGrupoProdutos.Inserir(aGrupoProduto: TGrupoProduto);
 begin
+  Validador.Clear;
   Validador.Add(TGrupoProdutosValidacoesBasicas.New);
   Validador.Add(TGrupoProdutosValidacoesBasicasInserir.New);
 

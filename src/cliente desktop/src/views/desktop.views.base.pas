@@ -8,6 +8,7 @@ uses
   System.UITypes,
   System.Classes,
   System.Variants,
+
   FMX.Types,
   FMX.Controls,
   FMX.Forms,
@@ -16,17 +17,22 @@ uses
   FMX.Layouts,
   FMX.ListView.Types,
   FMX.TextLayout,
+
+  desktop.views.messagebox,
+
   Router4D.Interfaces;
 
 type
   TViewBase = class(TForm, iRouter4DComponent)
     lytPrincipal: TLayout;
   private
+
     { Private declarations }
   public
     function Render : TFMXObject;
     procedure UnRender;
     function GetTextHeight(const D: TListItemText; const Width: single; const Text: string): Integer;
+    function MessageBox : TMessageBox;
   end;
 
 var
@@ -35,6 +41,10 @@ var
 implementation
 
 {$R *.fmx}
+
+uses
+  desktop.views.principal,
+  FMX.Toast;
 
 { TViewBase }
 
@@ -66,6 +76,12 @@ begin
   finally
     Layout.Free;
   end;
+end;
+
+function TViewBase.MessageBox: TMessageBox;
+begin
+  Result := MessageBox;
+  Result.Render := ViewPrincipal.Layout2;
 end;
 
 function TViewBase.Render: TFMXObject;

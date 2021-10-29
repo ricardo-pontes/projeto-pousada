@@ -32,10 +32,13 @@ type
     Rectangle1: TRectangle;
     Rectangle5: TRectangle;
     lytForms: TLayout;
-    Button1: TButton;
-    procedure Button1Click(Sender: TObject);
+    ButtonProdutos: TButton;
+    ButtonGrupoProdutos: TButton;
+    Label1: TLabel;
+    procedure ButtonProdutosClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure ButtonGrupoProdutosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,9 +54,14 @@ implementation
 
 uses desktop.views.produtos;
 
-procedure TViewPrincipal.Button1Click(Sender: TObject);
+procedure TViewPrincipal.ButtonGrupoProdutosClick(Sender: TObject);
 begin
-  WindowState := TWindowState.wsMinimized;
+  TRouter4D.Link.&To('gruposprodutos');
+end;
+
+procedure TViewPrincipal.ButtonProdutosClick(Sender: TObject);
+begin
+  TRouter4D.Link.&To('produtos');
 end;
 
 procedure TViewPrincipal.Button2Click(Sender: TObject);

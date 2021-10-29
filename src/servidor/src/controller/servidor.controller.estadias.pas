@@ -27,7 +27,7 @@ implementation
 
 uses
   System.SysUtils,
-  servidor.exceptions,
+  shared.exceptions,
   servidor.infra.repository.estadias,
   servidor.model.estadias,
   entidades.estadia.validacoes.basicas,

@@ -31,6 +31,7 @@ uses
 
 procedure TModelProdutos.Alterar(aProduto: TProduto);
 begin
+  Validador.Clear;
   Validador.Add(TProdutosValidacoesBasicas.New);
   Validador.Add(TProdutosValidacoesBasicasAlterar.New);
   inherited;
@@ -57,6 +58,7 @@ end;
 
 procedure TModelProdutos.Inserir(aProduto: TProduto);
 begin
+  Validador.Clear;
   Validador.Add(TProdutosValidacoesBasicas.New);
   Validador.Add(TProdutosValidacoesBasicasInserir.New);
   inherited;

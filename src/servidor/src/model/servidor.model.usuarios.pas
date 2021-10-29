@@ -26,7 +26,8 @@ implementation
 
 uses
   System.SysUtils,
-  servidor.exceptions, validador.validacoessimples;
+  shared.exceptions,
+  validador.validacoessimples;
 
 { TModelUsuarios }
 

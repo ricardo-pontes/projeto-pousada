@@ -33,7 +33,7 @@ uses
   entidades.unidadehabitacional.categoria.validacoes.base.alterar,
   entidades.unidadehabitacional.categoria.validacoes.base.inserir,
   entidades.unidadehabitacional.categoria.validacoes.base,
-  servidor.exceptions,
+  shared.exceptions,
   servidor.infra.fabricas.repositories;
 
 function TControllerUnidadeHabitacionalCategoria.Alterar(aBody: string): string;

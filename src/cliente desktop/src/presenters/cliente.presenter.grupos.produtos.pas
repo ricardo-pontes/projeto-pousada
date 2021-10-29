@@ -17,7 +17,10 @@ type
     constructor Create(aView : iPresenterGrupoProdutosView);
     destructor Destroy; override;
 
+    procedure Alterar;
+    procedure Inserir;
     procedure BuscarPorIDEmpresa(aID : string);
+    procedure BuscarPorID(aID : string);
   end;
 
 implementation
@@ -25,9 +28,23 @@ implementation
 uses
   System.SysUtils,
   cliente.infra.repository.grupos.produtos,
-  cliente.infra.conexao;
+  cliente.infra.conexao,
+  cliente.infra.binds;
 
 { TPresenterGrupoProdutos }
+
+procedure TPresenterGrupoProdutos.Alterar;
+begin
+  FBinds.Entity(FModelGrupoProdutos.Entidade).BindToEntity;
+  FModelGrupoProdutos.Alterar(FModelGrupoProdutos.Entidade);
+end;
+
+procedure TPresenterGrupoProdutos.BuscarPorID(aID: string);
+begin
+  var lProduto := FModelGrupoProdutos.BuscarPorID(aID.ToInteger);
+  if Assigned(FView) then
+    FBinds.Entity(lProduto).BindToView;
+end;
 
 procedure TPresenterGrupoProdutos.BuscarPorIDEmpresa(aID: string);
 begin
@@ -40,12 +57,20 @@ constructor TPresenterGrupoProdutos.Create(aView : iPresenterGrupoProdutosView);
 begin
   FView := aView;
   FModelGrupoProdutos := TModelGrupoProdutos.Create(TRepositoryGrupoProdutos.New(TConexoes.New.Conexao));
+  FBinds := TBinds.New.View(FView.Instancia);
 end;
 
 destructor TPresenterGrupoProdutos.Destroy;
 begin
   FModelGrupoProdutos.DisposeOf;
   inherited;
+end;
+
+procedure TPresenterGrupoProdutos.Inserir;
+begin
+  FBinds.Entity(FModelGrupoProdutos.Entidade).BindToEntity;
+  FModelGrupoProdutos.Entidade.IDEmpresa := 1;
+  FModelGrupoProdutos.Inserir(FModelGrupoProdutos.Entidade);
 end;
 
 end.

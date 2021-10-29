@@ -39,7 +39,7 @@ implementation
 uses
   System.SysUtils,
   validador,
-  servidor.exceptions;
+  shared.exceptions;
 
 function TModelBaseCrud<T>.Alterar(aValue: T): string;
 begin

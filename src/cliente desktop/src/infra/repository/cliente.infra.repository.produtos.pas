@@ -29,30 +29,26 @@ implementation
 
 uses
   shared.json,
+  shared.exceptions,
   System.SysUtils;
 
 procedure TRepositoryProdutosRest.Alterar(aValue: TProduto);
 begin
   var lResponse := FConexao.Resource('/empresa/produtos').AddBody(TJSONConverter.ObjectToJson(aValue)).Put;
-  if lResponse.StatusCode <> 204 then
-    raise Exception.Create(lResponse.Content);
+  TSharedExceptionsRest.Checar(lResponse.StatusCode, lResponse.Content);
 end;
 
 function TRepositoryProdutosRest.BuscarPorID(aID: string): TProduto;
 begin
   var lResponse := FConexao.Resource('/empresa/produtos/' + aID).Get;
-  if lResponse.StatusCode <> 200 then
-    raise Exception.Create(lResponse.Content);
-
+  TSharedExceptionsRest.Checar(lResponse.StatusCode, lResponse.Content);
   Result := TJSONConverter.JsonToObject<TProduto>(lResponse.Content);
 end;
 
 function TRepositoryProdutosRest.BuscarPorIDEmpresa(aID: string): TObjectList<TProduto>;
 begin
   var lResponse := FConexao.Resource('/empresa/' + aID + '/produtos').Get;
-  if lResponse.StatusCode <> 200 then
-    raise Exception.Create(lResponse.Content);
-
+  TSharedExceptionsRest.Checar(lResponse.StatusCode, lResponse.Content);
   Result := TJSONConverter.JsonToObjectList<TProduto>(lResponse.Content);
 end;
 
@@ -70,8 +66,8 @@ end;
 procedure TRepositoryProdutosRest.Inserir(aValue : TProduto);
 begin
   var lResponse := FConexao.Resource('/empresa/produtos').AddBody(TJSONConverter.ObjectToJson(aValue)).Post;
-  if lResponse.StatusCode <> 201 then
-    raise Exception.Create(lResponse.Content);
+  TSharedExceptionsRest.Checar(lResponse.StatusCode, lResponse.Content);
+  aValue.ID := lResponse.Content.ToInteger;
 end;
 
 class function TRepositoryProdutosRest.New (aConexao : iRequest) : iRepositoryProdutos;

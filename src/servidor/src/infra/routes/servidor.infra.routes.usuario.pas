@@ -13,7 +13,7 @@ implementation
 uses
   System.SysUtils,
   servidor.controller.usuarios,
-  servidor.exceptions;
+  shared.exceptions.server;
 
 procedure BuscarPorID(aReq : THorseRequest; aRes : THorseResponse; aNext : TProc);
 begin

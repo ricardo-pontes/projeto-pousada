@@ -122,7 +122,7 @@ end;
 class procedure TValidacoes.StringNaoPodeSerVazia(aString, aDescricao: string);
 begin
   if aString.IsEmpty then
-    raise Exception.Create('O(A) ' + aDescricao + ' precisa ser preenchida.');
+    raise Exception.Create('O(A) ' + aDescricao + ' precisa ser preenchido(a).');
 end;
 
 class procedure TValidacoes.StringNaoPodeSerVaziaEDeveConterXCaracteres(

@@ -11,99 +11,83 @@ uses
   System.Actions,
   System.Generics.Collections,
 
+  desktop.views.base.cadastro,
+
   FMX.Types,
   FMX.Graphics,
   FMX.Controls,
   FMX.Forms,
   FMX.Dialogs,
   FMX.StdCtrls,
-  FMX.Layouts,
-  FMX.Objects,
-  FMX.Controls.Presentation,
-  FMX.TabControl,
   FMX.ListView.Types,
   FMX.ListView.Appearances,
   FMX.ListView.Adapters.Base,
-  FMX.ListView,
   FMX.ActnList,
-  FMX.ListBox,
+  FMX.TabControl,
+  FMX.Layouts,
+  FMX.ListView,
+  FMX.Controls.Presentation,
+  FMX.Objects,
+  FMX.EditBox,
+  FMX.NumberBox,
   FMX.Edit,
+  FMX.ListBox,
 
-  desktop.views.base,
-  entidades.produtos,
-  entidades.grupoprodutos,
-  cliente.presenter.produtos.interfaces,
-  cliente.presenter.grupos.produtos.interfaces,
+  Orion.Bindings.Attributes,
+
   cliente.presenter.produtos,
   cliente.presenter.grupos.produtos,
-  Orion.Bindings.Attributes, FMX.EditBox, FMX.NumberBox;
+  cliente.presenter.grupos.produtos.interfaces,
+  cliente.presenter.produtos.interfaces,
+  entidades.produtos,
+  entidades.grupoprodutos;
 
 type
-  TViewProdutos = class(TViewBase, iPresenterProdutosView, iPresenterGrupoProdutosView)
+  TViewProdutos = class(TViewBaseCadastro, iPresenterProdutosView, iPresenterGrupoProdutosView)
 
     [OrionBindingComponent('ID')]
-    EditCodigo: TEdit;
+    NumberBoxCodigo: TNumberBox;
 
     [OrionBindingComponent('Descricao')]
     EditDescricao: TEdit;
 
-    [OrionBindingComponent('ValorCusto')]
+    [OrionBindingComponent('ValorVenda')]
     NumberBoxValorVenda: TNumberBox;
 
-    [OrionBindingComponent('ValorVenda')]
+    [OrionBindingComponent('ValorCusto')]
     NumberBoxValorCusto: TNumberBox;
 
     [OrionBindingComponent('IDCategoria')]
     ComboBoxGrupoProduto: TComboBox;
 
+    Label10: TLabel;
     Label7: TLabel;
-    Rectangle1: TRectangle;
-    Rectangle2: TRectangle;
-    Button1: TButton;
-    Button2: TButton;
-    TabControl1: TTabControl;
-    TabItemPesquisa: TTabItem;
-    Rectangle3: TRectangle;
-    TabItemCadastro: TTabItem;
-    Label1: TLabel;
-    Rectangle4: TRectangle;
-    ButtonNovo: TButton;
-    ListViewPesquisa: TListView;
-    ActionList1: TActionList;
-    ChangeTabPesquisa: TChangeTabAction;
-    ChangeTabCadastro: TChangeTabAction;
-    Layout1: TLayout;
+    Label8: TLabel;
+    Label9: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
-    imgBtnEditar: TImage;
-    Layout2: TLayout;
-    ButtonSalvar: TButton;
-    FlowLayout1: TFlowLayout;
-    Label6: TLabel;
-    Label10: TLabel;
-    Button4: TButton;
     Label11: TLabel;
-
-    Label8: TLabel;
-    Label9: TLabel;
-    procedure ButtonNovoClick(Sender: TObject);
+    Label12: TLabel;
+    Button3: TButton;
     procedure ListViewPesquisaUpdateObjects(const Sender: TObject; const AItem: TListViewItem);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
-    procedure ListViewPesquisaItemClickEx(const Sender: TObject; ItemIndex: Integer; const LocalClickPos: TPointF;
-      const ItemObject: TListItemDrawable);
-    procedure Button4Click(Sender: TObject);
-    procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
+    procedure ListViewPesquisaItemClickEx(const Sender: TObject; ItemIndex: Integer; const LocalClickPos: TPointF; const ItemObject: TListItemDrawable);
+    procedure ButtonSalvarClick(Sender: TObject);
+    procedure ButtonNovoClick(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     FPresenter : TPresenterProdutos;
     FPresenterGrupoProdutos : TPresenterGrupoProdutos;
+
     procedure CarregarProdutos(aProdutos : TObjectList<TProduto>);
     procedure CarregarGruposProdutos(aGruposProdutos : TObjectList<TGrupoProduto>);
     function Instancia : TComponent;
+    procedure MostrarErro(aMensagem : string);
   public
-    { Public declarations }
+
   end;
 
 var
@@ -113,21 +97,42 @@ implementation
 
 {$R *.fmx}
 
+procedure TViewProdutos.Button3Click(Sender: TObject);
+begin
+  inherited;
+  var lStyle := ListViewPesquisa.StylesData['Search'];
+end;
+
 procedure TViewProdutos.ButtonNovoClick(Sender: TObject);
 begin
   inherited;
-  ChangeTabCadastro.Execute;
+  FPresenterGrupoProdutos.BuscarPorIDEmpresa('1');
 end;
 
-procedure TViewProdutos.Button4Click(Sender: TObject);
+procedure TViewProdutos.ButtonSalvarClick(Sender: TObject);
 begin
-  inherited;
-  ChangeTabPesquisa.Execute;
+  try
+    case EstadoCrud of
+      TEstadoCrud.Edicao  :
+      begin
+        FPresenter.Alterar;
+        FPresenter.BuscarPorIDEmpresa(1);
+      end;
+      TEstadoCrud.Insercao  :
+      begin
+        FPresenter.Inserir;
+        FPresenter.BuscarPorIDEmpresa(1);
+      end;
+    end;
+    inherited;
+  except on E: Exception do
+    ShowToast(TabItemCadastro, E);
+  end;
 end;
 
 procedure TViewProdutos.CarregarGruposProdutos(aGruposProdutos: TObjectList<TGrupoProduto>);
 begin
-  ComboBoxGrupoProduto.Clear;
+  ComboBoxGrupoProduto.ListBox.Clear;
   for var lGrupoProduto in aGruposProdutos do
   begin
     var lItem    := TListBoxItem.Create(ComboBoxGrupoProduto);
@@ -138,7 +143,7 @@ begin
   end;
 end;
 
-procedure TViewProdutos.CarregarProdutos(aProdutos : TObjectList<TProduto>);
+procedure TViewProdutos.CarregarProdutos(aProdutos: TObjectList<TProduto>);
 begin
   ListViewPesquisa.Items.Clear;
   for var lProduto in aProdutos do
@@ -146,9 +151,9 @@ begin
     var lItem := ListViewPesquisa.Items.Add;
     TListItemText(lItem.Objects.FindDrawable('ID')).Text         := lProduto.ID.ToString;
     TListItemText(lItem.Objects.FindDrawable('Descricao')).Text  := lProduto.Descricao;
-    TListItemText(lItem.Objects.FindDrawable('Grupo')).Text      := lProduto.NomeGrupo;
-    TListItemText(lItem.Objects.FindDrawable('Preco')).Text      := FormatFloat(',#0.00', lProduto.ValorVenda);
-    TListItemText(lItem.Objects.FindDrawable('PrecoCusto')).Text := FormatFloat(',#0.00', lProduto.ValorCusto);
+    TListItemText(lItem.Objects.FindDrawable('NomeGrupo')).Text  := lProduto.NomeGrupo;
+    TListItemText(lItem.Objects.FindDrawable('ValorVenda')).Text := FormatFloat(',#0.00', lProduto.ValorVenda);
+    TListItemText(lItem.Objects.FindDrawable('ValorCusto')).Text := FormatFloat(',#0.00', lProduto.ValorCusto);
     TListItemImage(lItem.Objects.FindDrawable('Editar')).Bitmap  := imgBtnEditar.Bitmap;
   end;
 end;
@@ -169,16 +174,6 @@ begin
   FPresenterGrupoProdutos.DisposeOf;
 end;
 
-procedure TViewProdutos.FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
-begin
-  inherited;
-  if Key = vkReturn then
-  begin
-    Key := vkTab;
-    KeyDown(Key, KeyChar, Shift);
-  end;
-end;
-
 function TViewProdutos.Instancia: TComponent;
 begin
   Result := Self;
@@ -194,20 +189,23 @@ begin
       var lItem := ListViewPesquisa.Items[ItemIndex].Objects.FindDrawable('ID');
       FPresenterGrupoProdutos.BuscarPorIDEmpresa('1');
       FPresenter.BuscarPorID(TListItemText(lItem).Text.ToInteger);
-      ChangeTabCadastro.Execute;
+      EstadoCrud := TEstadoCrud.Edicao;
+      ChangeTabActionCadastro.Execute;
     end;
 end;
 
 procedure TViewProdutos.ListViewPesquisaUpdateObjects(const Sender: TObject; const AItem: TListViewItem);
-var
-  txt : TListItemText;
 begin
   inherited;
-  txt := TListItemText(AItem.Objects.FindDrawable('Descricao'));
-  txt.Width := ListViewPesquisa.Width - 55 - 145 - 97 - 32-60;
-  txt.Height := GetTextHeight(txt, txt.Width, txt.Text);
-
+  var txt      := TListItemText(AItem.Objects.FindDrawable('Descricao'));
+  txt.Width    := ListViewPesquisa.Width - 55 - 145 - 97 - 32-60;
+  txt.Height   := GetTextHeight(txt, txt.Width, txt.Text);
   Aitem.Height := Trunc(txt.PlaceOffset.Y + txt.Height + 7);
+end;
+
+procedure TViewProdutos.MostrarErro(aMensagem: string);
+begin
+
 end;
 
 end.
