@@ -26,14 +26,23 @@ type
 implementation
 
 uses
-  System.SysUtils;
+  System.SysUtils, entidades.unidadehabitacional.categoria;
 
 { TRepositoryUnidadeHabitacionalDB }
 
 function TRepositoryUnidadeHabitacionalDB.BuscarPorIDEmpresa(aID: integer): TObjectList<TUnidadeHabitacional>;
 begin
   Result := nil;
-  FConexao.DataSet.Close.SQL('select * from UNIDADE_HABITACIONAL where UH_ID_EMPRESA = ' + aID.ToString).Open;
+  var lSQL := TStringBuilder.Create;
+  try
+    lSQL.Append('select ' + UH_TABELA + '.*, ' + UHCAT_DESCRICAO + ' from ' + UH_TABELA);
+    lSQL.Append(' inner join ' + UHCAT_TABELA + ' on ' + UHCAT_ID + ' = ' + UH_ID_GRUPO);
+    lSQL.Append(' where ' + UH_ID_EMPRESA + ' = ' + aID.ToString);
+    FConexao.DataSet.Close.SQL(lSQL.ToString).Open;
+  finally
+    lSQL.DisposeOf;
+  end;
+
   if FConexao.DataSet.RecordCount = 0 then
     Exit;
 

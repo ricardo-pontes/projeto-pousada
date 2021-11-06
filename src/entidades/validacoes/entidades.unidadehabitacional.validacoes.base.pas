@@ -6,10 +6,9 @@ uses
   validador.interfaces, entidades.unidadehabitacional;
 
 type
-  TUnidadeHabitacionalValidacaoBase = class(TInterfacedObject, iValidacaoEntidade)
+  TUnidadesHabitacionaisValidacoesBasicas = class(TInterfacedObject, iValidacaoEntidade)
   private
-    FUnidadeHabitacional : TUnidadeHabitacional;
-    FResult : string;
+    FEntidade : TUnidadeHabitacional;
   public
     constructor Create;
     destructor Destroy; override;
@@ -17,83 +16,137 @@ type
 
     function AddEntidade(aValue : TObject) : iValidacaoEntidade;
     function Executar : iValidacaoEntidade;
-    function Result : string;
+  end;
+
+  TUnidadesHabitacionaisValidacoesBasicasInserir = class(TInterfacedObject, iValidacaoEntidade)
+  private
+    FEntidade : TUnidadeHabitacional;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New : iValidacaoEntidade;
+
+    function AddEntidade(aValue : TObject) : iValidacaoEntidade;
+    function Executar : iValidacaoEntidade;
+  end;
+
+  TUnidadesHabitacionaisValidacoesBasicasAlterar = class(TInterfacedObject, iValidacaoEntidade)
+  private
+    FEntidade : TUnidadeHabitacional;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New : iValidacaoEntidade;
+
+    function AddEntidade(aValue : TObject) : iValidacaoEntidade;
+    function Executar : iValidacaoEntidade;
   end;
 
 implementation
 
 uses
-  System.SysUtils;
+  System.SysUtils, validador.validacoessimples;
 
-{ TUnidadeHabitacionalValidacaoBase }
+{ TUnidadesHabitacionaisValidacoesBasicas }
 
-function TUnidadeHabitacionalValidacaoBase.AddEntidade(aValue: TObject): iValidacaoEntidade;
+function TUnidadesHabitacionaisValidacoesBasicas.AddEntidade(aValue: TObject): iValidacaoEntidade;
 begin
   Result := Self;
-  FUnidadeHabitacional := TUnidadeHabitacional(aValue);
+  FEntidade := TUnidadeHabitacional(aValue);
 end;
 
-constructor TUnidadeHabitacionalValidacaoBase.Create;
+constructor TUnidadesHabitacionaisValidacoesBasicas.Create;
 begin
 
 end;
 
-destructor TUnidadeHabitacionalValidacaoBase.Destroy;
+destructor TUnidadesHabitacionaisValidacoesBasicas.Destroy;
 begin
 
   inherited;
 end;
 
-function TUnidadeHabitacionalValidacaoBase.Executar: iValidacaoEntidade;
+function TUnidadesHabitacionaisValidacoesBasicas.Executar: iValidacaoEntidade;
 begin
   Result := Self;
-  FResult := '';
+  if not Assigned(FEntidade) then
+    raise Exception.Create(Self.QualifiedClassName + ': Nenhum dado para validar.');
 
-  if not Assigned(FUnidadeHabitacional) then
-  begin
-    FResult := Self.QualifiedClassName + ': Nenhum dado para validar.';
-    Exit;
-  end;
-
-  if FUnidadeHabitacional.IDEmpresa <= 0 then
-  begin
-    FResult := 'O IDEmpresa é inválido.';
-    Exit;
-  end;
-
-  if FUnidadeHabitacional.Descricao.IsEmpty then
-  begin
-    FResult := 'A Descrição não pode ser vazia.';
-    Exit;
-  end;
-
-  if FUnidadeHabitacional.IDGrupo <= 0 then
-  begin
-    FResult := 'A Categoria deve ser preenchida.';
-    Exit;
-  end;
-
-  if FUnidadeHabitacional.Ativo.IsEmpty then
-  begin
-    FResult := 'Informe se a Unidade Habitacional está ativa ou não.';
-    Exit;
-  end;
-
-  if (FUnidadeHabitacional.Ativo <> 'S') and (FUnidadeHabitacional.Ativo <> 'N') then
-  begin
-    FResult := 'Só são aceitos S ou N no campo Ativo';
-    Exit;
-  end;
+  TValidacoes.NumeroDeveSerMaiorQueZero(FEntidade.IDEmpresa, 'ID Empresa');
+  TValidacoes.StringNaoPodeSerVazia(FEntidade.Descricao, 'Descrição');
+  TValidacoes.NumeroDeveSerMaiorQueZero(FEntidade.IDGrupo, 'Id Grupo');
+  TValidacoes.CampoAtivoPadrao(FEntidade.Ativo, 'Unidade Habitacional');
 end;
 
-class function TUnidadeHabitacionalValidacaoBase.New : iValidacaoEntidade;
+class function TUnidadesHabitacionaisValidacoesBasicas.New : iValidacaoEntidade;
 begin
   Result := Self.Create;
 end;
 
-function TUnidadeHabitacionalValidacaoBase.Result: string;
+{ TUnidadesHabitacionaisValidacoesBasicasInserir }
+
+function TUnidadesHabitacionaisValidacoesBasicasInserir.AddEntidade(aValue: TObject): iValidacaoEntidade;
 begin
-  Result := FResult;
+  Result := Self;
+  FEntidade := TUnidadeHabitacional(aValue);
+end;
+
+constructor TUnidadesHabitacionaisValidacoesBasicasInserir.Create;
+begin
+
+end;
+
+destructor TUnidadesHabitacionaisValidacoesBasicasInserir.Destroy;
+begin
+
+  inherited;
+end;
+
+function TUnidadesHabitacionaisValidacoesBasicasInserir.Executar: iValidacaoEntidade;
+begin
+  Result := Self;
+  if not Assigned(FEntidade) then
+    raise Exception.Create(Self.QualifiedClassName + ': Nenhum dado para validar.');
+
+  TValidacoes.NumeroSoPodeSerZero(FEntidade.ID, 'ID');
+end;
+
+class function TUnidadesHabitacionaisValidacoesBasicasInserir.New: iValidacaoEntidade;
+begin
+  Result := Self.Create;
+end;
+
+{ TUnidadesHabitacionaisValidacoesBasicasAlterar }
+
+function TUnidadesHabitacionaisValidacoesBasicasAlterar.AddEntidade(aValue: TObject): iValidacaoEntidade;
+begin
+  Result := Self;
+  FEntidade := TUnidadeHabitacional(aValue);
+end;
+
+constructor TUnidadesHabitacionaisValidacoesBasicasAlterar.Create;
+begin
+
+end;
+
+destructor TUnidadesHabitacionaisValidacoesBasicasAlterar.Destroy;
+begin
+
+  inherited;
+end;
+
+function TUnidadesHabitacionaisValidacoesBasicasAlterar.Executar: iValidacaoEntidade;
+begin
+  Result := Self;
+  if not Assigned(FEntidade) then
+    raise Exception.Create(Self.QualifiedClassName + ': Nenhum dado para validar.');
+
+  TValidacoes.NumeroDeveSerMaiorQueZero(FEntidade.ID, 'ID');
+end;
+
+class function TUnidadesHabitacionaisValidacoesBasicasAlterar.New: iValidacaoEntidade;
+begin
+  Result := Self.Create;
 end;
 
 end.

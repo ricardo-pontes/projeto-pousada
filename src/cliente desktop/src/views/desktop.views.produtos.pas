@@ -32,6 +32,10 @@ uses
   FMX.NumberBox,
   FMX.Edit,
   FMX.ListBox,
+  FMX.SearchBox,
+  FMX.ComboEdit,
+  FMX.ComboEdit.Style,
+  FMX.ExtCtrls,
 
   Orion.Bindings.Attributes,
 
@@ -40,7 +44,9 @@ uses
   cliente.presenter.grupos.produtos.interfaces,
   cliente.presenter.produtos.interfaces,
   entidades.produtos,
-  entidades.grupoprodutos;
+  entidades.grupoprodutos,
+  Router4D,
+  Router4d.Props;
 
 type
   TViewProdutos = class(TViewBaseCadastro, iPresenterProdutosView, iPresenterGrupoProdutosView)
@@ -71,13 +77,14 @@ type
     Label11: TLabel;
     Label12: TLabel;
     Button3: TButton;
-    procedure ListViewPesquisaUpdateObjects(const Sender: TObject; const AItem: TListViewItem);
+    btnNovoGrupoProdutos: TButton;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure ListViewPesquisaItemClickEx(const Sender: TObject; ItemIndex: Integer; const LocalClickPos: TPointF; const ItemObject: TListItemDrawable);
     procedure ButtonSalvarClick(Sender: TObject);
     procedure ButtonNovoClick(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure btnNovoGrupoProdutosClick(Sender: TObject);
   private
     FPresenter : TPresenterProdutos;
     FPresenterGrupoProdutos : TPresenterGrupoProdutos;
@@ -85,9 +92,10 @@ type
     procedure CarregarProdutos(aProdutos : TObjectList<TProduto>);
     procedure CarregarGruposProdutos(aGruposProdutos : TObjectList<TGrupoProduto>);
     function Instancia : TComponent;
-    procedure MostrarErro(aMensagem : string);
   public
-
+    [Subscribe]
+    procedure Listening(aValue : TProps);
+    function Render : TFMXObject; override;
   end;
 
 var
@@ -95,7 +103,17 @@ var
 
 implementation
 
+uses
+  System.Rtti,
+  cliente.presenter.usuarios;
+
 {$R *.fmx}
+
+procedure TViewProdutos.btnNovoGrupoProdutosClick(Sender: TObject);
+begin
+  inherited;
+  TRouter4D.Link.&To('gruposprodutos', TProps.Create.Key('gruposprodutos=novocadastro').PropString('produtos'));
+end;
 
 procedure TViewProdutos.Button3Click(Sender: TObject);
 begin
@@ -106,24 +124,17 @@ end;
 procedure TViewProdutos.ButtonNovoClick(Sender: TObject);
 begin
   inherited;
-  FPresenterGrupoProdutos.BuscarPorIDEmpresa('1');
+  FPresenterGrupoProdutos.BuscarPorIDEmpresa(FPresenterUsuarios.UsuarioLogado.IDEmpresa);
 end;
 
 procedure TViewProdutos.ButtonSalvarClick(Sender: TObject);
 begin
   try
     case EstadoCrud of
-      TEstadoCrud.Edicao  :
-      begin
-        FPresenter.Alterar;
-        FPresenter.BuscarPorIDEmpresa(1);
-      end;
-      TEstadoCrud.Insercao  :
-      begin
-        FPresenter.Inserir;
-        FPresenter.BuscarPorIDEmpresa(1);
-      end;
+      TEstadoCrud.Edicao    : FPresenter.Alterar;
+      TEstadoCrud.Insercao  : FPresenter.Inserir(FPresenterUsuarios.UsuarioLogado.IDEmpresa);
     end;
+    FPresenterGrupoProdutos.BuscarPorIDEmpresa(FPresenterUsuarios.UsuarioLogado.IDEmpresa);
     inherited;
   except on E: Exception do
     ShowToast(TabItemCadastro, E);
@@ -164,7 +175,6 @@ begin
   TabControl1.ActiveTab := TabItemPesquisa;
   FPresenter := TPresenterProdutos.Create(Self);
   FPresenterGrupoProdutos := TPresenterGrupoProdutos.Create(Self);
-  FPresenter.BuscarPorIDEmpresa(1);
 end;
 
 procedure TViewProdutos.FormDestroy(Sender: TObject);
@@ -179,6 +189,16 @@ begin
   Result := Self;
 end;
 
+procedure TViewProdutos.Listening(aValue: TProps);
+begin
+  try
+    if aValue.Key = 'produtos=atualizargrupoprodutos' then
+      FPresenterGrupoProdutos.BuscarPorIDEmpresa(FPresenterUsuarios.UsuarioLogado.IDEmpresa);
+  finally
+    aValue.DisposeOf;
+  end;
+end;
+
 procedure TViewProdutos.ListViewPesquisaItemClickEx(const Sender: TObject; ItemIndex: Integer;
   const LocalClickPos: TPointF; const ItemObject: TListItemDrawable);
 begin
@@ -187,25 +207,17 @@ begin
     if ItemObject.Name = 'Editar' then
     begin
       var lItem := ListViewPesquisa.Items[ItemIndex].Objects.FindDrawable('ID');
-      FPresenterGrupoProdutos.BuscarPorIDEmpresa('1');
       FPresenter.BuscarPorID(TListItemText(lItem).Text.ToInteger);
       EstadoCrud := TEstadoCrud.Edicao;
       ChangeTabActionCadastro.Execute;
     end;
 end;
 
-procedure TViewProdutos.ListViewPesquisaUpdateObjects(const Sender: TObject; const AItem: TListViewItem);
+function TViewProdutos.Render: TFMXObject;
 begin
-  inherited;
-  var txt      := TListItemText(AItem.Objects.FindDrawable('Descricao'));
-  txt.Width    := ListViewPesquisa.Width - 55 - 145 - 97 - 32-60;
-  txt.Height   := GetTextHeight(txt, txt.Width, txt.Text);
-  Aitem.Height := Trunc(txt.PlaceOffset.Y + txt.Height + 7);
-end;
-
-procedure TViewProdutos.MostrarErro(aMensagem: string);
-begin
-
+  Result := inherited;
+  if TabControl1.ActiveTab = TabItemPesquisa then
+    FPresenterGrupoProdutos.BuscarPorIDEmpresa(FPresenterUsuarios.UsuarioLogado.IDEmpresa);
 end;
 
 end.

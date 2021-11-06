@@ -19,6 +19,8 @@ type
     procedure Alterar(aGrupoProduto : TGrupoProduto); override;
     function BuscarPorIDEmpresa(aID : integer) : TObjectList<TGrupoProduto>;
     procedure Inserir(aGrupoProduto : TGrupoProduto); override;
+    procedure Ativar(aID : integer);
+    procedure Desativar(aID : integer);
   end;
 
 implementation
@@ -37,6 +39,11 @@ begin
   inherited;
 end;
 
+procedure TModelGrupoProdutos.Ativar(aID: integer);
+begin
+  FRepository.Ativar(aID.ToString);
+end;
+
 function TModelGrupoProdutos.BuscarPorIDEmpresa(aID: integer): TObjectList<TGrupoProduto>;
 begin
   if Assigned(Entidades) then Entidades.DisposeOf;
@@ -48,6 +55,11 @@ constructor TModelGrupoProdutos.Create(aRepository: iRepositoryGrupoProdutos);
 begin
   FRepository := aRepository;
   inherited Create(FRepository);
+end;
+
+procedure TModelGrupoProdutos.Desativar(aID: integer);
+begin
+  FRepository.Desativar(aID.ToString);
 end;
 
 destructor TModelGrupoProdutos.Destroy;

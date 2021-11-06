@@ -26,7 +26,7 @@ begin
     if aException is ExceptionNaoEncontrado then
       THorseResponse(aFramework).Send(aException.Message).Status(THttpStatus.NotFound)
     else if aException is ExceptionValidacao then
-      THorseResponse(aFramework).Send(aException.Message).Status(THTTPStatus.UnprocessableEntity)
+      THorseResponse(aFramework).Send(aException.Message).Status(THTTPStatus.Conflict)
     else if aException is ExceptionFalhaBancoDados then
       THorseResponse(aFramework).Send(aException.Message).Status(THTTPStatus.InternalServerError)
     else if aException is ExceptionConversao then

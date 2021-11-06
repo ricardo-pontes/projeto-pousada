@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="uy2bbgnuagp_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.produtos.TModelProdutos">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.model.produtos.TModelProdutos.FRepository" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.produtos.TModelProdutos.Create(cliente.infra.repository.produtos.interfaces.iRepositoryProdutos)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.produtos.TModelProdutos.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.produtos.TModelProdutos.Alterar(entidades.produtos.TProduto)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.produtos.TModelProdutos.BuscarPorIDEmpresa(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.produtos.TModelProdutos.Inserir(entidades.produtos.TProduto)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.produtos.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

@@ -1,0 +1,531 @@
+inherited ViewUsuarios: TViewUsuarios
+  Caption = 'ViewBaseCadastro1'
+  DesignerMasterStyle = 0
+  inherited lytPrincipal: TLayout
+    inherited Rectangle1: TRectangle
+      inherited TabControl1: TTabControl
+        TabIndex = 0
+        Sizes = (
+          860s
+          408s
+          860s
+          408s)
+        inherited TabItemPesquisa: TTabItem
+          IsSelected = True
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          inherited Layout2: TLayout
+            object Label2: TLabel
+              Align = Left
+              Size.Width = 89.000000000000000000
+              Size.Height = 27.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'label1'
+              Text = 'C'#243'digo'
+              TabOrder = 2
+            end
+            object Label3: TLabel
+              Align = Left
+              Margins.Left = 16.000000000000000000
+              Position.X = 105.000000000000000000
+              Size.Width = 296.000000000000000000
+              Size.Height = 27.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'label1'
+              Text = 'Nome Completo'
+              TabOrder = 1
+            end
+            object Label4: TLabel
+              Align = Left
+              Margins.Left = 16.000000000000000000
+              Position.X = 417.000000000000000000
+              Size.Width = 295.000000000000000000
+              Size.Height = 27.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'label1'
+              Text = 'Email'
+              TabOrder = 0
+            end
+          end
+          inherited ListViewPesquisa: TListView
+            ItemAppearanceClassName = 'TDynamicAppearance'
+            ItemEditAppearanceClassName = 'TDynamicAppearance'
+            HeaderAppearanceClassName = 'TCustomizeItemObjects'
+            FooterAppearanceClassName = 'TCustomizeItemObjects'
+            ItemAppearance.ItemHeight = 40
+            ItemAppearance.ItemEditHeight = 40
+            ItemAppearance.HeaderHeight = 1
+            ItemAppearance.FooterHeight = 1
+            ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+              item
+                AppearanceObjectName = 'ID'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.TextAlign = Leading
+                Appearance.TextColor = claDimgray
+                Appearance.Width = 89.000000000000000000
+                Appearance.Height = 44.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'NomeCompleto'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.TextAlign = Leading
+                Appearance.TextColor = claDimgray
+                Appearance.Width = 297.000000000000000000
+                Appearance.Height = 40.000000000000000000
+                Appearance.PlaceOffset.X = 104.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'Email'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.TextAlign = Leading
+                Appearance.TextColor = claDimgray
+                Appearance.Width = 297.000000000000000000
+                Appearance.Height = 40.000000000000000000
+                Appearance.PlaceOffset.X = 416.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'Situacao'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.Width = 73.000000000000000000
+                Appearance.Height = 40.000000000000000000
+                Appearance.Align = Trailing
+                Appearance.PlaceOffset.X = -48.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'Editar'
+                AppearanceClassName = 'TImageObjectAppearance'
+                Appearance.Width = 32.000000000000000000
+                Appearance.Height = 32.000000000000000000
+                Appearance.Align = Trailing
+                Appearance.VertAlign = Center
+              end>
+            ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+              item
+                AppearanceObjectName = 'Text1'
+                AppearanceClassName = 'TTextObjectAppearance'
+              end>
+            OnItemClickEx = ListViewPesquisaItemClickEx
+          end
+        end
+        inherited TabItemCadastro: TTabItem
+          IsSelected = False
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          inherited FlowLayout1: TFlowLayout
+            object NumberBoxCodigo: TNumberBox
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              StyleLookup = 'edit1'
+              TabOrder = 0
+              Cursor = crIBeam
+              Position.Y = 30.000000000000000000
+              Enabled = False
+              object Label5: TLabel
+                Align = Top
+                Margins.Top = -18.000000000000000000
+                Position.Y = -18.000000000000000000
+                Size.Width = 100.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'label2'
+                Text = 'C'#243'digo'
+                TabOrder = 0
+              end
+            end
+            object EditNome: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              StyleLookup = 'edit1'
+              TabOrder = 1
+              Position.X = 110.000000000000000000
+              Position.Y = 30.000000000000000000
+              Size.Width = 163.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              object Label6: TLabel
+                Align = Top
+                Margins.Top = -18.000000000000000000
+                Position.Y = -18.000000000000000000
+                Size.Width = 163.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'label2'
+                Text = 'Nome'
+                TabOrder = 0
+              end
+            end
+            object EditSobrenome: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              StyleLookup = 'edit1'
+              TabOrder = 2
+              Position.X = 283.000000000000000000
+              Position.Y = 30.000000000000000000
+              Size.Width = 230.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              object Label7: TLabel
+                Align = Top
+                Margins.Top = -18.000000000000000000
+                Position.Y = -18.000000000000000000
+                Size.Width = 230.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'label2'
+                Text = 'Sobrenome'
+                TabOrder = 0
+              end
+            end
+            object EditEmail: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              StyleLookup = 'edit1'
+              TabOrder = 3
+              Position.X = 523.000000000000000000
+              Position.Y = 30.000000000000000000
+              Hint = 
+                'A senha deve conter pelo menos 8 caracteres, 1 letra mai'#250'scula, ' +
+                '1 n'#250'mero e 1 s'#237'mbolo'
+              Size.Width = 267.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              ParentShowHint = False
+              ShowHint = True
+              OnEnter = EditEmailEnter
+              object Label18: TLabel
+                Align = Top
+                Margins.Top = -18.000000000000000000
+                Position.Y = -18.000000000000000000
+                Size.Width = 267.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'label2'
+                Text = 'Email'
+                TabOrder = 0
+              end
+            end
+            object EditSenha: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              StyleLookup = 'edit1'
+              TabOrder = 4
+              Position.Y = 82.000000000000000000
+              Size.Width = 150.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              object Label19: TLabel
+                Align = Top
+                Margins.Top = -18.000000000000000000
+                Position.Y = -18.000000000000000000
+                Size.Width = 150.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'label2'
+                Text = 'Senha'
+                TabOrder = 0
+              end
+            end
+            object EditCPF: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              StyleLookup = 'edit1'
+              TabOrder = 5
+              Position.X = 160.000000000000000000
+              Position.Y = 82.000000000000000000
+              Size.Width = 150.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              object Label8: TLabel
+                Align = Top
+                Margins.Top = -18.000000000000000000
+                Position.Y = -18.000000000000000000
+                Size.Width = 150.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'label2'
+                Text = 'CPF'
+                TabOrder = 0
+              end
+            end
+            object EditRG: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              StyleLookup = 'edit1'
+              TabOrder = 6
+              Position.X = 320.000000000000000000
+              Position.Y = 82.000000000000000000
+              Size.Width = 150.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              object Label9: TLabel
+                Align = Top
+                Margins.Top = -18.000000000000000000
+                Position.Y = -18.000000000000000000
+                Size.Width = 150.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'label2'
+                Text = 'RG'
+                TabOrder = 0
+              end
+            end
+            object DateEditDataNascimento: TDateEdit
+              Date = 44503.000000000000000000
+              Position.X = 480.000000000000000000
+              Position.Y = 82.000000000000000000
+              Size.Width = 113.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 7
+              object Label11: TLabel
+                Align = Top
+                Margins.Top = -18.000000000000000000
+                Position.Y = -18.000000000000000000
+                Size.Width = 113.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Data de Nascimento'
+                TabOrder = 15
+              end
+            end
+            object EditCelular: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              StyleLookup = 'edit1'
+              TabOrder = 8
+              Position.X = 603.000000000000000000
+              Position.Y = 82.000000000000000000
+              Size.Width = 102.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              object Label10: TLabel
+                Align = Top
+                Margins.Top = -18.000000000000000000
+                Position.Y = -18.000000000000000000
+                Size.Width = 102.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'label2'
+                Text = 'Celular'
+                TabOrder = 0
+              end
+            end
+            object EditCEP: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              StyleLookup = 'edit1'
+              TabOrder = 9
+              Position.X = 715.000000000000000000
+              Position.Y = 82.000000000000000000
+              Size.Width = 94.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              object Label17: TLabel
+                Align = Top
+                Margins.Top = -18.000000000000000000
+                Position.Y = -18.000000000000000000
+                Size.Width = 94.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'label2'
+                Text = 'CEP'
+                TabOrder = 0
+              end
+            end
+            object EditLogradouro: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              StyleLookup = 'edit1'
+              TabOrder = 10
+              Position.Y = 134.000000000000000000
+              Size.Width = 222.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              object Label12: TLabel
+                Align = Top
+                Margins.Top = -18.000000000000000000
+                Position.Y = -18.000000000000000000
+                Size.Width = 222.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'label2'
+                Text = 'Logradouro'
+                TabOrder = 0
+              end
+            end
+            object EditNumero: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              StyleLookup = 'edit1'
+              TabOrder = 11
+              Position.X = 232.000000000000000000
+              Position.Y = 134.000000000000000000
+              Size.Width = 70.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              object Label13: TLabel
+                Align = Top
+                Margins.Top = -18.000000000000000000
+                Position.Y = -18.000000000000000000
+                Size.Width = 70.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'label2'
+                Text = 'N'#250'mero'
+                TabOrder = 0
+              end
+            end
+            object EditBairro: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              StyleLookup = 'edit1'
+              TabOrder = 12
+              Position.X = 312.000000000000000000
+              Position.Y = 134.000000000000000000
+              Size.Width = 193.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              object Label14: TLabel
+                Align = Top
+                Margins.Top = -18.000000000000000000
+                Position.Y = -18.000000000000000000
+                Size.Width = 193.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'label2'
+                Text = 'Bairro'
+                TabOrder = 0
+              end
+            end
+            object EditCidade: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              StyleLookup = 'edit1'
+              TabOrder = 13
+              Position.X = 515.000000000000000000
+              Position.Y = 134.000000000000000000
+              Size.Width = 177.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              object Label15: TLabel
+                Align = Top
+                Margins.Top = -18.000000000000000000
+                Position.Y = -18.000000000000000000
+                Size.Width = 177.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'label2'
+                Text = 'Cidade'
+                TabOrder = 0
+              end
+            end
+            object ComboBoxUF: TComboBox
+              Items.Strings = (
+                'AC'
+                'AL'
+                'AP'
+                'AM'
+                'BA'
+                'CE'
+                'DF'
+                'ES'
+                'GO'
+                'MA'
+                'MT'
+                'MS'
+                'MG'
+                'PA'
+                'PB'
+                'PR'
+                'PE'
+                'PI'
+                'RJ'
+                'RN'
+                'RS'
+                'RO'
+                'RR'
+                'SC'
+                'SP'
+                'SE'
+                'TO')
+              Position.X = 702.000000000000000000
+              Position.Y = 134.000000000000000000
+              Size.Width = 49.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'combobox1'
+              TabOrder = 14
+              object Label16: TLabel
+                Align = Top
+                Margins.Top = -18.000000000000000000
+                Position.Y = -18.000000000000000000
+                Size.Width = 49.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'label2'
+                Text = 'UF'
+                TabOrder = 86
+              end
+            end
+          end
+        end
+      end
+      inherited Rectangle2: TRectangle
+        inherited Label1: TLabel
+          TextSettings.Font.StyleExt = {00050000000000000004000000}
+          Text = 'Cadastro > Usu'#225'rios'
+        end
+      end
+    end
+  end
+  inherited imgBtnEditar: TImage
+    MultiResBitmap.Height = 96
+    MultiResBitmap.Width = 96
+    MultiResBitmap = <
+      item
+        Width = 96
+        Height = 96
+        PNG = {
+          89504E470D0A1A0A0000000D4948445200000060000000600806000000E29877
+          38000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+          060C49444154785EED9C5B6C14551880FF99D95BBB9DDEA8EDDA5A109498F0C2
+          B521146D0B89561B151513634C082141246808540C4F26240624916242C47049
+          94181330C4808A21B6D01291422A10835123085E4A52BA886DB75DD8D9EE1CCF
+          D93D0B2DDDDD99D99DB6BB33FFF732E79C79EAF7CD999D49DB05044110044110
+          04411004B115023F2229F06FDA242B91C8FB2008CB809041BAF441554BCBFED8
+          D9CCC0001AFCBD6143A9248A6D743837B6128310F2218DB0910A247C292D3040
+          0A92C98F43CDEFA9DAB1636D2611447E44EEE3AFCD9B4BE82DA7950E13CA6750
+          F16BAE37377F4CEDA77D214BFC888CE0C8E9D3F2EDBC9216E8E97EC6AB21979E
+          5C10A8ADF5B67476B25886C11D701F878E9F29250A74F45794AFEA59DCF043AF
+          FFA6CA4FA5E2EDEE8D1BF7A6B313D2DE3A5684C977B9D4560184797C09DC81FE
+          73BE2F0FD5949795695EACF483795F952CBF216CD9A2275A140CC049243F8E3B
+          3040231C1C9708780BA2A492CF08C9850B7B96BD72A15710349F760441587D7D
+          70F0753ED5C4F601BE686F2F70BBC89164F2E3848A8B16F817D575F6828E0800
+          CD7CA889AD0390DD50F2D2E5A74EE685BB3D7C2925C19229B5FEBAA59A3B4101
+          28E6434D6C1B80C9A73F7DABA4866B6677BD362F4FE9EEE2A75212948BE6FB9F
+          481DC145C8613ED4C49601E2F2E9703E9B57940D4B73BA5E9D971FBE7686CDB5
+          60116E2C5E72316104423A5D92F40E9F6962BB17B1FBE5C7F17A89285F3E5279
+          AB7CC9D9B0A3A49A2F2765D8E379F08EAFEABC70A1CBE7CDCF8F3D4DAA6A0714
+          163EEDDBBA75283AD781AD0224931F271AE18AFE0811B7BBF2CE8C99B1081ECF
+          2951149FADDCB62DC84FEBC23601B4E4C761110AAE7C5DF95FF9D28B61475125
+          5F4E0A8B407CD5070BFFB9B6A27AE7CE005FD68D2D5EC4D47D502A44E03B3A4C
+          297F24BD7E31F2D3FC03E7829E19B57C2931847CE30A0DBCDCD4D414E22B86B0
+          FC0E60F2D530B48A827EF98CD8EDE868655F457DA7E2289DCA974793A17C86A5
+          03C4E54B22A47CC94A46EC7674B4AAAFA26E6C0413E4332C1B2053F9716211BE
+          1A1581A8EA31B712C8583EC3929F0166C91F492F88EACFD33E3D33E09CDE4FE5
+          2F37433EC37201D4FD20AB0A7C4BE53FCE974C43258EF6B619C79E6B6C6CD4FD
+          9CAF85A5028CC7951F4725704C5060B9B81E4CB9F2E35826402ECA67582240AE
+          CA67E47C805C96CFC8E900B92E9F91B301AC209F919301A2F223D046DF2293FE
+          D154BA4CA47C46CE05B0927C464E05B09A7C46CE04B0A27C464E04B0AA7C46D6
+          07B0B27C06FDB9B21775174C5105EBCA6764ED0E88CA77D2E7FCF191DF2604E1
+          79B1196EF3A549232B03D8453E23EB02D8493E23AB02D84D3E236B0244E53BE8
+          07AE0073F8926964AB7C465604B0AB7CC6A407B0B37CC6A406B0BB7CC6A40540
+          F931262500CABFC7840740F9A399D000287F2C131600E527664202A0FCE48C7B
+          00949F9A710D80F2B519B700285F1F123F9A0AD90365D1DF64A17C4D4CDF014C
+          7E844AA26567F325D3B09A7C86A90150BE714C0B80F2D3C39400283F7D320E80
+          F23323A300283F73D20E80F2CD21AD00D17F050DC309FA9C5FC3974C2302F0BD
+          340C4DC29BC0BEA3D9F2A4F7854D8F7A5E94AA9D86BE96450FECCA1787A0D12E
+          F21969052082DA00B2580F0F394FF1A58CB1D36D672469055087230DD1814911
+          EC2A9F61F833403DE1992638C89F7C1A23A09E82EE703D9F19C2CEF219C67780
+          036257FF48D2DC097697CF301C80809AF84A371801E5C7301CE0EEFD3F113A23
+          A0FC7B180A7060FB630BAEF7174DE7D3C4D0086AB5B383CFC680F247632840F7
+          BF05ABD77CB610FEF0CB7C25316281D8902802CA1F8BA100BD01F792BEA00BD6
+          7D5E633802CA4F8CC48FBAA8983EAB6528E410EF842538F99B0F163D72134ABD
+          0A3F3B16C1253CACE6891DA45FBD82F213A37B07ECDA3277D18D018F834F416B
+          270C03FCAA02D92DC8C24782175E40F989D11DA06F0856F1E15DE211CEFE2213
+          FA7C7A9E2E6D07159E2452A8D0591F9A25D52BEBC43AE5B0B8024CFB8E35ABA1
+          FB4D78FDDADADFCF5E7D60269F42B153094FF50D5E2D9743ED6E41DDFB6ECB8F
+          17F929C400BA03AC5CD970AB385FE9292F0C1E971D914FDE7AEFD2257E0A4110
+          044110044110044110441700FF0301AB5A65C3C27DE10000000049454E44AE42
+          6082}
+        FileName = 'E:\Projetos\Pousada\src\imagens\edit_96px.png'
+      end>
+  end
+end

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="t4bqyx0ch2l_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::ff7ybdj98ii_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.caracteristicas.interfaces.iRepositoryCaracteristicas" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.caracteristicas.interfaces.@unitclass" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.caracteristicas.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.caracteristicas.TRepositoryCaracteristicasRest">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.infra.repository.caracteristicas.TRepositoryCaracteristicasRest.FConexao" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.caracteristicas.TRepositoryCaracteristicasRest.Create(RESTRequest4D.Request.Contract.IRequest)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.caracteristicas.TRepositoryCaracteristicasRest.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.caracteristicas.TRepositoryCaracteristicasRest.New(RESTRequest4D.Request.Contract.IRequest)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.caracteristicas.TRepositoryCaracteristicasRest.Alterar(entidades.caracteristicas.TCaracteristica)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.caracteristicas.TRepositoryCaracteristicasRest.BuscarPorID(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.caracteristicas.TRepositoryCaracteristicasRest.BuscarPorIDEmpresa(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.caracteristicas.TRepositoryCaracteristicasRest.Inserir(entidades.caracteristicas.TCaracteristica)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.caracteristicas.TRepositoryCaracteristicasRest.Ativar(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.caracteristicas.TRepositoryCaracteristicasRest.Desativar(System.string)" />
+    </reference>
+  </view>
+</nodeSet>

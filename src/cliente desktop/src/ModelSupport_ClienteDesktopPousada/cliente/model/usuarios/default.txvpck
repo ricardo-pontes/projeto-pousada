@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="u2gru1u0a4t_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.usuarios.TModelUsuarios">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.model.usuarios.TModelUsuarios.FRepository" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.usuarios.TModelUsuarios.Create(cliente.infra.repository.usuarios.interfaces.iRepositoryUsuarios)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.usuarios.TModelUsuarios.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.usuarios.TModelUsuarios.Alterar(entidades.usuario.TUsuario)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.usuarios.TModelUsuarios.Ativar(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.usuarios.TModelUsuarios.Inserir(entidades.usuario.TUsuario)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.usuarios.TModelUsuarios.BuscarPorIDEmpresa(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.usuarios.TModelUsuarios.BuscarPorID(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.usuarios.TModelUsuarios.Desativar(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.usuarios.TModelUsuarios.Login(System.string,System.string)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.usuarios.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

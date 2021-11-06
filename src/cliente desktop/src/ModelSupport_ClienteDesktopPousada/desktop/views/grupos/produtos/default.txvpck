@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="thvcgdie1ks_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.grupos.produtos.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:ClienteDesktopPousada:desktop.views.grupos.produtos.@unitclass.ViewGrupoProdutos" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.grupos.produtos.@unitclass.ViewGrupoProdutos" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.NumberBoxCodigo" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.EditDescricao" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.SwitchAtivo" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.Label2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.Label4" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.Label3" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.Label5" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.Label6" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.FormCreate(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.FormDestroy(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.ListViewPesquisaItemClickEx(System.TObject,System.Integer,System.Types.TPointF,FMX.ListView.Types.TListItemDrawable)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.ButtonSalvarClick(System.TObject)" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.FPresenter" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.CarregarGruposProdutos(System.Generics.Collections.TObjectList&lt;entidades.grupoprodutos.TGrupoProduto&gt;)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.Instancia()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.Listening(Router4D.Props.TProps)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.VoltarParaFormAnterior()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.grupos.produtos.TViewGrupoProdutos.Render()" />
+    </reference>
+  </view>
+</nodeSet>

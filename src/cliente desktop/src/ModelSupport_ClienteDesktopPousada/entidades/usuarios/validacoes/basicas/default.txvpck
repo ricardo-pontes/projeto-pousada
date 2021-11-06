@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="uf6nvpqo8pt_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasInserir">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasInserir.FEntidade" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasInserir.Create()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasInserir.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasInserir.New()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasInserir.AddEntidade(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasInserir.Executar()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicas">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicas.FEntidade" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicas.Create()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicas.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicas.New()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicas.AddEntidade(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicas.Executar()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasLogin">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasLogin.FEntidade" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasLogin.FEmail" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasLogin.FSenha" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasLogin.Create(System.string,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasLogin.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasLogin.New(System.string,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasLogin.AddEntidade(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasLogin.Executar()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasAlterar">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasAlterar.FEntidade" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasAlterar.Create()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasAlterar.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasAlterar.New()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasAlterar.AddEntidade(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.usuarios.validacoes.basicas.TUsuariosValidacoesBasicasAlterar.Executar()" />
+    </reference>
+  </view>
+</nodeSet>

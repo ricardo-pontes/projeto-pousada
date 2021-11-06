@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="ynh92hendum_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.grupos.produtos.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.grupos.produtos.TModelGrupoProdutos">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.model.grupos.produtos.TModelGrupoProdutos.FRepository" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.grupos.produtos.TModelGrupoProdutos.Create(cliente.infra.repository.grupos.produtos.interfaces.iRepositoryGrupoProdutos)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.grupos.produtos.TModelGrupoProdutos.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.grupos.produtos.TModelGrupoProdutos.Alterar(entidades.grupoprodutos.TGrupoProduto)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.grupos.produtos.TModelGrupoProdutos.BuscarPorIDEmpresa(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.grupos.produtos.TModelGrupoProdutos.Inserir(entidades.grupoprodutos.TGrupoProduto)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.grupos.produtos.TModelGrupoProdutos.Ativar(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.grupos.produtos.TModelGrupoProdutos.Desativar(System.Integer)" />
+    </reference>
+  </view>
+</nodeSet>

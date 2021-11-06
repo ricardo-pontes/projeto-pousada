@@ -20,7 +20,8 @@ uses
   FMX.Filter.Effects,
   FMX.Controls.Presentation,
   FMX.StdCtrls,
-  Router4D;
+  Router4D,
+  cliente.presenter.usuarios;
 
 type
   TViewPrincipal = class(TForm)
@@ -35,11 +36,24 @@ type
     ButtonProdutos: TButton;
     ButtonGrupoProdutos: TButton;
     Label1: TLabel;
+    ButtonCaracteristicas: TButton;
+    Button1: TButton;
+    ButtonUsuarios: TButton;
+    ButtonEmpresas: TButton;
+    ButtonUnidadesHabitacionais: TButton;
+    ButtonUnidadesHabitacionaisCategorias: TButton;
     procedure ButtonProdutosClick(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    procedure ButtonUnidadesHabitacionaisCategoriasClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure ButtonGrupoProdutosClick(Sender: TObject);
+    procedure ButtonCaracteristicasClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure ButtonUsuariosClick(Sender: TObject);
+    procedure ButtonEmpresasClick(Sender: TObject);
+    procedure ButtonUnidadesHabitacionaisClick(Sender: TObject);
   private
+
     { Private declarations }
   public
     { Public declarations }
@@ -52,7 +66,19 @@ implementation
 
 {$R *.fmx}
 
-uses desktop.views.produtos;
+uses
+  desktop.views.inicio,
+  Router4D.Props;
+
+procedure TViewPrincipal.ButtonCaracteristicasClick(Sender: TObject);
+begin
+  TRouter4D.Link.&To('caracteristicas');
+end;
+
+procedure TViewPrincipal.ButtonEmpresasClick(Sender: TObject);
+begin
+  TRouter4D.Link.&To('empresas');
+end;
 
 procedure TViewPrincipal.ButtonGrupoProdutosClick(Sender: TObject);
 begin
@@ -64,15 +90,36 @@ begin
   TRouter4D.Link.&To('produtos');
 end;
 
-procedure TViewPrincipal.Button2Click(Sender: TObject);
+procedure TViewPrincipal.ButtonUnidadesHabitacionaisCategoriasClick(Sender: TObject);
 begin
-  Close;
+  TRouter4D.Link.&To('unidadeshabitacionaiscategorias');
+end;
+
+procedure TViewPrincipal.ButtonUnidadesHabitacionaisClick(Sender: TObject);
+begin
+  TRouter4D.Link.&To('unidadeshabitacionais');
+end;
+
+procedure TViewPrincipal.ButtonUsuariosClick(Sender: TObject);
+begin
+  TRouter4D.Link.&To('usuarios');
+end;
+
+procedure TViewPrincipal.Button1Click(Sender: TObject);
+begin
+  TRouter4D.Link.&To('inicio');
 end;
 
 procedure TViewPrincipal.FormCreate(Sender: TObject);
 begin
-  TRouter4D.Render<TViewProdutos>.SetElement(lytForms, Layout2);
-  TRouter4D.Link.&To('produtos');
+  TRouter4D.Render<TViewInicio>.SetElement(lytForms, Layout2);
+  TRouter4D.Link.&To('inicio');
+end;
+
+procedure TViewPrincipal.FormDestroy(Sender: TObject);
+begin
+  if Assigned(FPresenterUsuarios) then
+    FPresenterUsuarios.DisposeOf;
 end;
 
 end.

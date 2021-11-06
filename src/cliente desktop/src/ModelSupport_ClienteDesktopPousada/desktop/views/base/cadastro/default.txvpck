@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="vrn0igd4g0j_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.base.cadastro.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:ClienteDesktopPousada:desktop.views.base.cadastro.@unitclass.ViewBaseCadastro" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.@unitclass.ViewBaseCadastro" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.EstadoCrud" />
+      <reference referencedUin="delphi:l_ast:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.FEstadoCrud" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.Rectangle1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.Rectangle2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.Button1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.Button2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.Label1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.TabControl1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.TabItemPesquisa" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.TabItemCadastro" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.Layout1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.ButtonNovo" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.Layout2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.ListViewPesquisa" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.Layout3" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.ButtonSalvar" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.Button4" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.FlowLayout1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.ActionList1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.ChangeTabActionCadastro" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.ChangeTabActionPesquisa" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.imgBtnEditar" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.Line1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.Line2" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.ButtonSalvarClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.ButtonNovoClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.Button4Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.FormCreate(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.FormDestroy(System.TObject)" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.FEstadoCrud" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.FListen" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.FFormAnterior" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.EstadoCrud" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.LimparComponentesCrud()" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.Listen" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro.FormAnterior" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.base.cadastro.TEstadoCrud">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TEstadoCrud.Edicao" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TEstadoCrud.Insercao" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.cadastro.TEstadoCrud.Nenhum" />
+    </reference>
+  </view>
+</nodeSet>

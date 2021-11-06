@@ -10,6 +10,8 @@ uses
 type
   iRepositoryUsuarios = interface(iRepositoryBaseCrud<TUsuario>)
     ['{6E0CBE3E-4EB9-41D2-9EFF-1B54057BADAB}']
+    function Ativar(aID : integer) : string;
+    function Desativar(aID : integer) : string;
     function BuscarPorIDEmpresa(aIDEmpresa : integer) : TObjectList<TUsuario>;
     function Login(aEmail, aSenha : string) : TUsuario;
   end;

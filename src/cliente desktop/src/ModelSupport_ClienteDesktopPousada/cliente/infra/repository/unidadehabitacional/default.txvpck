@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="eyp0isa7fbi_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::rs21s7f6xpo_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.unidadehabitacional.caracteristicas.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.unidadehabitacional.caracteristicas.TRepositoryUnidadeHabitacionalCaracteristicasRest" />
+      <reference referencedUin="design:view:::3jj4lp7zoig_v" />
+    </reference>
+  </view>
+</nodeSet>

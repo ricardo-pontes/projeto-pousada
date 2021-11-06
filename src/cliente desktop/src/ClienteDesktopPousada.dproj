@@ -102,7 +102,7 @@
         <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
         <Icns_MainIcns>$(BDS)\bin\delphi_PROJECTICNS.icns</Icns_MainIcns>
         <SanitizedProjectName>ClienteDesktopPousada</SanitizedProjectName>
-        <DCC_UnitSearchPath>modules\.dcp;modules\.dcu;modules;modules\fmx-toast\samples\src;modules\fmx-toast\src;modules\router4delphi\src;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>modules\.dcp;modules\.dcu;modules;modules\router4delphi\src;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android)'!=''">
         <DCC_UsePackage>fmx;DbxCommonDriver;bindengine;IndyIPCommon;emsclient;FireDACCommonDriver;IndyProtocols;IndyIPClient;dbxcds;FmxTeeUI;bindcompfmx;FireDACSqliteDriver;DbxClientDriver;soapmidas;fmxFireDAC;dbexpress;inet;DataSnapCommon;dbrtl;FireDACDBXDriver;CustomIPTransport;DBXInterBaseDriver;IndySystem;bindcomp;FireDACCommon;IndyCore;RESTBackendComponents;bindcompdbx;rtl;RESTComponents;DBXSqliteDriver;IndyIPServer;dsnapxml;DataSnapClient;DataSnapProviderClient;DataSnapFireDAC;emsclientfiredac;FireDAC;FireDACDSDriver;xmlrtl;tethering;dsnap;CloudService;DataSnapNativeClient;FMXTee;soaprtl;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
@@ -317,6 +317,245 @@
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="..\..\shared\shared.exceptions.pas"/>
+        <DCCReference Include="infra\repository\cliente.infra.repository.unidadehabitacional.caracteristicas.interfaces.pas"/>
+        <DCCReference Include="infra\repository\cliente.infra.repository.unidadehabitacional.caracteristicas.pas"/>
+        <DCCReference Include="..\..\entidades\entidades.caracteristicas.pas"/>
+        <DCCReference Include="..\..\entidades\validacoes\entidades.caracteristicas.validacoes.basicas.pas"/>
+        <DCCReference Include="infra\repository\cliente.infra.repository.caracteristicas.interfaces.pas"/>
+        <DCCReference Include="infra\repository\cliente.infra.repository.caracteristicas.pas"/>
+        <DCCReference Include="model\cliente.model.caracteristicas.pas"/>
+        <DCCReference Include="presenters\cliente.presenter.caracteristicas.interfaces.pas"/>
+        <DCCReference Include="presenters\cliente.presenter.caracteristicas.pas"/>
+        <DCCReference Include="views\desktop.views.caracteristicas.pas">
+            <Form>ViewCaracteristicas</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="views\desktop.views.inicio.pas">
+            <Form>ViewInicio</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="views\desktop.views.empresa.pas">
+            <Form>ViewEmpresas</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="views\desktop.views.login.pas">
+            <Form>ViewLogin</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="infra\repository\cliente.infra.repository.usuarios.interfaces.pas"/>
+        <DCCReference Include="infra\repository\cliente.infra.repository.usuarios.pas"/>
+        <DCCReference Include="model\cliente.model.usuarios.pas"/>
+        <DCCReference Include="..\..\entidades\validacoes\entidades.usuarios.validacoes.basicas.pas"/>
+        <DCCReference Include="presenters\cliente.presenter.usuarios.pas"/>
+        <DCCReference Include="presenters\cliente.presenter.usuarios.interfaces.pas"/>
+        <DCCReference Include="views\desktop.views.usuario.pas">
+            <Form>ViewUsuarios</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="infra\repository\cliente.infra.repository.empresas.interfaces.pas"/>
+        <DCCReference Include="infra\repository\cliente.infra.repository.empresas.pas"/>
+        <DCCReference Include="model\cliente.model.empresas.pas"/>
+        <DCCReference Include="..\..\entidades\validacoes\entidades.empresas.validacoes.basicas.pas"/>
+        <DCCReference Include="presenters\cliente.presenter.empresas.pas"/>
+        <DCCReference Include="presenters\cliente.presenter.empresas.interfaces.pas"/>
+        <DCCReference Include="infra\repository\cliente.infra.repository.unidadehabitacional.interfaces.pas"/>
+        <DCCReference Include="infra\repository\cliente.infra.repository.unidadehabitacional.pas"/>
+        <DCCReference Include="model\cliente.model.unidadeshabitacionais.pas"/>
+        <DCCReference Include="..\..\entidades\validacoes\entidades.unidadehabitacional.validacoes.base.pas"/>
+        <DCCReference Include="presenters\cliente.presenter.unidadeshabitacionais.interfaces.pas"/>
+        <DCCReference Include="presenters\cliente.presenter.unidadeshabitacionais.pas"/>
+        <DCCReference Include="views\desktop.views.unidadeshabitacionais.pas">
+            <Form>ViewUnidadesHabitacionais</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="infra\repository\cliente.infra.repository.unidadehabitacional.categorias.interfaces.pas"/>
+        <DCCReference Include="infra\repository\cliente.infra.repository.unidadehabitacional.categorias.pas"/>
+        <DCCReference Include="views\desktop.views.unidadeshabitacionais.categorias.pas">
+            <Form>ViewUnidadesHabitacionaisCategorias</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <None Include="ModelSupport_ClienteDesktopPousada\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\ClienteDesktopPousada\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\usuario\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\usuario\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\ClienteDesktopPousada\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\validador\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\shared\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\grupos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\caracteristicas\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\contatos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\endereco\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\unidadehabitacional\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\estadia\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\clientes\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\produtos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\pessoa\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\usuarios\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\grupoprodutos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\empresa\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\model\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\infra\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\validador\validacoessimples\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\validador\interfaces\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\shared\exceptions\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\shared\json\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\grupos\produtos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\caracteristicas\validacoes\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\unidadehabitacional\caracteristicas\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\unidadehabitacional\categoria\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\estadia\acompanhante\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\produtos\validacoes\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\usuarios\validacoes\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\empresa\endereco\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\empresa\contatos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\grupos\produtos\validacoes\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\grupos\produtos\validacoes\basicas\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\caracteristicas\validacoes\basicas\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\produtos\validacoes\basicas\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\usuarios\validacoes\basicas\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\model\grupos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\model\caracteristicas\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\model\produtos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\model\base\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\model\usuarios\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\routes\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\binds\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\conexao\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\usuarios\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\grupos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\caracteristicas\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\produtos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\model\grupos\produtos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\base\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\grupos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\produtos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\unidadehabitacional\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\caracteristicas\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\usuarios\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\conexao\interfaces\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\base\crud\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\grupos\produtos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\produtos\interfaces\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\unidadehabitacional\caracteristicas\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\caracteristicas\interfaces\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\usuarios\interfaces\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\base\crud\interfaces\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\grupos\produtos\interfaces\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\unidadehabitacional\caracteristicas\interfaces\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\usuarios\interfaces\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\grupos\produtos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\caracteristicas\interfaces\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\produtos\interfaces\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\grupos\produtos\interfaces\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\infra\styles\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\usuario\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\inicio\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\produtos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\messagebox\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\caracteristicas\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\empresa\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\principal\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\grupos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\login\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\base\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\grupos\produtos\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\base\cadastro\default.txvpck"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\unidadehabitacional\caracteristicas\interfaces\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\binds\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\inicio\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\model\usuarios\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\clientes\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\usuarios\validacoes\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\grupos\produtos\interfaces\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\base\crud\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\empresa\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\routes\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\produtos\interfaces\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\shared\exceptions\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\usuarios\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\caracteristicas\interfaces\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\estadia\acompanhante\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\grupos\produtos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\grupos\produtos\validacoes\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\caracteristicas\validacoes\basicas\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\usuarios\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\grupos\produtos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\caracteristicas\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\produtos\validacoes\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\produtos\interfaces\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\model\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\usuarios\interfaces\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\unidadehabitacional\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\validador\validacoessimples\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\model\produtos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\produtos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\usuario\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\endereco\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\unidadehabitacional\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\model\grupos\produtos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\conexao\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\usuarios\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\produtos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\usuarios\interfaces\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\infra\styles\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\unidadehabitacional\categoria\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\caracteristicas\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\grupos\produtos\validacoes\basicas\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\grupos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\conexao\interfaces\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\caracteristicas\validacoes\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\unidadehabitacional\caracteristicas\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\usuarios\validacoes\basicas\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\messagebox\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\login\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\unidadehabitacional\caracteristicas\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\produtos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\validador\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\produtos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\grupos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\base\crud\interfaces\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\grupos\produtos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\grupos\produtos\interfaces\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\grupos\produtos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\pessoa\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\shared\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\produtos\validacoes\basicas\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\contatos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\model\base\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\caracteristicas\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\grupos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\shared\json\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\caracteristicas\interfaces\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\empresa\endereco\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\principal\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\base\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\validador\interfaces\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\estadia\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\grupoprodutos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\model\grupos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\grupos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\empresa\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\presenter\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\entidades\empresa\contatos\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\infra\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\caracteristicas\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\cliente\model\caracteristicas\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\base\cadastro\default.txaPackage"/>
+        <None Include="ModelSupport_ClienteDesktopPousada\desktop\views\base\default.txaPackage"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -343,9 +582,410 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\grupos\produtos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\pessoa\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\messagebox\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\unidadehabitacional\caracteristicas\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\caracteristicas\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\unidadehabitacional\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\clientes\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\grupos\produtos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\caracteristicas\interfaces\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\model\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\unidadehabitacional\caracteristicas\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\usuarios\validacoes\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\grupos\produtos\validacoes\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\base\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\conexao\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\infra\styles\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\base\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\grupos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\base\crud\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\endereco\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\produtos\validacoes\basicas\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\grupos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\model\grupos\produtos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\produtos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\empresa\endereco\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\produtos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\usuario\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\model\grupos\produtos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\empresa\endereco\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\contatos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\infra\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\model\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\model\base\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\grupos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\endereco\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\model\grupos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\inicio\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\grupos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\produtos\validacoes\basicas\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
+                    <Platform Name="iOSSimulator">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\grupos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\validador\interfaces\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\caracteristicas\interfaces\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\caracteristicas\interfaces\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\unidadehabitacional\categoria\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\validador\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\grupos\produtos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\grupos\produtos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\usuario\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\unidadehabitacional\caracteristicas\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\usuarios\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\empresa\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\ClienteDesktopPousada\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\principal\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\clientes\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\grupos\produtos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\unidadehabitacional\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\base\cadastro\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\conexao\interfaces\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\produtos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\estadia\acompanhante\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="..\out\bin\Win32\ClienteDesktopPousada.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>ClienteDesktopPousada.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\login\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\produtos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\caracteristicas\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\shared\exceptions\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -354,13 +994,704 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\empresa\contatos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\shared\exceptions\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\produtos\interfaces\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\unidadehabitacional\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\produtos\interfaces\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\infra\styles\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\produtos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\ClienteDesktopPousada\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\model\usuarios\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\usuarios\validacoes\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\base\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\unidadehabitacional\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\caracteristicas\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\usuarios\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\conexao\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\pessoa\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\produtos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\grupos\produtos\validacoes\basicas\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\conexao\interfaces\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\grupos\produtos\validacoes\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\unidadehabitacional\categoria\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\grupos\produtos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\unidadehabitacional\caracteristicas\interfaces\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\principal\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\usuarios\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\usuarios\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\grupos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\unidadehabitacional\caracteristicas\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\grupos\produtos\interfaces\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\caracteristicas\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\caracteristicas\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\grupos\produtos\interfaces\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\empresa\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\binds\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\model\produtos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\validador\interfaces\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\grupoprodutos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\usuarios\interfaces\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\usuarios\interfaces\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\validador\validacoessimples\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\empresa\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\produtos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\model\base\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\produtos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\contatos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\base\crud\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\routes\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\caracteristicas\validacoes\basicas\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\usuario\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\shared\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\caracteristicas\validacoes\basicas\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\model\caracteristicas\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\shared\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\model\produtos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\caracteristicas\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\caracteristicas\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\usuario\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\base\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\grupos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\validador\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\grupoprodutos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\grupos\produtos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\base\cadastro\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\caracteristicas\validacoes\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\base\crud\interfaces\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\grupos\produtos\interfaces\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\grupos\produtos\interfaces\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\grupos\produtos\validacoes\basicas\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\produtos\validacoes\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\usuarios\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\usuarios\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\grupos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\estadia\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\usuarios\validacoes\basicas\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
                     <Platform Name="OSX32">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
-                    <Platform Name="iOSSimulator">
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\inicio\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\model\grupos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\model\usuarios\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\shared\json\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\estadia\acompanhante\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\produtos\interfaces\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\produtos\interfaces\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\login\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\shared\json\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\validador\validacoessimples\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\empresa\contatos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\empresa\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\infra\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\caracteristicas\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\model\caracteristicas\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\routes\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\binds\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\produtos\validacoes\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\usuarios\interfaces\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\usuarios\interfaces\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\desktop\views\messagebox\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\usuarios\validacoes\basicas\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\estadia\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\unidadehabitacional\caracteristicas\interfaces\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\entidades\caracteristicas\validacoes\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\grupos\produtos\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\infra\repository\base\crud\interfaces\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_ClienteDesktopPousada\cliente\presenter\caracteristicas\interfaces\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -1167,8 +2498,8 @@
                 <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME).app"/>
-                <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Android64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
@@ -1184,6 +2515,7 @@
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">True</Platform>
             </Platforms>
+            <ModelSupport>True</ModelSupport>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>

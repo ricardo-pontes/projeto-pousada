@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="hhwhgb6t9ag_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.usuario.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:ClienteDesktopPousada:desktop.views.usuario.@unitclass.ViewUsuarios" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.@unitclass.ViewUsuarios" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.NumberBoxCodigo" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.EditNome" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.EditSobrenome" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.EditCPF" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.EditRG" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.DateEditDataNascimento" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.EditCelular" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.EditLogradouro" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.EditNumero" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.EditBairro" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.EditCidade" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.EditCEP" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.ComboBox1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Label2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Label3" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Label4" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Label5" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Label6" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Label7" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Label8" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Label9" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Label11" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Label10" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Label12" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Label13" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Label14" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Label15" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Label17" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Label16" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.FormCreate(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.ListViewPesquisaItemClickEx(System.TObject,System.Integer,System.Types.TPointF,FMX.ListView.Types.TListItemDrawable)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.CarregarUsuarios(System.Generics.Collections.TObjectList&lt;entidades.usuario.TUsuario&gt;)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Instancia()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.usuario.TViewUsuarios.Render()" />
+    </reference>
+  </view>
+</nodeSet>

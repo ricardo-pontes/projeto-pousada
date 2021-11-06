@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="6m1fovq5y8i_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.estadia.TEstadia">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.TEstadia.FID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.TEstadia.FIDEmpresa" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.TEstadia.FIDCliente" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.TEstadia.FDataEntrada" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.TEstadia.FDataSaida" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.TEstadia.FDataRegistro" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.TEstadia.FValor" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.TEstadia.FObservacoes" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.TEstadia.FNomeCliente" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.estadia.TEstadia.ID" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.estadia.TEstadia.IDEmpresa" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.estadia.TEstadia.IDCliente" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.estadia.TEstadia.NomeCliente" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.estadia.TEstadia.DataEntrada" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.estadia.TEstadia.DataSaida" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.estadia.TEstadia.DataRegistro" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.estadia.TEstadia.Valor" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.estadia.TEstadia.Observacoes" />
+    </reference>
+    <reference referencedUin="design:view:::ode7p26y96h_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.estadia.acompanhante.TEstadiaAcompanhante" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.estadia.acompanhante.@unitclass" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.estadia.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_TABELA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_ID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_ID_DISPLAY" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_ID_EMPRESA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_ID_EMPRESA_DISPLAY" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_ID_CLIENTE" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_ID_CLIENTE_DISPLAY" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_DATA_ENTRADA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_DATA_ENTRADA_DISPLAY" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_DATA_SAIDA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_DATA_SAIDA_DISPLAY" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_DATA_REGISTRO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_DATA_REGISTRO_DISPLAY" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_VALOR" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_VALOR_DISPLAY" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_OBSERVACOES" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.@unitclass.EST_OBSERVACOES_DISPLAY" />
+    </reference>
+  </view>
+</nodeSet>

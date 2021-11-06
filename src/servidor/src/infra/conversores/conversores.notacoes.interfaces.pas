@@ -9,7 +9,7 @@ type
   iNotacao = interface;
   {$SCOPEDENUMS ON}
   TTipoSql = (Select, Update, Insert, Delete);
-  TNotacaoConstraint = (PK, AutoInc, IgnoreWriteSQLs);
+  TNotacaoConstraint = (PK, AutoInc, IgnoreWriteSQLs, DateField);
   {$SCOPEDENUMS OFF}
 
   TNotacaoConstraints = set of TNotacaoConstraint;

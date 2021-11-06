@@ -10,12 +10,14 @@ type
     FDescricao: string;
     FIDGrupo: integer;
     FAtivo: string;
+    FNomeGrupo: string;
 
   public
     property ID: Int64 read FID write FID;
     property IDEmpresa: integer read FIDEmpresa write FIDEmpresa;
     property Descricao: string read FDescricao write FDescricao;
     property IDGrupo: integer read FIDGrupo write FIDGrupo;
+    property NomeGrupo: string read FNomeGrupo write FNomeGrupo;
     property Ativo: string read FAtivo write FAtivo;
   end;
 

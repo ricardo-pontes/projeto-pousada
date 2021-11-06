@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="0o3m8hyda3r_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.base.TModelBase&lt;1&gt;">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.model.base.TModelBase&lt;1&gt;.FEntidade" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.model.base.TModelBase&lt;1&gt;.FEntidades" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.model.base.TModelBase&lt;1&gt;.FValidador" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.model.base.TModelBase&lt;1&gt;.FRepository" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.base.TModelBase&lt;1&gt;.Create(cliente.infra.repository.base.crud.interfaces.iRepositoryBaseCrud&lt;1&gt;)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.base.TModelBase&lt;1&gt;.Destroy()" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:cliente.model.base.TModelBase&lt;1&gt;.Entidade" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:cliente.model.base.TModelBase&lt;1&gt;.Entidades" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:cliente.model.base.TModelBase&lt;1&gt;.Validador" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.base.TModelBase&lt;1&gt;.Alterar(T)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.base.TModelBase&lt;1&gt;.BuscarPorID(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.base.TModelBase&lt;1&gt;.Inserir(T)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.base.TModelBase&lt;1&gt;.Deletar(System.Integer)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.base.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

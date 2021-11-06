@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="s7499fuy2qq_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.NumberBoxCodigo" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.EditDescricao" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.NumberBoxValorVenda" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.NumberBoxValorCusto" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.ComboBoxGrupoProduto" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.Label10" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.Label7" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.Label8" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.Label9" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.Label2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.Label3" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.Label4" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.Label5" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.Label11" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.Label12" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.Button3" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.btnNovoGrupoProdutos" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.FormCreate(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.FormDestroy(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.ListViewPesquisaItemClickEx(System.TObject,System.Integer,System.Types.TPointF,FMX.ListView.Types.TListItemDrawable)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.ButtonSalvarClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.ButtonNovoClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.Button3Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.btnNovoGrupoProdutosClick(System.TObject)" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.FPresenter" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.FPresenterGrupoProdutos" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.CarregarProdutos(System.Generics.Collections.TObjectList&lt;entidades.produtos.TProduto&gt;)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.CarregarGruposProdutos(System.Generics.Collections.TObjectList&lt;entidades.grupoprodutos.TGrupoProduto&gt;)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.Instancia()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.produtos.TViewProdutos.Listening(Router4D.Props.TProps)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.produtos.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:ClienteDesktopPousada:desktop.views.produtos.@unitclass.ViewProdutos" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.produtos.@unitclass.ViewProdutos" />
+    </reference>
+  </view>
+</nodeSet>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="pgypn2xbiom_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::38606lt9sbq_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::ynh92hendum_v" />
+    </reference>
+    <reference referencedUin="design:view:::arn9bpg0y0n_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.caracteristicas.TModelCaracteristicas" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.caracteristicas.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::uy2bbgnuagp_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.produtos.TModelProdutos" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.produtos.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::0o3m8hyda3r_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.base.TModelBase&lt;1&gt;" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.base.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::u2gru1u0a4t_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.usuarios.TModelUsuarios" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.usuarios.@unitclass" />
+    </reference>
+  </view>
+</nodeSet>

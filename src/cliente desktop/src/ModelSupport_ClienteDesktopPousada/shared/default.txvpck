@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="p0dsmngwurn_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::a5onyreep4j_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionFalhaBancoDadosGravacao" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionConversaoNumerica" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionPersonalizada" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.TSharedExceptionsRest" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionFalhaConversaoObjeto" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionValidacao" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionFalhaBancoDadosLeitura" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionFalhaBancoDados" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionNaoEncontrado" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionConversao" />
+    </reference>
+    <reference referencedUin="design:view:::jqwfh5jl2qo_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.json.TJSONConverter" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.json.@unitclass" />
+    </reference>
+  </view>
+</nodeSet>

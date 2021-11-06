@@ -21,6 +21,8 @@ type
     class function New(aConexao : iConexao; aNotacao : iNotacao) : iRepositoryGrupoProdutos;
 
     function BuscarPorIDEmpresa(aIDEmpresa : integer) : TObjectList<TGrupoProduto>;
+    function Ativar(aID : integer) : string;
+    function Desativar(aID : integer) : string;
   end;
 
 implementation
@@ -30,6 +32,18 @@ uses
   conversores.notacoes.factory;
 
 { TRepositoryGrupoProdutosDB }
+
+function TRepositoryGrupoProdutosDB.Ativar(aID: integer): string;
+begin
+  var lSQL := TStringBuilder.Create;
+  try
+    lSQL.Append('update ' + PG_TABELA + ' set ' +PG_ATIVO + ' = ' + QuotedStr('S'));
+    lSQL.Append(' where ' + PG_ID + ' = ' + aID.ToString);
+    FConexao.DataSet.SQL(lSQL.ToString).ExecSQL;
+  finally
+    lSQL.DisposeOf;
+  end;
+end;
 
 function TRepositoryGrupoProdutosDB.BuscarPorIDEmpresa(aIDEmpresa : integer) : TObjectList<TGrupoProduto>;
 begin
@@ -46,6 +60,18 @@ begin
   FConexao := aConexao;
   FNotacao := aNotacao;
   inherited Create(FConexao, FNotacao);
+end;
+
+function TRepositoryGrupoProdutosDB.Desativar(aID: integer): string;
+begin
+  var lSQL := TStringBuilder.Create;
+  try
+    lSQL.Append('update ' + PG_TABELA + ' set ' +PG_ATIVO + ' = ' + QuotedStr('N'));
+    lSQL.Append(' where ' + PG_ID + ' = ' + aID.ToString);
+    FConexao.DataSet.SQL(lSQL.ToString).ExecSQL;
+  finally
+    lSQL.DisposeOf;
+  end;
 end;
 
 destructor TRepositoryGrupoProdutosDB.Destroy;

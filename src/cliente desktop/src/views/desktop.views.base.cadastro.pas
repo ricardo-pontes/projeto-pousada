@@ -9,6 +9,7 @@ uses
   System.Classes,
   System.Variants,
   System.Actions,
+  System.Generics.Collections,
 
   FMX.Types,
   FMX.Graphics,
@@ -27,6 +28,7 @@ uses
   FMX.ActnList,
   FMX.Edit,
   FMX.ListBox,
+  FMX.DateTimeCtrls,
   desktop.views.base;
 
 type
@@ -59,15 +61,20 @@ type
     procedure ButtonSalvarClick(Sender: TObject);
     procedure ButtonNovoClick(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     FEstadoCrud : TEstadoCrud;
+    FListen: TDictionary<string, string>;
+    FFormAnterior: string;
   public
     { Public declarations }
     property EstadoCrud: TEstadoCrud read FEstadoCrud write FEstadoCrud;
     procedure LimparComponentesCrud;
-    procedure ShowToast(aOwner : TComponent; aException : Exception); overload;
-    procedure ShowToast(aOwner : TComponent; aMessage : string); overload;
-    procedure ShowToastSuccess(aOwner : TComponent; aMessage : string);
+    procedure SetListItemAtivo(aValue : string; aItem : TListViewItem);
+
+    property Listen: TDictionary<string, string> read FListen write FListen;
+    property FormAnterior: string read FFormAnterior write FFormAnterior;
   end;
 
 var
@@ -102,6 +109,18 @@ begin
   ShowToastSuccess(TabControl1, 'Informações salvas com sucesso.');
 end;
 
+procedure TViewBaseCadastro.FormCreate(Sender: TObject);
+begin
+  inherited;
+  FListen:= TDictionary<string, string>.Create;
+end;
+
+procedure TViewBaseCadastro.FormDestroy(Sender: TObject);
+begin
+  inherited;
+  FListen.DisposeOf;
+end;
+
 procedure TViewBaseCadastro.LimparComponentesCrud;
 begin
   for var lComponent in FlowLayout1.Controls do
@@ -112,31 +131,28 @@ begin
     begin
       TComboBox(lComponent).ListBox.Clear;
       TComboBox(lComponent).ItemIndex := -1;
-    end;
+    end
+    else if lComponent is TDateEdit then
+      TDateEdit(lComponent).Text := EmptyStr;
+
   end;
 
 end;
 
-procedure TViewBaseCadastro.ShowToast(aOwner: TComponent; aMessage: string);
+procedure TViewBaseCadastro.SetListItemAtivo(aValue: string; aItem: TListViewItem);
 begin
-  TToast.New(TFMXObject(aOwner)).Success(aMessage);
-end;
-
-procedure TViewBaseCadastro.ShowToastSuccess(aOwner: TComponent; aMessage: string);
-begin
-  TToast.New(TFMXObject(aOwner)).Success(aMessage);
-end;
-
-procedure TViewBaseCadastro.ShowToast(aOwner : TComponent; aException: Exception);
-begin
-  if aException is ExceptionNaoEncontrado then
-    TToast.New(TFMXObject(aOwner)).Info(aException.Message)
-  else if aException is ExceptionValidacao then
-    TToast.New(TFMXObject(aOwner)).Warning(aException.Message)
-  else if aException is ExceptionConversao then
-    TToast.New(TFMXObject(aOwner)).Error(aException.Message)
-  else
-    TToast.New(TFMXObject(aOwner)).Error('Houve uma falha inesperada na ação.');
+  if aValue = 'S' then
+  begin
+    TListItemText(aItem.Objects.FindDrawable('Situacao')).TextColor := TAlphaColorRec.Red;
+    TListItemText(aItem.Objects.FindDrawable('Situacao')).Font.Style := [TFontStyle.fsUnderline];
+    TListItemText(aItem.Objects.FindDrawable('Situacao')).Text := 'desativar';
+  end
+  else if aValue = 'N' then
+  begin
+    TListItemText(aItem.Objects.FindDrawable('Situacao')).TextColor := TAlphaColorRec.Green;
+    TListItemText(aItem.Objects.FindDrawable('Situacao')).Font.Style := [TFontStyle.fsUnderline];
+    TListItemText(aItem.Objects.FindDrawable('Situacao')).Text := 'ativar';
+  end;
 end;
 
 end.

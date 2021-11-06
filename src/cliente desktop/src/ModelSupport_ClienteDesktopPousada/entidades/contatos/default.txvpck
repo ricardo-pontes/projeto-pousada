@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="736ohzhx8jn_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.contatos.TContato">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.contatos.TContato.FDescricao" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.contatos.TContato.FTipoContato" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.contatos.TContato.FID" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.contatos.TContato.ID" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.contatos.TContato.TipoContato" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.contatos.TContato.Descricao" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.contatos.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

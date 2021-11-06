@@ -20,6 +20,8 @@ type
     function Alterar(aBody : string) : string; override;
     function BuscarPorIDEmpresa(aID : string) : TJSONArray;
     function Inserir(aBody : string) : string; override;
+    function Ativar(aID : string) : string;
+    function Desativar(aID : string) : string;
   end;
 
 implementation
@@ -40,6 +42,15 @@ begin
   inherited;
 end;
 
+function TControllerGrupoProdutos.Ativar(aID: string): string;
+begin
+  var lID := 0;
+  if not TryStrToInt(aID, lID) then
+    raise Exception.Create('Só são aceitos números no parâmetro.');
+
+  Result := FModel.Ativar(lID);
+end;
+
 function TControllerGrupoProdutos.BuscarPorIDEmpresa(aID: string): TJSONArray;
 begin
   var lID := 0;
@@ -53,6 +64,15 @@ constructor TControllerGrupoProdutos.Create;
 begin
   FModel := TModelGrupoProdutos.New(TRepositories.GrupoProdutos);
   inherited Create(FModel);
+end;
+
+function TControllerGrupoProdutos.Desativar(aID: string): string;
+begin
+  var lID := 0;
+  if not TryStrToInt(aID, lID) then
+    raise Exception.Create('Só são aceitos números no parâmetro.');
+
+  Result := FModel.Desativar(lID);
 end;
 
 destructor TControllerGrupoProdutos.Destroy;

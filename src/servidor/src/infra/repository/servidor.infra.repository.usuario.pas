@@ -20,7 +20,9 @@ type
     destructor Destroy; override;
     class function New(aConexao : iConexao; aNotacao : iNotacao) : iRepositoryUsuarios;
 
+    function Ativar(aID : integer) : string;
     function BuscarPorIDEmpresa(aIDEmpresa : integer) : TObjectList<TUsuario>;
+    function Desativar(aID : integer) : string;
     function Login(aEmail, aSenha : string) : TUsuario;
   end;
 
@@ -31,6 +33,18 @@ uses
   shared.exceptions;
 
 { TRepositoryUsuarios }
+
+function TRepositoryUsuarios.Ativar(aID: integer): string;
+begin
+  var lSQL := TStringBuilder.Create;
+  try
+    lSQL.Append('update ' + USU_TABELA + ' set ' + USU_ATIVO + ' = ' + QuotedStr('S'));
+    lSQL.Append(' where ' + USU_ID + ' = ' + aID.ToString);
+    FConexao.DataSet.ExecSQL(lSQL.ToString);
+  finally
+    lSQL.DisposeOf;
+  end;
+end;
 
 function TRepositoryUsuarios.BuscarPorIDEmpresa(aIDEmpresa: integer): TObjectList<TUsuario>;
 begin
@@ -50,6 +64,18 @@ begin
   inherited Create(FConexao, FNotacao);
 end;
 
+function TRepositoryUsuarios.Desativar(aID: integer): string;
+begin
+  var lSQL := TStringBuilder.Create;
+  try
+    lSQL.Append('update ' + USU_TABELA + ' set ' + USU_ATIVO + ' = ' + QuotedStr('N'));
+    lSQL.Append(' where ' + USU_ID + ' = ' + aID.ToString);
+    FConexao.DataSet.ExecSQL(lSQL.ToString);
+  finally
+    lSQL.DisposeOf;
+  end;
+end;
+
 destructor TRepositoryUsuarios.Destroy;
 begin
 
@@ -62,8 +88,8 @@ begin
   var lSQL := TStringBuilder.Create;
   try
     lSQL.Append('select * from ' + USU_TABELA);
-    lSQL.Append(' where ' + USU_EMAIL + ' = ' + aEmail);
-    lSQL.Append(' and ' + USU_SENHA + ' = ' + aSenha);
+    lSQL.Append(' where ' + USU_EMAIL + ' = ' + aEmail.QuotedString);
+    lSQL.Append(' and ' + USU_SENHA + ' = ' + aSenha.QuotedString);
     FConexao.DataSet.SQL(lSQL.ToString).Open;
     if FConexao.DataSet.RecordCount = 1 then
     begin

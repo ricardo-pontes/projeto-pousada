@@ -11,6 +11,8 @@ type
   iRepositoryGrupoProdutos = interface(iRepositoryBaseCrud<TGrupoProduto>)
     ['{DFCBE7C1-F6AC-4BF5-861D-D54C23FF985E}']
     function BuscarPorIDEmpresa(aID : string) : TObjectList<TGrupoProduto>;
+    procedure Ativar(aID : string);
+    procedure Desativar(aID : string);
   end;
 
 implementation

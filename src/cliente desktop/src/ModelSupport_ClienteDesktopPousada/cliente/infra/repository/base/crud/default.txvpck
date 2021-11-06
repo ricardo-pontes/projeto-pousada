@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="wo2iqb2yubh_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::b0u6pcd9wqj_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.base.crud.interfaces.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.base.crud.interfaces.iRepositoryBaseCrud&lt;1&gt;" />
+    </reference>
+  </view>
+</nodeSet>

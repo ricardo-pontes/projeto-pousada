@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="ynmitjau5dn_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.Layout1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.Rectangle1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.Rectangle2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.ShadowEffect1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.Layout2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.Button1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.lblTitulo" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.Layout3" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.Layout4" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.lblMensagem" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.ButtonSim" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.ButtonNao" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.ButtonOk" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.ButtonSimClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.ButtonNaoClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.ButtonOkClick(System.TObject)" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.FProcSim" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.FProcNao" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.FProcOK" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.FRender" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.MensagemSimNao(System.string,System.string,System.SysUtils.TProc,System.SysUtils.TProc)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.MensagemSimNao(System.string,System.string,System.SysUtils.TProc)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.MensagemOk(System.string,System.string,System.SysUtils.TProc)" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:desktop.views.messagebox.TMessageBox.Render" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.messagebox.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:ClienteDesktopPousada:desktop.views.messagebox.@unitclass.MessageBox" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.messagebox.@unitclass.MessageBox" />
+    </reference>
+  </view>
+</nodeSet>

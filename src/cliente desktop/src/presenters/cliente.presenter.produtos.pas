@@ -18,7 +18,7 @@ type
     destructor Destroy; override;
     procedure BuscarPorIDEmpresa(aID : integer);
     procedure BuscarPorID(aID : integer);
-    procedure Inserir;
+    procedure Inserir(aIDEmpresa : integer);
     procedure Alterar;
   end;
 
@@ -64,10 +64,11 @@ begin
   FModelProdutos.DisposeOf;
 end;
 
-procedure TPresenterProdutos.Inserir;
+procedure TPresenterProdutos.Inserir(aIDEmpresa : integer);
 begin
+  FModelProdutos.PrepararInsercao;
+  FModelProdutos.Entidade.IDEmpresa := aIDEmpresa;
   FBinds.Entity(FModelProdutos.Entidade).BindToEntity;
-  FModelProdutos.Entidade.IDEmpresa := 1;
   FModelProdutos.Inserir(FModelProdutos.Entidade);
 end;
 

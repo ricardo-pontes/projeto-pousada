@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="ode7p26y96h_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.estadia.acompanhante.TEstadiaAcompanhante">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.acompanhante.TEstadiaAcompanhante.FID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.acompanhante.TEstadiaAcompanhante.FIDEmpresa" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.acompanhante.TEstadiaAcompanhante.FIDEstadia" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.acompanhante.TEstadiaAcompanhante.FNome" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.acompanhante.TEstadiaAcompanhante.FCelular" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.estadia.acompanhante.TEstadiaAcompanhante.ID" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.estadia.acompanhante.TEstadiaAcompanhante.IDEmpresa" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.estadia.acompanhante.TEstadiaAcompanhante.IDEstadia" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.estadia.acompanhante.TEstadiaAcompanhante.Nome" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.estadia.acompanhante.TEstadiaAcompanhante.Celular" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.estadia.acompanhante.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.acompanhante.@unitclass.ESTA_TABELA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.acompanhante.@unitclass.ESTA_ID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.acompanhante.@unitclass.ESTA_ID_DISPLAY" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.acompanhante.@unitclass.ESTA_ID_EMPRESA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.acompanhante.@unitclass.ESTA_ID_EMPRESA_DISPLAY" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.acompanhante.@unitclass.ESTA_ID_ESTADIA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.acompanhante.@unitclass.ESTA_ID_ESTADIA_DISPLAY" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.acompanhante.@unitclass.ESTA_NOME" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.acompanhante.@unitclass.ESTA_NOME_DISPLAY" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.acompanhante.@unitclass.ESTA_CELULAR" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.estadia.acompanhante.@unitclass.ESTA_CELULAR_DISPLAY" />
+    </reference>
+  </view>
+</nodeSet>

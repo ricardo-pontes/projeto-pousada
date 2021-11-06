@@ -155,6 +155,7 @@ begin
     begin
       var lAutoInc := False;
       var lIgnore := False;
+      var lDateField := False;
       for var lConstraint in lNotacaoItem.Constraints do
       begin
         if lConstraint = TNotacaoConstraint.PK then
@@ -165,6 +166,9 @@ begin
 
         if lConstraint = TNotacaoConstraint.IgnoreWriteSQLs then
           lIgnore := True;
+
+        if lConstraint = TNotacaoConstraint.DateField then
+          lDateField := True;
       end;
 
       if lAutoInc then
@@ -187,7 +191,17 @@ begin
         case lProperty.PropertyType.TypeKind of
           tkInteger     : lValues.Append(lProperty.GetValue(Pointer(FObject)).AsInteger);
           tkChar        : lValues.Append(lProperty.GetValue(Pointer(FObject)).AsString.QuotedString);
-          tkFloat       : lValues.Append(lProperty.GetValue(Pointer(FObject)).AsExtended.ToString.Replace(',', '.', [rfReplaceAll]));
+          tkFloat       :
+          begin
+            if lDateField then
+            begin
+              var lData := FormatDateTime('dd.mm.yyyy', FloatToDateTime(lProperty.GetValue(Pointer(FObject)).AsExtended)).QuotedString;
+              lValues.Append(lData);
+            end
+            else
+              lValues.Append(lProperty.GetValue(Pointer(FObject)).AsExtended.ToString.Replace(',', '.', [rfReplaceAll]));
+          end;
+
           tkString      : lValues.Append(lProperty.GetValue(Pointer(FObject)).AsString.QuotedString);
           tkWChar       : lValues.Append(lProperty.GetValue(Pointer(FObject)).AsString.QuotedString);
           tkLString     : lValues.Append(lProperty.GetValue(Pointer(FObject)).AsString.QuotedString);
@@ -285,6 +299,7 @@ begin
 
     for var lNotacaoItem in FNotacoes do
     begin
+      var lDateField := False;
       var lProperty := lType.GetProperty(lNotacaoItem.PropertyName);
       var lIgnore := False;
       if Assigned(lProperty) then
@@ -299,6 +314,9 @@ begin
 
           if lConstraint = TNotacaoConstraint.IgnoreWriteSQLs then
             lIgnore := True;
+
+          if lConstraint = TNotacaoConstraint.DateField then
+            lDateField := True;
         end;
 
         if lIgnore then
@@ -313,7 +331,16 @@ begin
           tkInteger     : lSQL.Append(lNotacaoItem.DataSetFieldName).Append('=').Append(lProperty.GetValue(Pointer(FObject)).AsInteger);
           tkInt64       : lSQL.Append(lNotacaoItem.DataSetFieldName).Append('=').Append(lProperty.GetValue(Pointer(FObject)).AsInt64);
           tkChar        : lSQL.Append(lNotacaoItem.DataSetFieldName).Append('=').Append(lProperty.GetValue(Pointer(FObject)).AsString.QuotedString);
-          tkFloat       : lSQL.Append(lNotacaoItem.DataSetFieldName).Append('=').Append(lProperty.GetValue(Pointer(FObject)).AsExtended.ToString.Replace(',', '.', [rfReplaceAll]));
+          tkFloat       :
+          begin
+            if lDateField then
+            begin
+              var lData := FormatDateTime('dd.mm.yyyy', FloatToDateTime(lProperty.GetValue(Pointer(FObject)).AsExtended)).QuotedString;
+              lSQL.Append(lNotacaoItem.DataSetFieldName).Append('=').Append(lData);
+            end
+            else
+             lSQL.Append(lNotacaoItem.DataSetFieldName).Append('=').Append(lProperty.GetValue(Pointer(FObject)).AsExtended.ToString.Replace(',', '.', [rfReplaceAll]));
+          end;
           tkString      : lSQL.Append(lNotacaoItem.DataSetFieldName).Append('=').Append(lProperty.GetValue(Pointer(FObject)).AsString.QuotedString);
           tkWChar       : lSQL.Append(lNotacaoItem.DataSetFieldName).Append('=').Append(lProperty.GetValue(Pointer(FObject)).AsString.QuotedString);
           tkLString     : lSQL.Append(lNotacaoItem.DataSetFieldName).Append('=').Append(lProperty.GetValue(Pointer(FObject)).AsString.QuotedString);

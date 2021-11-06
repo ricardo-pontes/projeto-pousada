@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="xenstmx0e4n_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.interfaces.iRepositoryUsuarios">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.interfaces.iRepositoryUsuarios.Ativar(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.interfaces.iRepositoryUsuarios.BuscarPorIDEmpresa(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.interfaces.iRepositoryUsuarios.Desativar(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.interfaces.iRepositoryUsuarios.Logar(System.string,System.string)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.interfaces.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

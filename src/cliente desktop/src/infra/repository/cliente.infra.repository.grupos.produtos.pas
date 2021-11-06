@@ -20,8 +20,9 @@ type
     procedure Alterar(aValue : TGrupoProduto);
     function BuscarPorID(aID : string) : TGrupoProduto;
     procedure Inserir(aValue : TGrupoProduto);
-
     function BuscarPorIDEmpresa(aID : string) : TObjectList<TGrupoProduto>;
+    procedure Ativar(aID : string);
+    procedure Desativar(aID : string);
   end;
 
 implementation
@@ -36,6 +37,12 @@ uses
 procedure TRepositoryGrupoProdutos.Alterar(aValue: TGrupoProduto);
 begin
   var lResponse := FConexao.Resource('/empresa/gruposprodutos').AddBody(TJSONConverter.ObjectToJson(aValue)).Put;
+  TSharedExceptionsRest.Checar(lResponse.StatusCode, lResponse.Content);
+end;
+
+procedure TRepositoryGrupoProdutos.Ativar(aID: string);
+begin
+  var lResponse := FConexao.Resource('/empresa/gruposprodutos/' + aID + '/ativar').Post;
   TSharedExceptionsRest.Checar(lResponse.StatusCode, lResponse.Content);
 end;
 
@@ -56,6 +63,12 @@ end;
 constructor TRepositoryGrupoProdutos.Create(aConexao : iRequest);
 begin
   FConexao := aConexao;
+end;
+
+procedure TRepositoryGrupoProdutos.Desativar(aID: string);
+begin
+  var lResponse := FConexao.Resource('/empresa/gruposprodutos/' + aID + '/desativar').Post;
+  TSharedExceptionsRest.Checar(lResponse.StatusCode, lResponse.Content);
 end;
 
 destructor TRepositoryGrupoProdutos.Destroy;

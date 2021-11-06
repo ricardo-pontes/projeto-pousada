@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="1nrnez1keer_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::shxa520uu8p_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.empresa.endereco.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::02nfg1d06un_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.empresa.contatos.TEmpresaContato" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.empresa.contatos.@unitclass" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.empresa.TEmpresa">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.empresa.TEmpresa.Create()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.empresa.TEmpresa.Destroy()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.empresa.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.@unitclass.EMP_TABELA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.@unitclass.EMP_ID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.@unitclass.EMP_RAZAO_SOCIAL" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.@unitclass.EMP_NOME_FANTASIA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.@unitclass.EMP_CNPJ" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.@unitclass.EMP_EMAIL" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.@unitclass.EMP_SITE" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.@unitclass.EMP_TELEFONE" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.@unitclass.EMP_DATA_CADASTRO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.@unitclass.EMP_LOGRADOURO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.@unitclass.EMP_NUMERO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.@unitclass.EMP_BAIRRO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.@unitclass.EMP_CIDADE" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.@unitclass.EMP_UF" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.@unitclass.EMP_CEP" />
+    </reference>
+  </view>
+</nodeSet>

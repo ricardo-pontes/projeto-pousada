@@ -1,0 +1,477 @@
+inherited ViewEmpresas: TViewEmpresas
+  Caption = 'ViewBase1'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  inherited lytPrincipal: TLayout
+    object Rectangle1: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Padding.Left = 20.000000000000000000
+      Padding.Right = 20.000000000000000000
+      Padding.Bottom = 20.000000000000000000
+      Size.Width = 784.000000000000000000
+      Size.Height = 480.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      XRadius = 20.000000000000000000
+      YRadius = 20.000000000000000000
+      object Rectangle2: TRectangle
+        Align = Top
+        Fill.Color = claWhite
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 20.000000000000000000
+        Sides = []
+        Size.Width = 744.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object Button1: TButton
+          Align = Right
+          Margins.Top = 14.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 14.000000000000000000
+          Position.X = 695.000000000000000000
+          Position.Y = 14.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 21.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonminimizar'
+          TabOrder = 1
+        end
+        object Button2: TButton
+          Align = Right
+          Margins.Top = 14.000000000000000000
+          Margins.Bottom = 14.000000000000000000
+          Position.X = 722.000000000000000000
+          Position.Y = 14.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 21.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonclose'
+          TabOrder = 0
+        end
+        object Label1: TLabel
+          Align = Left
+          StyledSettings = []
+          Size.Width = 585.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.Font.StyleExt = {00050000000000000004000000}
+          TextSettings.FontColor = claDarkslategray
+          Text = 'Cadastro > Empresa'
+          TabOrder = 2
+        end
+        object Line1: TLine
+          Align = MostBottom
+          LineType = Bottom
+          Position.Y = 49.000000000000000000
+          Size.Width = 744.000000000000000000
+          Size.Height = 1.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claSilver
+        end
+      end
+      object FlowLayout1: TFlowLayout
+        Align = Client
+        Padding.Top = 30.000000000000000000
+        Size.Width = 744.000000000000000000
+        Size.Height = 358.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Justify = Left
+        JustifyLastLine = Left
+        FlowDirection = LeftToRight
+        HorizontalGap = 10.000000000000000000
+        VerticalGap = 30.000000000000000000
+        object NumberBoxCodigo: TNumberBox
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          StyleLookup = 'edit1'
+          TabOrder = 0
+          TabStop = False
+          Cursor = crIBeam
+          Max = 100000000.000000000000000000
+          ReadOnly = True
+          Position.Y = 30.000000000000000000
+          Enabled = False
+          Size.Width = 97.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          KillFocusByReturn = True
+          object Label12: TLabel
+            Align = Top
+            StyledSettings = [Family, Size, Style]
+            Margins.Top = -18.000000000000000000
+            Position.Y = -18.000000000000000000
+            Size.Width = 97.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'label2'
+            TextSettings.FontColor = xFF393939
+            Text = 'C'#243'digo'
+            TabOrder = 0
+          end
+        end
+        object EditRazaoSocial: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          StyleLookup = 'edit1'
+          TabOrder = 1
+          ReturnKeyType = Next
+          Position.X = 107.000000000000000000
+          Position.Y = 30.000000000000000000
+          Size.Width = 305.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object Label7: TLabel
+            Align = Top
+            Margins.Top = -18.000000000000000000
+            Position.Y = -18.000000000000000000
+            Size.Width = 305.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'label2'
+            Text = 'Raz'#227'o Social'
+            TabOrder = 0
+          end
+        end
+        object EditNomeFantasia: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          StyleLookup = 'edit1'
+          TabOrder = 2
+          ReturnKeyType = Next
+          Position.X = 422.000000000000000000
+          Position.Y = 30.000000000000000000
+          Size.Width = 305.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object Label2: TLabel
+            Align = Top
+            Margins.Top = -18.000000000000000000
+            Position.Y = -18.000000000000000000
+            Size.Width = 305.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'label2'
+            Text = 'Nome de Fantasia'
+            TabOrder = 0
+          end
+        end
+        object EditCNPJ: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          StyleLookup = 'edit1'
+          TabOrder = 3
+          ReturnKeyType = Next
+          Position.Y = 82.000000000000000000
+          Size.Width = 129.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object Label3: TLabel
+            Align = Top
+            Margins.Top = -18.000000000000000000
+            Position.Y = -18.000000000000000000
+            Size.Width = 129.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'label2'
+            Text = 'CNPJ'
+            TabOrder = 0
+          end
+        end
+        object EditSite: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          StyleLookup = 'edit1'
+          TabOrder = 4
+          ReturnKeyType = Next
+          Position.X = 139.000000000000000000
+          Position.Y = 82.000000000000000000
+          Size.Width = 273.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object Label4: TLabel
+            Align = Top
+            Margins.Top = -18.000000000000000000
+            Position.Y = -18.000000000000000000
+            Size.Width = 273.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'label2'
+            Text = 'Site'
+            TabOrder = 0
+          end
+        end
+        object EditTelefone: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          StyleLookup = 'edit1'
+          TabOrder = 5
+          ReturnKeyType = Next
+          Position.X = 422.000000000000000000
+          Position.Y = 82.000000000000000000
+          Size.Width = 123.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object Label5: TLabel
+            Align = Top
+            Margins.Top = -18.000000000000000000
+            Position.Y = -18.000000000000000000
+            Size.Width = 123.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'label2'
+            Text = 'Telefone'
+            TabOrder = 0
+          end
+        end
+        object EditWhatsapp: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          StyleLookup = 'edit1'
+          TabOrder = 6
+          ReturnKeyType = Next
+          Position.X = 555.000000000000000000
+          Position.Y = 82.000000000000000000
+          Size.Width = 123.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object Label6: TLabel
+            Align = Top
+            Margins.Top = -18.000000000000000000
+            Position.Y = -18.000000000000000000
+            Size.Width = 123.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'label2'
+            Text = 'Whatsapp'
+            TabOrder = 0
+          end
+        end
+        object EditInstagram: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          StyleLookup = 'edit1'
+          TabOrder = 7
+          ReturnKeyType = Next
+          Position.Y = 134.000000000000000000
+          Size.Width = 329.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object Label8: TLabel
+            Align = Top
+            Margins.Top = -18.000000000000000000
+            Position.Y = -18.000000000000000000
+            Size.Width = 329.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'label2'
+            Text = 'Instagram'
+            TabOrder = 0
+          end
+        end
+        object EditFacebook: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          StyleLookup = 'edit1'
+          TabOrder = 8
+          ReturnKeyType = Next
+          Position.X = 339.000000000000000000
+          Position.Y = 134.000000000000000000
+          Size.Width = 329.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object Label9: TLabel
+            Align = Top
+            Margins.Top = -18.000000000000000000
+            Position.Y = -18.000000000000000000
+            Size.Width = 329.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'label2'
+            Text = 'Facebook'
+            TabOrder = 0
+          end
+        end
+        object EditCEP: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          StyleLookup = 'edit1'
+          TabOrder = 9
+          Position.Y = 186.000000000000000000
+          Size.Width = 94.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object Label17: TLabel
+            Align = Top
+            Margins.Top = -18.000000000000000000
+            Position.Y = -18.000000000000000000
+            Size.Width = 94.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'label2'
+            Text = 'CEP'
+            TabOrder = 0
+          end
+        end
+        object EditLogradouro: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          StyleLookup = 'edit1'
+          TabOrder = 10
+          Position.X = 104.000000000000000000
+          Position.Y = 186.000000000000000000
+          Size.Width = 222.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object Label10: TLabel
+            Align = Top
+            Margins.Top = -18.000000000000000000
+            Position.Y = -18.000000000000000000
+            Size.Width = 222.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'label2'
+            Text = 'Logradouro'
+            TabOrder = 0
+          end
+        end
+        object EditNumero: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          StyleLookup = 'edit1'
+          TabOrder = 11
+          Position.X = 336.000000000000000000
+          Position.Y = 186.000000000000000000
+          Size.Width = 70.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object Label13: TLabel
+            Align = Top
+            Margins.Top = -18.000000000000000000
+            Position.Y = -18.000000000000000000
+            Size.Width = 70.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'label2'
+            Text = 'N'#250'mero'
+            TabOrder = 0
+          end
+        end
+        object EditBairro: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          StyleLookup = 'edit1'
+          TabOrder = 12
+          Position.X = 416.000000000000000000
+          Position.Y = 186.000000000000000000
+          Size.Width = 193.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object Label14: TLabel
+            Align = Top
+            Margins.Top = -18.000000000000000000
+            Position.Y = -18.000000000000000000
+            Size.Width = 193.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'label2'
+            Text = 'Bairro'
+            TabOrder = 0
+          end
+        end
+        object EditCidade: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          StyleLookup = 'edit1'
+          TabOrder = 13
+          Position.Y = 238.000000000000000000
+          Size.Width = 177.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object Label15: TLabel
+            Align = Top
+            Margins.Top = -18.000000000000000000
+            Position.Y = -18.000000000000000000
+            Size.Width = 177.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'label2'
+            Text = 'Cidade'
+            TabOrder = 0
+          end
+        end
+        object ComboBoxUF: TComboBox
+          Items.Strings = (
+            'AC'
+            'AL'
+            'AP'
+            'AM'
+            'BA'
+            'CE'
+            'DF'
+            'ES'
+            'GO'
+            'MA'
+            'MT'
+            'MS'
+            'MG'
+            'PA'
+            'PB'
+            'PR'
+            'PE'
+            'PI'
+            'RJ'
+            'RN'
+            'RS'
+            'RO'
+            'RR'
+            'SC'
+            'SP'
+            'SE'
+            'TO')
+          Position.X = 187.000000000000000000
+          Position.Y = 238.000000000000000000
+          Size.Width = 49.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'combobox1'
+          TabOrder = 14
+          object Label16: TLabel
+            Align = Top
+            Margins.Top = -18.000000000000000000
+            Position.Y = -18.000000000000000000
+            Size.Width = 49.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'label2'
+            Text = 'UF'
+            TabOrder = 86
+          end
+        end
+      end
+      object Layout3: TLayout
+        Align = Top
+        Position.X = 20.000000000000000000
+        Position.Y = 52.000000000000000000
+        Size.Width = 744.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object ButtonSalvar: TButton
+          Align = Right
+          Margins.Top = 10.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 664.000000000000000000
+          Position.Y = 10.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 29.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'button1'
+          TabOrder = 0
+          Text = 'Salvar'
+          OnClick = ButtonSalvarClick
+        end
+        object Line2: TLine
+          Align = MostBottom
+          LineType = Bottom
+          Position.Y = 49.000000000000000000
+          Size.Width = 744.000000000000000000
+          Size.Height = 1.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claSilver
+        end
+      end
+    end
+  end
+end

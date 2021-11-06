@@ -301,6 +301,18 @@
         <DCCReference Include="controller\servidor.controller.estadias.acompanhantes.pas"/>
         <DCCReference Include="..\..\shared\shared.exceptions.pas"/>
         <DCCReference Include="..\..\entidades\validacoes\entidades.grupos.produtos.validacoes.basicas.pas"/>
+        <DCCReference Include="..\..\entidades\entidades.caracteristicas.pas"/>
+        <DCCReference Include="infra\repository\servidor.infra.repository.caracteristicas.interfaces.pas"/>
+        <DCCReference Include="infra\repository\servidor.infra.repository.caracteristicas.pas"/>
+        <DCCReference Include="model\servidor.model.caracteristicas.interfaces.pas"/>
+        <DCCReference Include="model\servidor.model.caracteristicas.pas"/>
+        <DCCReference Include="controller\servidor.controller.caracteristicas.interfaces.pas"/>
+        <DCCReference Include="controller\servidor.controller.caracteristicas.pas"/>
+        <DCCReference Include="infra\routes\servidor.infra.routes.caracteristicas.pas"/>
+        <DCCReference Include="..\..\entidades\validacoes\entidades.caracteristicas.validacoes.db.pas"/>
+        <DCCReference Include="..\..\entidades\validacoes\entidades.caracteristicas.validacoes.basicas.pas"/>
+        <DCCReference Include="infra\routes\servidor.infra.routes.empresa.pas"/>
+        <DCCReference Include="..\..\entidades\validacoes\entidades.usuarios.validacoes.db.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

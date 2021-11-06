@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="02nfg1d06un_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.empresa.contatos.TEmpresaContato">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.contatos.TEmpresaContato.FIDEmpresa" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.empresa.contatos.TEmpresaContato.IDEmpresa" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.empresa.contatos.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.contatos.@unitclass.EMPC_TABELA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.contatos.@unitclass.EMPC_ID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.contatos.@unitclass.EMPC_IDEMPRESA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.contatos.@unitclass.EMPC_TIPO_CONTATO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.empresa.contatos.@unitclass.EMPC_DESCRICAO" />
+    </reference>
+  </view>
+</nodeSet>

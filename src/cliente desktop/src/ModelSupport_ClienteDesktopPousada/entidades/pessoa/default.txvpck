@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="6llpx60t7tt_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.pessoa.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.pessoa.TPessoa">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.FID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.FLogradouro" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.FNumero" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.FBairro" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.FCidade" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.FUF" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.FTelefone" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.FDataCadastro" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.FCEP" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.FEmail" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.FAtivo" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.ID" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.Telefone" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.DataCadastro" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.Logradouro" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.Numero" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.Bairro" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.Cidade" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.UF" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.CEP" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.Email" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoa.Ativo" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.pessoa.TPessoaFisica">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_gnt:src:ClienteDesktopPousada:entidades.pessoa.TPessoaFisica:entidades.pessoa.TPessoa" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoaFisica.FCPF" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoaFisica.FRG" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoaFisica.FDataNascimento" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoaFisica.FNome" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoaFisica.FSobreNome" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.pessoa.TPessoaFisica.GetNomeCompleto()" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoaFisica.Nome" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoaFisica.SobreNome" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoaFisica.NomeCompleto" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoaFisica.CPF" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoaFisica.RG" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoaFisica.DataNascimento" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.pessoa.TPessoaJuridica">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_gnt:src:ClienteDesktopPousada:entidades.pessoa.TPessoaJuridica:entidades.pessoa.TPessoa" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoaJuridica.FRazaoSocial" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoaJuridica.FFantasia" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoaJuridica.FCNPJ" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.pessoa.TPessoaJuridica.FSite" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoaJuridica.RazaoSocial" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoaJuridica.Fantasia" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoaJuridica.CNPJ" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.pessoa.TPessoaJuridica.Site" />
+    </reference>
+  </view>
+</nodeSet>

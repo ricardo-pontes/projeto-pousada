@@ -39,8 +39,7 @@ procedure Inserir(aReq : THorseRequest; aRes : THorseResponse; aNext : TProc);
 begin
   try
     var lController := TControllerUnidadeHabitacionalCaracteristicas.New;
-    lController.Inserir(aReq.Body);
-    aRes.Send('OK').Status(THTTPStatus.Created);
+    aRes.Send(lController.Inserir(aReq.Body)).Status(THTTPStatus.Created);
   except on E: Exception do
     TExceptions.Tratar(E, aRes);
   end;

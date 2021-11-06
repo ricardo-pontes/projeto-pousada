@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="arn9bpg0y0n_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.caracteristicas.TModelCaracteristicas">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.model.caracteristicas.TModelCaracteristicas.FRepository" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.caracteristicas.TModelCaracteristicas.Create(cliente.infra.repository.caracteristicas.interfaces.iRepositoryCaracteristicas)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.caracteristicas.TModelCaracteristicas.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.caracteristicas.TModelCaracteristicas.Alterar(entidades.caracteristicas.TCaracteristica)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.caracteristicas.TModelCaracteristicas.BuscarPorIDEmpresa(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.caracteristicas.TModelCaracteristicas.Inserir(entidades.caracteristicas.TCaracteristica)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.caracteristicas.TModelCaracteristicas.Ativar(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.model.caracteristicas.TModelCaracteristicas.Desativar(System.Integer)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.model.caracteristicas.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

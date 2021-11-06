@@ -10,6 +10,7 @@ type
   private
 
   public
+    class function Categorias : iNotacao;
     class function Cliente : iNotacao;
     class function Empresa : iNotacao;
     class function EmpresaContatos : iNotacao;
@@ -35,9 +36,21 @@ uses
   entidades.empresa,
   entidades.produtos,
   entidades.unidadehabitacional,
+  entidades.unidadehabitacional.categoria,
   entidades.empresa.contatos,
   entidades.clientes,
-  entidades.estadia, entidades.estadia.acompanhante;
+  entidades.estadia,
+  entidades.estadia.acompanhante,
+  entidades.caracteristicas;
+
+class function TNotacoesFactory.Categorias: iNotacao;
+begin
+  Result := TNotacao.New.AddTableName(CAT_TABELA);
+  Result.AddNotation('ID',        CAT_ID, [TNotacaoConstraint.PK, TNotacaoConstraint.AutoInc])
+        .AddNotation('IDEmpresa', CAT_ID_EMPRESA)
+        .AddNotation('Descricao', CAT_DESCRICAO)
+        .AddNotation('Ativo',     CAT_ATIVO);
+end;
 
 class function TNotacoesFactory.Cliente: iNotacao;
 begin
@@ -69,13 +82,16 @@ begin
         .AddNotation('Email',        EMP_EMAIL)
         .AddNotation('Site',         EMP_SITE)
         .AddNotation('Telefone',     EMP_TELEFONE)
-        .AddNotation('DataCadastro', EMP_DATA_CADASTRO)
+        .AddNotation('DataCadastro', EMP_DATA_CADASTRO, [TNotacaoConstraint.DateField])
         .AddNotation('Logradouro',   EMP_LOGRADOURO)
         .AddNotation('Numero',       EMP_NUMERO)
         .AddNotation('Bairro',       EMP_BAIRRO)
         .AddNotation('Cidade',       EMP_CIDADE)
         .AddNotation('UF',           EMP_UF)
-        .AddNotation('CEP',          EMP_CEP);
+        .AddNotation('CEP',          EMP_CEP)
+        .AddNotation('Whatsapp',     EMP_WHATSAPP)
+        .AddNotation('Instagram',    EMP_INSTAGRAM)
+        .AddNotation('Facebook',     EMP_FACEBOOK)
 end;
 
 class function TNotacoesFactory.EmpresaContatos: iNotacao;
@@ -138,10 +154,12 @@ end;
 class function TNotacoesFactory.UnidadeHabitacional: iNotacao;
 begin
   Result := TNotacao.New.AddTableName(UH_TABELA);
+  Result.AddJoin(' inner join ' + UHCAT_TABELA + ' on ' + UHCAT_ID + ' = ' + UH_ID_GRUPO);
   Result.AddNotation('ID',        UH_ID, [TNotacaoConstraint.PK, TNotacaoConstraint.AutoInc])
         .AddNotation('IDEmpresa', UH_ID_EMPRESA)
         .AddNotation('Descricao', UH_DESCRICAO)
         .AddNotation('IDGrupo',   UH_ID_GRUPO)
+        .AddNotation('NomeGrupo', UHCAT_DESCRICAO, [TNotacaoConstraint.IgnoreWriteSQLs])
         .AddNotation('Ativo',     UH_ATIVO);
 end;
 
@@ -174,15 +192,16 @@ begin
         .AddNotation('RG',             USU_RG)
         .AddNotation('Email',          USU_EMAIL)
         .AddNotation('Senha',          USU_SENHA)
-        .AddNotation('DataNascimento', USU_DATA_NASCIMENTO)
+        .AddNotation('DataNascimento', USU_DATA_NASCIMENTO, [TNotacaoConstraint.DateField])
         .AddNotation('Telefone',       USU_TELEFONE)
-        .AddNotation('DataCadastro',   USU_DATA_CADASTRO)
+        .AddNotation('DataCadastro',   USU_DATA_CADASTRO, [TNotacaoConstraint.DateField])
         .AddNotation('Logradouro',     USU_LOGRADOURO)
         .AddNotation('Numero',         USU_NUMERO)
         .AddNotation('Bairro',         USU_BAIRRO)
         .AddNotation('Cidade',         USU_CIDADE)
         .AddNotation('UF',             USU_UF)
         .AddNotation('CEP',            USU_CEP)
+        .AddNotation('Ativo',          USU_ATIVO)
 end;
 
 end.

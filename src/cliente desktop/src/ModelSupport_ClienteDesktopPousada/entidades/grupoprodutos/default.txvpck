@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="7l7fja8ngkk_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.grupoprodutos.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.grupoprodutos.@unitclass.PG_TABELA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.grupoprodutos.@unitclass.PG_ID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.grupoprodutos.@unitclass.PG_IDEMPRESA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.grupoprodutos.@unitclass.PG_DESCRICAO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.grupoprodutos.@unitclass.PG_ATIVO" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.grupoprodutos.TGrupoProduto">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.grupoprodutos.TGrupoProduto.FID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.grupoprodutos.TGrupoProduto.FIDEmpresa" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.grupoprodutos.TGrupoProduto.FDescricao" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.grupoprodutos.TGrupoProduto.FAtivo" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.grupoprodutos.TGrupoProduto.ID" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.grupoprodutos.TGrupoProduto.IDEmpresa" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.grupoprodutos.TGrupoProduto.Descricao" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.grupoprodutos.TGrupoProduto.Ativo" />
+    </reference>
+  </view>
+</nodeSet>

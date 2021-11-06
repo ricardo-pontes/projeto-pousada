@@ -23,10 +23,12 @@ uses
   servidor.infra.repository.usuario.interfaces,
   servidor.infra.repository.usuario,
   servidor.infra.repository.estadias.acompanhantes.interfaces,
-  servidor.infra.repository.estadias.acompanhantes;
+  servidor.infra.repository.estadias.acompanhantes,
+  servidor.infra.repository.caracteristicas.interfaces;
 
 type
   TRepositories = class
+    class function Caracteristicas : iRepositoryCaracteristicas;
     class function Clientes : iRepositoryClientes;
     class function Estadias : iRepositoryEstadias;
     class function EstadiasAcompanhantes : iRepositoryEstadiasAcompanhantes;
@@ -44,7 +46,12 @@ implementation
 
 { TRepositories }
 
-uses conversores.notacoes.factory, servidor.infra.conexao;
+uses conversores.notacoes.factory, servidor.infra.conexao, servidor.infra.repository.caracteristicas;
+
+class function TRepositories.Caracteristicas: iRepositoryCaracteristicas;
+begin
+  Result := TRepositoryCaracteristicas.New(TConexaoFactory.New.Conexao, TNotacoesFactory.Categorias);
+end;
 
 class function TRepositories.Clientes: iRepositoryClientes;
 begin

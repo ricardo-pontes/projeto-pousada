@@ -39,8 +39,7 @@ procedure Inserir(aReq : THorseRequest; aRes : THorseResponse; aNext : TProc);
 begin
   try
     var lController := TControllerUsuarios.New;
-    lController.Inserir(aReq.Body);
-    aRes.Send('OK').Status(THTTPStatus.Created);
+    aRes.Send(lController.Inserir(aReq.Body)).Status(THTTPStatus.Created);
   except on E: Exception do
     TExceptions.Tratar(E, aRes);
   end;
@@ -56,12 +55,47 @@ begin
   end;
 end;
 
+procedure Logar(aReq : THorseRequest; aRes : THorseResponse; aNext : TProc);
+begin
+  try
+    var lController := TControllerUsuarios.New;
+    aRes.Send(lController.Logar(aReq.Body));
+  except on E: Exception do
+    TExceptions.Tratar(E, aRes);
+  end;
+end;
+
+procedure Ativar(aReq : THorseRequest; aRes : THorseResponse; aNext : TProc);
+begin
+  try
+    var lController := TControllerUsuarios.New;
+    lController.Ativar(aReq.Params.Items['id']);
+    aRes.Status(THTTPStatus.NoContent);
+  except on E: Exception do
+    TExceptions.Tratar(E, aRes);
+  end;
+end;
+
+procedure Desativar(aReq : THorseRequest; aRes : THorseResponse; aNext : TProc);
+begin
+  try
+    var lController := TControllerUsuarios.New;
+    lController.Desativar(aReq.Params.Items['id']);
+    aRes.Status(THTTPStatus.NoContent);
+  except on E: Exception do
+    TExceptions.Tratar(E, aRes);
+  end;
+end;
+
 procedure Registrar;
 begin
-  THorse.Post('/api/v1/empresa/usuarios',           Inserir);
-  THorse.Put('/api/v1/empresa/usuarios',            Alterar);
-  THorse.Get('/api/v1/empresa/:idempresa/usuarios', BuscarPorIDEmpresa);
-  THorse.Get('/api/v1/empresa/usuarios/:id',        BuscarPorID);
+  THorse.Post('/api/v1/empresas/usuarios',               Inserir);
+  THorse.Post('/api/v1/empresas/usuarios/:id/ativar',    Ativar);
+  THorse.Post('/api/v1/empresas/usuarios/:id/desativar', Desativar);
+  THorse.Post('/api/v1/empresas/usuarios/logar',         Logar);
+  THorse.Put('/api/v1/empresas/usuarios',                Alterar);
+  THorse.Get('/api/v1/empresas/:idempresa/usuarios',     BuscarPorIDEmpresa);
+  THorse.Get('/api/v1/empresas/usuarios/:id',            BuscarPorID);
 end;
 
 end.

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="2f0su5vfpyn_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.Layout2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.Layout3" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.Rectangle2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.Rectangle3" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.Rectangle4" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.Rectangle1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.Rectangle5" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.lytForms" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.ButtonProdutos" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.ButtonGrupoProdutos" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.Label1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.ButtonCaracteristicas" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.Button1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.ButtonUsuarios" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.ButtonProdutosClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.Button2Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.FormCreate(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.ButtonGrupoProdutosClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.ButtonCaracteristicasClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.Button1Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.FormDestroy(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.principal.TViewPrincipal.ButtonUsuariosClick(System.TObject)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.principal.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:ClienteDesktopPousada:desktop.views.principal.@unitclass.ViewPrincipal" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.principal.@unitclass.ViewPrincipal" />
+    </reference>
+  </view>
+</nodeSet>

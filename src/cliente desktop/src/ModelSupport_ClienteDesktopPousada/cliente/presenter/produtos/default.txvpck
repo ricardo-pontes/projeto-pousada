@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="c4cyffys0mr_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.produtos.TPresenterProdutos">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.presenter.produtos.TPresenterProdutos.FBinds" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.presenter.produtos.TPresenterProdutos.FView" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.presenter.produtos.TPresenterProdutos.FModelProdutos" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.produtos.TPresenterProdutos.Create(cliente.presenter.produtos.interfaces.iPresenterProdutosView)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.produtos.TPresenterProdutos.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.produtos.TPresenterProdutos.BuscarPorIDEmpresa(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.produtos.TPresenterProdutos.BuscarPorID(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.produtos.TPresenterProdutos.Inserir()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.produtos.TPresenterProdutos.Alterar()" />
+    </reference>
+    <reference referencedUin="design:view:::v6aznsi4byr_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.produtos.interfaces.iPresenterProdutos" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.produtos.interfaces.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.produtos.interfaces.iPresenterProdutosView" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.produtos.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

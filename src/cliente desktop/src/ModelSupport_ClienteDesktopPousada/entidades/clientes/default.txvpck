@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="3chmusscono_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.clientes.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_TABELA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_ID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_ID_EMPRESA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_NOME" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_CPF" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_RG" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_EMAIL" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_DATA_NASCIMENTO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_TELEFONE" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_CELULAR" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_DATA_CADASTRO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_LOGRADOURO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_NUMERO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_BAIRRO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_CIDADE" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_UF" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.@unitclass.CLI_CEP" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.clientes.TClientePF">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.clientes.TClientePF.FIDEmpresa" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.clientes.TClientePF.IDEmpresa" />
+    </reference>
+  </view>
+</nodeSet>

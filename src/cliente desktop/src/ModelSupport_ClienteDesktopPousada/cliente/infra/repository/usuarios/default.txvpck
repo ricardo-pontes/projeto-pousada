@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="aatp813iz7q_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::xenstmx0e4n_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.interfaces.iRepositoryUsuarios" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.interfaces.@unitclass" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.TRepositoryUsuariosRest">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.TRepositoryUsuariosRest.FConexao" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.TRepositoryUsuariosRest.Create(RESTRequest4D.Request.Contract.IRequest)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.TRepositoryUsuariosRest.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.TRepositoryUsuariosRest.New(RESTRequest4D.Request.Contract.IRequest)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.TRepositoryUsuariosRest.Alterar(entidades.usuario.TUsuario)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.TRepositoryUsuariosRest.Ativar(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.TRepositoryUsuariosRest.BuscarPorIDEmpresa(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.TRepositoryUsuariosRest.BuscarPorID(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.TRepositoryUsuariosRest.Desativar(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.TRepositoryUsuariosRest.Inserir(entidades.usuario.TUsuario)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.TRepositoryUsuariosRest.Logar(System.string,System.string)" />
+    </reference>
+  </view>
+</nodeSet>

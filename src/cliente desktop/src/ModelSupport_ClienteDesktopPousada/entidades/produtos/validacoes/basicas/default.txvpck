@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="e2niwvl6sek_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicasAlterar">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicasAlterar.FEntidade" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicasAlterar.Create()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicasAlterar.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicasAlterar.New()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicasAlterar.AddEntidade(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicasAlterar.Executar()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicas">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicas.FEntidade" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicas.Create()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicas.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicas.New()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicas.AddEntidade(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicas.Executar()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicasInserir">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicasInserir.FEntidade" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicasInserir.Create()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicasInserir.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicasInserir.New()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicasInserir.AddEntidade(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicasInserir.Executar()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

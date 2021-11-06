@@ -39,8 +39,7 @@ procedure Inserir(aReq : THorseRequest; aRes : THorseResponse; aNext : TProc);
 begin
   try
     var lController := TControllerUnidadeHabitacional.New;
-    lController.Inserir(aReq.Body);
-    aRes.Send('OK').Status(THTTPStatus.Created);
+    aRes.Send(lController.Inserir(aReq.Body)).Status(THTTPStatus.Created);
   except on E: Exception do
     TExceptions.Tratar(E, aRes);
   end;
@@ -58,10 +57,10 @@ end;
 
 procedure Registrar;
 begin
-  THorse.Post('/api/v1/empresa/unidadehabitacional',           Inserir);
-  THorse.Put('/api/v1/empresa/unidadehabitacional',            Alterar);
-  THorse.Get('/api/v1/empresa/:idempresa/unidadehabitacional', BuscarPorIDEmpresa);
-  THorse.Get('/api/v1/empresa/unidadehabitacional/:id',        BuscarPorID);
+  THorse.Post('/api/v1/empresas/unidadeshabitacionais',           Inserir);
+  THorse.Put('/api/v1/empresas/unidadeshabitacionais',            Alterar);
+  THorse.Get('/api/v1/empresas/:idempresa/unidadeshabitacionais', BuscarPorIDEmpresa);
+  THorse.Get('/api/v1/empresas/unidadeshabitacionais/:id',        BuscarPorID);
 end;
 
 end.

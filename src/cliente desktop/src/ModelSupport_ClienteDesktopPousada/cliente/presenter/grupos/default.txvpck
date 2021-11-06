@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="vkhy17hhvdk_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::piaffwrptsg_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.grupos.produtos.@unitclass" />
+      <reference referencedUin="design:view:::j5s6mn8ccif_v" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.grupos.produtos.TPresenterGrupoProdutos" />
+    </reference>
+  </view>
+</nodeSet>

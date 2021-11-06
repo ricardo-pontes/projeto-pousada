@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="7mqjb0w8zkf_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.endereco.TEndereco">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.endereco.TEndereco.FLogradouro" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.endereco.TEndereco.FNumero" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.endereco.TEndereco.FBairro" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.endereco.TEndereco.FUF" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.endereco.TEndereco.FCodigoMunicipio" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.endereco.TEndereco.FMunicipio" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.endereco.TEndereco.FCEP" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.endereco.TEndereco.Logradouro" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.endereco.TEndereco.Numero" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.endereco.TEndereco.Bairro" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.endereco.TEndereco.CodigoMunicipio" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.endereco.TEndereco.Municipio" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.endereco.TEndereco.UF" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.endereco.TEndereco.CEP" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.endereco.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

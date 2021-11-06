@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="n0a20niix2s_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.caracteristicas.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="design:view:::ptn4dw7h1ij_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.caracteristicas.interfaces.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.caracteristicas.interfaces.iPresenterCaracteristicasView" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.caracteristicas.TPresenterCaracteristicas">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.presenter.caracteristicas.TPresenterCaracteristicas.FModel" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.presenter.caracteristicas.TPresenterCaracteristicas.FView" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.presenter.caracteristicas.TPresenterCaracteristicas.FBinds" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.caracteristicas.TPresenterCaracteristicas.Create(cliente.presenter.caracteristicas.interfaces.iPresenterCaracteristicasView)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.caracteristicas.TPresenterCaracteristicas.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.caracteristicas.TPresenterCaracteristicas.Alterar()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.caracteristicas.TPresenterCaracteristicas.BuscarPorIEmpresa(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.caracteristicas.TPresenterCaracteristicas.BuscarPorID(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.caracteristicas.TPresenterCaracteristicas.Ativar(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.caracteristicas.TPresenterCaracteristicas.Desativar(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.caracteristicas.TPresenterCaracteristicas.Inserir()" />
+    </reference>
+  </view>
+</nodeSet>

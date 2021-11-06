@@ -15,7 +15,7 @@ type
   public
     class function JsonToObject<T:class, constructor>(aJson : TJSONObject) : T; overload;
     class function JsonToObject<T:class, constructor>(aJson : string) : T; overload;
-    class function JsonToObjectList<T: class, constructor>(aJson : UTF8String) : TObjectList<T>;
+    class function JsonToObjectList<T: class, constructor>(aJson: string) : TObjectList<T>;
     class function ObjectToJson(aObject : TObject) : TJSONObject;
     class function ObjectoJsonString(aObject : TObject) : string;
     class function ObjectListToJson<T: class, constructor>(aObjectList: TObjectList<T>): TJSONArray;
@@ -91,7 +91,7 @@ begin
   Result := TJson.JsonToObject<T>(aJson);
 end;
 
-class function TJSONConverter.JsonToObjectList<T>(aJson: UTF8String): TObjectList<T>;
+class function TJSONConverter.JsonToObjectList<T>(aJson: string): TObjectList<T>;
 begin
   var lJSON := TJSONObject.ParseJSONValue(aJson);
   try
@@ -116,12 +116,12 @@ end;
 
 class function TJSONConverter.ObjectListToJson<T>(aObjectList: TObjectList<T>): TJSONArray;
 begin
+  Result := TJSONArray.Create;
   if not Assigned(aObjectList) then
     Exit;
 
   if aObjectList.Count > 0 then
   begin
-    Result := TJSONArray.Create;
     for var lObject in aObjectList do
     begin
       Result.AddElement(ObjectToJson(lObject));

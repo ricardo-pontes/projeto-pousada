@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="t6dhnydztgg_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::gwg4h5j1o8h_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::xcjc6wixzuq_v" />
+      <reference referencedUin="design:view:::1t0sfbxt3co_v" />
+      <reference referencedUin="design:view:::53nza939ff_v" />
+      <reference referencedUin="design:view:::736ohzhx8jn_v" />
+      <reference referencedUin="design:view:::7mqjb0w8zkf_v" />
+      <reference referencedUin="design:view:::ov0cfc4u1vk_v" />
+      <reference referencedUin="design:view:::6m1fovq5y8i_v" />
+      <reference referencedUin="design:view:::3chmusscono_v" />
+      <reference referencedUin="design:view:::0go0mlbiiph_v" />
+      <reference referencedUin="design:view:::6llpx60t7tt_v" />
+      <reference referencedUin="design:view:::sanmhrjhmoo_v" />
+      <reference referencedUin="design:view:::7l7fja8ngkk_v" />
+      <reference referencedUin="design:view:::1nrnez1keer_v" />
+    </reference>
+    <reference referencedUin="design:view:::51xmpychhvt_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::pgypn2xbiom_v" />
+      <reference referencedUin="design:view:::w3ccnwhbblh_v" />
+      <reference referencedUin="design:view:::s17fe07z0tm_v" />
+    </reference>
+    <reference referencedUin="design:view:::zlh06nrm7ll_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::u54ydkcxnmr_v" />
+      <reference referencedUin="design:view:::naq0fk1bc8g_v" />
+    </reference>
+    <reference referencedUin="design:view:::ru8qc0z4azr_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::gylbvsunyfp_v" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:validador.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:validador.TValidador" />
+      <reference referencedUin="design:view:::htmpx737qdj_v" />
+    </reference>
+    <reference referencedUin="design:view:::yonh8j0tmqm_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:ClienteDesktopPousada.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::p0dsmngwurn_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::a5onyreep4j_v" />
+      <reference referencedUin="design:view:::jqwfh5jl2qo_v" />
+    </reference>
+  </view>
+</nodeSet>

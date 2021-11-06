@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="gylbvsunyfp_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:validador.validacoessimples.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.CampoAtivoPadrao(System.string,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.NumeroNaoPodeSerMenorQueZero(System.Integer,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.NumeroNaoPodeSerMenorQueZero(System.Extended,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.NumeroNaoPodeSerIgualAZero(System.Integer,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.NumeroNaoPodeSerIgualAZero(System.Extended,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.NumeroDeveSerMaiorQueZero(System.Integer,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.NumeroDeveSerMaiorQueZero(System.Extended,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.NumeroSoPodeSerZero(System.Integer,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.NumeroSoPodeSerZero(System.Extended,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.StringNaoPodeSerVazia(System.string,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.StringDeveConterXCaracteres(System.string,System.Integer,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.StringNaoPodeSerVaziaEDeveConterXCaracteres(System.string,System.Integer,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.DataNaoPodeSerVazia(System.TDateTime,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.Data1NaoPodeSerMaiorQueData2(System.TDateTime,System.TDateTime,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.DataNaoPodeExcederDataHoje(System.TDateTime,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.DataNaoPodeSerVaziaNemExcederDataHoje(System.TDateTime,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.CNPJValido(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.validacoessimples.TValidacoes.EmailValido(System.string)" />
+    </reference>
+  </view>
+</nodeSet>

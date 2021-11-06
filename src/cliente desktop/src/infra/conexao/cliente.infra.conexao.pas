@@ -24,7 +24,11 @@ implementation
 
 function TConexoes.Conexao: iRequest;
 begin
-  result := TRequest.New.BaseURL('http://localhost:9000/api/v1').AcceptEncoding('gzip').ContentType('application/json; charset=utf-8');
+  result := TRequest.New;
+  Result.BaseURL('http://localhost:9000/api/v1');
+  Result.AcceptEncoding('gzip');
+  Result.ContentType('application/json; charset=utf-8');
+  Result.RaiseExceptionOn500(False);
 end;
 
 constructor TConexoes.Create;

@@ -42,6 +42,19 @@ type
     function Executar : iValidacaoEntidade;
   end;
 
+  TEmpresaValidacoesBasicasValidarCNPJ = class(TInterfacedObject, iValidacaoEntidade)
+  private
+    FEntidade : TEmpresa;
+    FCNPJ : string;
+  public
+    constructor Create(aCNPJ : string);
+    destructor Destroy; override;
+    class function New(aCNPJ : string) : iValidacaoEntidade;
+
+    function AddEntidade(aValue : TObject) : iValidacaoEntidade;
+    function Executar : iValidacaoEntidade;
+  end;
+
 implementation
 
 uses
@@ -154,6 +167,35 @@ end;
 class function TEmpresaValidacoesBasicasInserir.New: iValidacaoEntidade;
 begin
   Result := Self.Create;
+end;
+
+{ TEmpresaValidacoesBasicasValidarCNPJ }
+
+function TEmpresaValidacoesBasicasValidarCNPJ.AddEntidade(aValue: TObject): iValidacaoEntidade;
+begin
+  Result := Self;
+  FEntidade := TEmpresa(aValue);
+end;
+
+constructor TEmpresaValidacoesBasicasValidarCNPJ.Create(aCNPJ : string);
+begin
+  FCNPJ := aCNPJ;
+end;
+
+destructor TEmpresaValidacoesBasicasValidarCNPJ.Destroy;
+begin
+
+  inherited;
+end;
+
+function TEmpresaValidacoesBasicasValidarCNPJ.Executar: iValidacaoEntidade;
+begin
+  TValidacoes.CNPJValido(FCNPJ);
+end;
+
+class function TEmpresaValidacoesBasicasValidarCNPJ.New(aCNPJ : string) : iValidacaoEntidade;
+begin
+  Result := Self.Create(aCNPJ);
 end;
 
 end.

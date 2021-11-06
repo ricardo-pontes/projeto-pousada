@@ -5,7 +5,7 @@
 		"https://github.com/bittencourtthulio/router4delphi": {
 			"name": "router4delphi",
 			"version": "1.0.6",
-			"hash": "5e77550c45e734fd4e24e4d9165343e9",
+			"hash": "fa3090419af1d376d8f876b19a6aa042",
 			"artifacts": {},
 			"failed": false,
 			"changed": false
@@ -13,7 +13,15 @@
 		"https://github.com/mateusvicente100/fmx-toast": {
 			"name": "fmx-toast",
 			"version": "1.0.0",
-			"hash": "fe184b518f23bc3a22b580cc372cd592",
+			"hash": "ceb27ccdb59ab32683e69d7178097299",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"https://github.com/spinettaro/delphi-event-bus": {
+			"name": "delphi-event-bus",
+			"version": "v2.0",
+			"hash": "5d4ff74a1d2bd301ee620296d9fd0273",
 			"artifacts": {},
 			"failed": false,
 			"changed": false

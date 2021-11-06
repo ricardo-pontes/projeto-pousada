@@ -8,12 +8,10 @@ uses
 type
   TUsuario = class(TPessoaFisica)
   private
-    FEmail: string;
     FSenha: string;
     FIDEmpresa: integer;
   public
     property IDEmpresa: integer read FIDEmpresa write FIDEmpresa;
-    property Email: string read FEmail write FEmail;
     property Senha: string read FSenha write FSenha;
   end;
 
@@ -36,6 +34,7 @@ const
   USU_CIDADE = 'USU_CIDADE';
   USU_UF = 'USU_UF';
   USU_CEP = 'USU_CEP';
+  USU_ATIVO = 'USU_ATIVO';
 
 implementation
 

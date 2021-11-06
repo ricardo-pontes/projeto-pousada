@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="d1rha2ycp5o_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::e2niwvl6sek_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicasAlterar" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicas" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.TProdutosValidacoesBasicasInserir" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.produtos.validacoes.basicas.@unitclass" />
+    </reference>
+  </view>
+</nodeSet>

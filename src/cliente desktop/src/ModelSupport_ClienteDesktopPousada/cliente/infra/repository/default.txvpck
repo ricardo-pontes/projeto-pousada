@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="9uhl3oqvr5i_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::pma9cn3spvm_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::wo2iqb2yubh_v" />
+    </reference>
+    <reference referencedUin="design:view:::1ycw2tt5uwf_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::03czbmio22r_v" />
+    </reference>
+    <reference referencedUin="design:view:::9i3hxjf0z9o_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.produtos.@unitclass" />
+      <reference referencedUin="design:view:::ccxrqlm0n0p_v" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.produtos.TRepositoryProdutosRest" />
+    </reference>
+    <reference referencedUin="design:view:::eyp0isa7fbi_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::rs21s7f6xpo_v" />
+    </reference>
+    <reference referencedUin="design:view:::t4bqyx0ch2l_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::ff7ybdj98ii_v" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.caracteristicas.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.caracteristicas.TRepositoryCaracteristicasRest" />
+    </reference>
+    <reference referencedUin="design:view:::aatp813iz7q_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::xenstmx0e4n_v" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.usuarios.TRepositoryUsuariosRest" />
+    </reference>
+  </view>
+</nodeSet>

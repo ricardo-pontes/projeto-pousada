@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="qltpdnuzt4t_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicas">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicas.FEntidade" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicas.Create()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicas.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicas.New()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicas.AddEntidade(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicas.Executar()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicasAlterar">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicasAlterar.FEntidade" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicasAlterar.Create()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicasAlterar.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicasAlterar.New()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicasAlterar.AddEntidade(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicasAlterar.Executar()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicasInserir">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicasInserir.FEntidade" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicasInserir.Create()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicasInserir.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicasInserir.New()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicasInserir.AddEntidade(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:entidades.caracteristicas.validacoes.basicas.TCaracteristicasValidacoesBasicasInserir.Executar()" />
+    </reference>
+  </view>
+</nodeSet>

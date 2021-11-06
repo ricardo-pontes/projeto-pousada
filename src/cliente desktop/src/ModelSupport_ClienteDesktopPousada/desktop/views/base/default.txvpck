@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="v8q0kor42cq_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.base.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:ClienteDesktopPousada:desktop.views.base.@unitclass.ViewBase" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.@unitclass.ViewBase" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.base.TViewBase">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.base.TViewBase.lytPrincipal" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.base.TViewBase.Render()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.base.TViewBase.UnRender()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.base.TViewBase.GetTextHeight(FMX.ListView.Types.TListItemText,System.Single,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.base.TViewBase.MessageBox()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.base.TViewBase.ShowToast(System.Classes.TComponent,System.SysUtils.Exception)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.base.TViewBase.ShowToast(System.Classes.TComponent,System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.base.TViewBase.ShowToastSuccess(System.Classes.TComponent,System.string)" />
+    </reference>
+    <reference referencedUin="design:view:::vrn0igd4g0j_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.base.cadastro.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.base.cadastro.TViewBaseCadastro" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.base.cadastro.TEstadoCrud" />
+    </reference>
+  </view>
+</nodeSet>

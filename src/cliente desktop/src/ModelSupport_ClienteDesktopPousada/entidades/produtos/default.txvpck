@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="0go0mlbiiph_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.produtos.TProduto">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.TProduto.FID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.TProduto.FIDEmpresa" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.TProduto.FDescricao" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.TProduto.FValorCusto" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.TProduto.FValorVenda" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.TProduto.FIDCategoria" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.TProduto.FAtivo" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.TProduto.FNomeGrupo" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.produtos.TProduto.ID" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.produtos.TProduto.IDEmpresa" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.produtos.TProduto.Descricao" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.produtos.TProduto.NomeGrupo" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.produtos.TProduto.ValorCusto" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.produtos.TProduto.ValorVenda" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.produtos.TProduto.IDCategoria" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.produtos.TProduto.Ativo" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.produtos.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.@unitclass.PROD_TABELA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.@unitclass.PROD_ID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.@unitclass.PROD_ID_EMPRESA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.@unitclass.PROD_DESCRICAO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.@unitclass.PROD_VALOR_CUSTO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.@unitclass.PROD_VALOR_VENDA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.@unitclass.PROD_ID_GRUPO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.produtos.@unitclass.PROD_ATIVO" />
+    </reference>
+    <reference referencedUin="design:view:::d1rha2ycp5o_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::e2niwvl6sek_v" />
+    </reference>
+  </view>
+</nodeSet>

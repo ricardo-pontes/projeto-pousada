@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="gwg4h5j1o8h_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::xcjc6wixzuq_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::2z0zoi07qfr_v" />
+    </reference>
+    <reference referencedUin="design:view:::1t0sfbxt3co_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.caracteristicas.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.caracteristicas.TCaracteristica" />
+      <reference referencedUin="design:view:::7v6xs9cdd9p_v" />
+    </reference>
+    <reference referencedUin="design:view:::53nza939ff_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.usuario.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.usuario.TUsuario" />
+    </reference>
+    <reference referencedUin="design:view:::736ohzhx8jn_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.contatos.TContato" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.contatos.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::7mqjb0w8zkf_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.endereco.TEndereco" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.endereco.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::ov0cfc4u1vk_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.unidadehabitacional.@unitclass" />
+      <reference referencedUin="design:view:::8vbdb02jyuh_v" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.unidadehabitacional.TUnidadeHabitacional" />
+      <reference referencedUin="design:view:::rhtbq0xkdil_v" />
+    </reference>
+    <reference referencedUin="design:view:::6m1fovq5y8i_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.estadia.TEstadia" />
+      <reference referencedUin="design:view:::ode7p26y96h_v" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.estadia.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::3chmusscono_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.clientes.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.clientes.TClientePF" />
+    </reference>
+    <reference referencedUin="design:view:::0go0mlbiiph_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.produtos.TProduto" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.produtos.@unitclass" />
+      <reference referencedUin="design:view:::d1rha2ycp5o_v" />
+    </reference>
+    <reference referencedUin="design:view:::6llpx60t7tt_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.pessoa.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.pessoa.TPessoa" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.pessoa.TPessoaFisica" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.pessoa.TPessoaJuridica" />
+    </reference>
+    <reference referencedUin="design:view:::sanmhrjhmoo_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::v28x1w9ukck_v" />
+    </reference>
+    <reference referencedUin="design:view:::7l7fja8ngkk_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.grupoprodutos.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.grupoprodutos.TGrupoProduto" />
+    </reference>
+    <reference referencedUin="design:view:::1nrnez1keer_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::shxa520uu8p_v" />
+      <reference referencedUin="design:view:::02nfg1d06un_v" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.empresa.TEmpresa" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.empresa.@unitclass" />
+    </reference>
+  </view>
+</nodeSet>

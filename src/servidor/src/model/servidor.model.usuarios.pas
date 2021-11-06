@@ -18,6 +18,8 @@ type
     destructor Destroy; override;
     class function New(aRepository : iRepositoryUsuarios) : iModelUsuarios;
 
+    function Ativar(aID : integer) : string;
+    function Desativar(aID : integer) : string;
     function BuscarPordIDEmpresa(aIDEmpresa : integer) : TObjectList<TUsuario>;
     function Login(aEmail, aSenha : string) : TUsuario;
   end;
@@ -30,6 +32,11 @@ uses
   validador.validacoessimples;
 
 { TModelUsuarios }
+
+function TModelUsuarios.Ativar(aID: integer): string;
+begin
+  Result := FRepository.Ativar(aID);
+end;
 
 function TModelUsuarios.BuscarPordIDEmpresa(aIDEmpresa: integer): TObjectList<TUsuario>;
 begin
@@ -46,6 +53,11 @@ constructor TModelUsuarios.Create(aRepository : iRepositoryUsuarios);
 begin
   FRepository := aRepository;
   inherited Create(aRepository);
+end;
+
+function TModelUsuarios.Desativar(aID: integer): string;
+begin
+  Result := FRepository.Desativar(aID);
 end;
 
 destructor TModelUsuarios.Destroy;
@@ -71,7 +83,7 @@ begin
   end;
 
   if not Assigned(Entidade) then
-    raise ExceptionNaoEncontrado.Create('Usuário/Senha inválidos.');
+    raise ExceptionNaoEncontrado.Create('Email/Senha inválidos.');
   Result := Entidade;
 end;
 

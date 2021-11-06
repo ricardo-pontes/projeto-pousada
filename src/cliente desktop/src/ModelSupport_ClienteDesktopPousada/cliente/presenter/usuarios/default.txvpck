@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="jz6iawco0jr_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.usuarios.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:ClienteDesktopPousada:cliente.presenter.usuarios.@unitclass.FPresenterUsuarios" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.presenter.usuarios.@unitclass.FPresenterUsuarios" />
+    </reference>
+    <reference referencedUin="design:view:::09e5qduw7gg_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.usuarios.interfaces.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.usuarios.interfaces.iPresenterUsuariosView" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.usuarios.TPresenterUsuarios">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.presenter.usuarios.TPresenterUsuarios.FBinds" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.presenter.usuarios.TPresenterUsuarios.FModel" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.presenter.usuarios.TPresenterUsuarios.FView" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.usuarios.TPresenterUsuarios.Create(cliente.presenter.usuarios.interfaces.iPresenterUsuariosView)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.usuarios.TPresenterUsuarios.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.usuarios.TPresenterUsuarios.Ativar(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.usuarios.TPresenterUsuarios.BuscarPorIDEmpresa(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.usuarios.TPresenterUsuarios.BuscarPorID(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.usuarios.TPresenterUsuarios.Desativar(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.usuarios.TPresenterUsuarios.SetView(cliente.presenter.usuarios.interfaces.iPresenterUsuariosView)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.usuarios.TPresenterUsuarios.Logar(System.string,System.string)" />
+    </reference>
+  </view>
+</nodeSet>

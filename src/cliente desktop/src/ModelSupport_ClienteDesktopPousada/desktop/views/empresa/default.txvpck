@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="erph4rf4h0h_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.empresa.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:ClienteDesktopPousada:desktop.views.empresa.@unitclass.ViewBase1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.empresa.@unitclass.ViewBase1" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.empresa.TViewBase1">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

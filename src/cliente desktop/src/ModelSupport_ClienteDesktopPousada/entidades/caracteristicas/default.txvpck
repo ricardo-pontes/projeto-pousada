@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="1t0sfbxt3co_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.caracteristicas.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.caracteristicas.@unitclass.CAT_TABELA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.caracteristicas.@unitclass.CAT_ID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.caracteristicas.@unitclass.CAT_ID_EMPRESA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.caracteristicas.@unitclass.CAT_DESCRICAO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.caracteristicas.@unitclass.CAT_ATIVO" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.caracteristicas.TCaracteristica">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.caracteristicas.TCaracteristica.FID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.caracteristicas.TCaracteristica.FDescricao" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.caracteristicas.TCaracteristica.FAtivo" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.caracteristicas.TCaracteristica.FIDEmpresa" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.caracteristicas.TCaracteristica.ID" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.caracteristicas.TCaracteristica.IDEmpresa" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.caracteristicas.TCaracteristica.Descricao" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.caracteristicas.TCaracteristica.Ativo" />
+    </reference>
+    <reference referencedUin="design:view:::7v6xs9cdd9p_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::qltpdnuzt4t_v" />
+    </reference>
+  </view>
+</nodeSet>

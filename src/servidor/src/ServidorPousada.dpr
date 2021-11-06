@@ -129,18 +129,33 @@ uses
   servidor.controller.estadias.acompanhantes.interfaces in 'controller\servidor.controller.estadias.acompanhantes.interfaces.pas',
   servidor.controller.estadias.acompanhantes in 'controller\servidor.controller.estadias.acompanhantes.pas',
   shared.exceptions in '..\..\shared\shared.exceptions.pas',
-  entidades.grupos.produtos.validacoes.basicas in '..\..\entidades\validacoes\entidades.grupos.produtos.validacoes.basicas.pas';
+  entidades.grupos.produtos.validacoes.basicas in '..\..\entidades\validacoes\entidades.grupos.produtos.validacoes.basicas.pas',
+  entidades.caracteristicas in '..\..\entidades\entidades.caracteristicas.pas',
+  servidor.infra.repository.caracteristicas.interfaces in 'infra\repository\servidor.infra.repository.caracteristicas.interfaces.pas',
+  servidor.infra.repository.caracteristicas in 'infra\repository\servidor.infra.repository.caracteristicas.pas',
+  servidor.model.caracteristicas.interfaces in 'model\servidor.model.caracteristicas.interfaces.pas',
+  servidor.model.caracteristicas in 'model\servidor.model.caracteristicas.pas',
+  servidor.controller.caracteristicas.interfaces in 'controller\servidor.controller.caracteristicas.interfaces.pas',
+  servidor.controller.caracteristicas in 'controller\servidor.controller.caracteristicas.pas',
+  servidor.infra.routes.caracteristicas in 'infra\routes\servidor.infra.routes.caracteristicas.pas',
+  entidades.caracteristicas.validacoes.db in '..\..\entidades\validacoes\entidades.caracteristicas.validacoes.db.pas',
+  entidades.caracteristicas.validacoes.basicas in '..\..\entidades\validacoes\entidades.caracteristicas.validacoes.basicas.pas',
+  servidor.infra.routes.empresa in 'infra\routes\servidor.infra.routes.empresa.pas',
+  entidades.usuarios.validacoes.db in '..\..\entidades\validacoes\entidades.usuarios.validacoes.db.pas';
 
 begin
   ReportMemoryLeaksOnShutdown := True;
   THorse.Use(Compression());
   THorse.Use(Jhonson('utf-8'));
 
+  servidor.infra.routes.caracteristicas.Registrar;
+  servidor.infra.routes.empresa.Registrar;
   servidor.infra.routes.grupoprodutos.Registrar;
   servidor.infra.routes.produtos.Registrar;
   servidor.infra.routes.unidadehabitacional.Registrar;
   servidor.infra.routes.unidadehabitacional.categorias.Registrar;
   servidor.infra.routes.unidadehabitacional.caracteristicas.Registrar;
+  servidor.infra.routes.usuario.Registrar;
 
   THorse.Listen(9000,
   procedure (aHorse : THorse)

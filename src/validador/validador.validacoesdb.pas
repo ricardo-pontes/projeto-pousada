@@ -23,7 +23,7 @@ begin
   var lSQL := TStringBuilder.Create;
   try
     if aID = 0 then
-      lSQL.Append('select * from ' + aTabela + ' where ' + aCampo + ' = ' + VarToStr(aValor).QuotedString)
+      lSQL.Append('select upper('+ aCampo + ') from ' + aTabela + ' where upper(' + aCampo + ') = upper(' + VarToStr(aValor).QuotedString + ')')
     else
     begin
       lSQL.Append('select * from ' + aTabela + ' where ' + aNotacao.GetPKTableName + ' <> ' + aID.ToString);

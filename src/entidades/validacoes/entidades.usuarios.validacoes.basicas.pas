@@ -10,7 +10,6 @@ type
   TUsuariosValidacoesBasicas = class(TInterfacedObject, iValidacaoEntidade)
   private
     FEntidade : TUsuario;
-    FResult : string;
   public
     constructor Create;
     destructor Destroy; override;
@@ -18,13 +17,23 @@ type
 
     function AddEntidade(aValue : TObject) : iValidacaoEntidade;
     function Executar : iValidacaoEntidade;
-    function Result : string;
+  end;
+
+  TUsuariosValidacoesBasicasAlterar = class(TInterfacedObject, iValidacaoEntidade)
+  private
+    FEntidade : TUsuario;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New : iValidacaoEntidade;
+
+    function AddEntidade(aValue : TObject) : iValidacaoEntidade;
+    function Executar : iValidacaoEntidade;
   end;
 
   TUsuariosValidacoesBasicasInserir = class(TInterfacedObject, iValidacaoEntidade)
   private
     FEntidade : TUsuario;
-    FResult : string;
   public
     constructor Create;
     destructor Destroy; override;
@@ -32,16 +41,21 @@ type
 
     function AddEntidade(aValue : TObject) : iValidacaoEntidade;
     function Executar : iValidacaoEntidade;
-    function Result : string;
   end;
-const
-  MSG_ID_DEVE_SER_ZERO_NA_INSERCAO = 'Ao inserir um novo cadastro, o ID deve ser zero.';
-  MSG_ID_NAODEVE_SER_ZERO_NA_INSERCAO = 'Ao alterar um cadastro, é obrigatório passar o ID.';
-  MSG_ID_EMPRESA_NAO_PODE_RECEBER_ZERO = 'O ID Empresa nao pode receber zero.';
-  MSG_ID_EMPRESA_NAO_PODE_SER_MENOR_QUE_ZERO = 'O ID Empresa nao pode ser menor que zero.';
-  MSG_EMAIL_NAO_PODE_SER_VAZIO = 'O email precisa ser preenchido.';
-  MSG_SENHA_NAO_PODE_SER_VAZIA = 'A senha precisa ser preenchida.';
-  MSG_LIMITE_TAMANHO_SENHA = 'A senha deve conter no máximo 20 caracteres.';
+
+  TUsuariosValidacoesBasicasLogin = class(TInterfacedObject, iValidacaoEntidade)
+  private
+    FEntidade : TUsuario;
+    FEmail : string;
+    FSenha : string;
+  public
+    constructor Create(aEmail, aSenha : string);
+    destructor Destroy; override;
+    class function New(aEmail, aSenha : string) : iValidacaoEntidade;
+
+    function AddEntidade(aValue : TObject) : iValidacaoEntidade;
+    function Executar : iValidacaoEntidade;
+  end;
 
 implementation
 
@@ -70,19 +84,18 @@ end;
 function TUsuariosValidacoesBasicas.Executar : iValidacaoEntidade;
 begin
   Result := Self;
-  Fresult := '';
-  try
-    if not Assigned(FEntidade) then
-      raise Exception.Create(Self.QualifiedClassName + ': Nenhum dado para validar.');
+  if not Assigned(FEntidade) then
+    raise Exception.Create(Self.QualifiedClassName + ': Nenhum dado para validar.');
 
-    TValidacoes.NumeroDeveSerMaiorQueZero(FEntidade.IDEmpresa, 'ID Empresa');
-    TValidacoes.StringNaoPodeSerVaziaEDeveConterXCaracteres(FEntidade.Email, 200, 'Email');
-    TValidacoes.StringNaoPodeSerVaziaEDeveConterXCaracteres(FEntidade.Senha, 20, 'Senha');
-    TValidacoes.StringNaoPodeSerVaziaEDeveConterXCaracteres(FEntidade.NomeCompleto, 200, 'Nome');
+  TValidacoes.NumeroDeveSerMaiorQueZero(FEntidade.IDEmpresa, 'ID Empresa');
+  TValidacoes.StringNaoPodeSerVaziaEDeveConterXCaracteres(FEntidade.Email, 200, 'Email');
+  TValidacoes.StringNaoPodeSerVaziaEDeveConterXCaracteres(FEntidade.Senha, 20, 'Senha');
+  TValidacoes.StringNaoPodeSerVaziaEDeveConterXCaracteres(FEntidade.Nome, 200, 'Nome');
+  if FEntidade.Nome.Trim <> 'Administrador' then
+  begin
+    TValidacoes.StringNaoPodeSerVaziaEDeveConterXCaracteres(FEntidade.SobreNome, 200, 'Nome');
     TValidacoes.DataNaoPodeSerVaziaNemExcederDataHoje(FEntidade.DataNascimento, 'Data de Nascimento');
     TValidacoes.DataNaoPodeSerVaziaNemExcederDataHoje(FEntidade.DataCadastro, 'Data de Nascimento');
-  except on E: Exception do
-    FResult := E.Message;
   end;
 end;
 
@@ -91,10 +104,6 @@ begin
   Result := Self.Create;
 end;
 
-function TUsuariosValidacoesBasicas.Result : string;
-begin
-  Result := FResult;
-end;
 
 { TUsuariosValidacoesBasicasInserir }
 
@@ -118,19 +127,10 @@ end;
 function TUsuariosValidacoesBasicasInserir.Executar: iValidacaoEntidade;
 begin
   Result := Self;
-  FResult := '';
-
   if not Assigned(FEntidade) then
-  begin
-    FResult := Self.QualifiedClassName + ': Nenhum dado para validar.';
-    Exit;
-  end;
+    raise Exception.Create(Self.QualifiedClassName + ': Nenhum dado para validar.');
 
-  if FEntidade.ID <> 0 then
-  begin
-    FResult := MSG_ID_DEVE_SER_ZERO_NA_INSERCAO;
-    Exit;
-  end;
+  TValidacoes.NumeroSoPodeSerZero(FEntidade.ID, 'ID');;
 end;
 
 class function TUsuariosValidacoesBasicasInserir.New: iValidacaoEntidade;
@@ -138,9 +138,68 @@ begin
   Result := Self.Create;
 end;
 
-function TUsuariosValidacoesBasicasInserir.Result: string;
+{ TUsuariosValidacoesBasicasLogin }
+
+function TUsuariosValidacoesBasicasLogin.AddEntidade(aValue: TObject): iValidacaoEntidade;
 begin
-  Result := FResult;
+  Result := Self;
+  FEntidade := TUsuario(aValue);
+end;
+
+constructor TUsuariosValidacoesBasicasLogin.Create(aEmail, aSenha : string);
+begin
+  FEmail := aEmail;
+  FSenha := aSenha;
+end;
+
+destructor TUsuariosValidacoesBasicasLogin.Destroy;
+begin
+
+  inherited;
+end;
+
+function TUsuariosValidacoesBasicasLogin.Executar: iValidacaoEntidade;
+begin
+  TValidacoes.StringNaoPodeSerVazia(FEmail, 'Email');
+  TValidacoes.StringNaoPodeSerVaziaEDeveConterXCaracteres(FSenha, 20, 'Senha');
+  TValidacoes.EmailValido(FEmail);
+end;
+
+class function TUsuariosValidacoesBasicasLogin.New(aEmail, aSenha : string) : iValidacaoEntidade;
+begin
+  Result := Self.Create(aEmail, aSenha);
+end;
+
+{ TUsuariosValidacoesBasicasAlterar }
+
+function TUsuariosValidacoesBasicasAlterar.AddEntidade(aValue: TObject): iValidacaoEntidade;
+begin
+  Result := Self;
+  FEntidade := TUsuario(aValue);
+end;
+
+constructor TUsuariosValidacoesBasicasAlterar.Create;
+begin
+
+end;
+
+destructor TUsuariosValidacoesBasicasAlterar.Destroy;
+begin
+
+  inherited;
+end;
+
+function TUsuariosValidacoesBasicasAlterar.Executar: iValidacaoEntidade;
+begin
+  if not Assigned(FEntidade) then
+    raise Exception.Create(Self.QualifiedClassName + ': Nenhum dado para validar.');
+
+  TValidacoes.NumeroDeveSerMaiorQueZero(FEntidade.ID, 'ID');
+end;
+
+class function TUsuariosValidacoesBasicasAlterar.New: iValidacaoEntidade;
+begin
+  Result := Self.Create;
 end;
 
 end.

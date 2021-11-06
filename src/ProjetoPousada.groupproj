@@ -6,9 +6,6 @@
         <Projects Include="servidor\src\ServidorPousada.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="servidor\tests\ServidorPousadaTest.dproj">
-            <Dependencies/>
-        </Projects>
         <Projects Include="cliente desktop\src\ClienteDesktopPousada.dproj">
             <Dependencies/>
         </Projects>
@@ -29,15 +26,6 @@
     <Target Name="ServidorPousada:Make">
         <MSBuild Projects="servidor\src\ServidorPousada.dproj" Targets="Make"/>
     </Target>
-    <Target Name="ServidorPousadaTest">
-        <MSBuild Projects="servidor\tests\ServidorPousadaTest.dproj"/>
-    </Target>
-    <Target Name="ServidorPousadaTest:Clean">
-        <MSBuild Projects="servidor\tests\ServidorPousadaTest.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="ServidorPousadaTest:Make">
-        <MSBuild Projects="servidor\tests\ServidorPousadaTest.dproj" Targets="Make"/>
-    </Target>
     <Target Name="ClienteDesktopPousada">
         <MSBuild Projects="cliente desktop\src\ClienteDesktopPousada.dproj"/>
     </Target>
@@ -48,13 +36,13 @@
         <MSBuild Projects="cliente desktop\src\ClienteDesktopPousada.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="ServidorPousada;ServidorPousadaTest;ClienteDesktopPousada"/>
+        <CallTarget Targets="ServidorPousada;ClienteDesktopPousada"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="ServidorPousada:Clean;ServidorPousadaTest:Clean;ClienteDesktopPousada:Clean"/>
+        <CallTarget Targets="ServidorPousada:Clean;ClienteDesktopPousada:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="ServidorPousada:Make;ServidorPousadaTest:Make;ClienteDesktopPousada:Make"/>
+        <CallTarget Targets="ServidorPousada:Make;ClienteDesktopPousada:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

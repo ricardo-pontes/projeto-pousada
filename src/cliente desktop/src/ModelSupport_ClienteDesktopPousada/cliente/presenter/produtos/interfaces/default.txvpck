@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="v6aznsi4byr_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.produtos.interfaces.iPresenterProdutos">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.produtos.interfaces.iPresenterProdutos.BuscarPorIDEmpresa(System.Integer)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.produtos.interfaces.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.presenter.produtos.interfaces.iPresenterProdutosView">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.produtos.interfaces.iPresenterProdutosView.CarregarProdutos(System.Generics.Collections.TObjectList&lt;entidades.produtos.TProduto&gt;)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.presenter.produtos.interfaces.iPresenterProdutosView.Instancia()" />
+    </reference>
+  </view>
+</nodeSet>

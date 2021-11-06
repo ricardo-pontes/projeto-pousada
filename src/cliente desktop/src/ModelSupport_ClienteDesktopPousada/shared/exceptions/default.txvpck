@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="a5onyreep4j_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionFalhaBancoDadosGravacao">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_gnt:src:ClienteDesktopPousada:shared.exceptions.ExceptionFalhaBancoDadosGravacao:shared.exceptions.ExceptionFalhaBancoDados" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:shared.exceptions.ExceptionFalhaBancoDadosGravacao.Create()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionConversaoNumerica">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_gnt:src:ClienteDesktopPousada:shared.exceptions.ExceptionConversaoNumerica:shared.exceptions.ExceptionConversao" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:shared.exceptions.ExceptionConversaoNumerica.Create()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionPersonalizada">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.TSharedExceptionsRest">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:shared.exceptions.TSharedExceptionsRest.Checar(System.Integer,System.string)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionFalhaConversaoObjeto">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_gnt:src:ClienteDesktopPousada:shared.exceptions.ExceptionFalhaConversaoObjeto:shared.exceptions.ExceptionConversao" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:shared.exceptions.ExceptionFalhaConversaoObjeto.Create()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionValidacao">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_gnt:src:ClienteDesktopPousada:shared.exceptions.ExceptionValidacao:shared.exceptions.ExceptionPersonalizada" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionFalhaBancoDadosLeitura">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_gnt:src:ClienteDesktopPousada:shared.exceptions.ExceptionFalhaBancoDadosLeitura:shared.exceptions.ExceptionFalhaBancoDados" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:shared.exceptions.ExceptionFalhaBancoDadosLeitura.Create()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionFalhaBancoDados">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_gnt:src:ClienteDesktopPousada:shared.exceptions.ExceptionFalhaBancoDados:shared.exceptions.ExceptionPersonalizada" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionNaoEncontrado">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_gnt:src:ClienteDesktopPousada:shared.exceptions.ExceptionNaoEncontrado:shared.exceptions.ExceptionPersonalizada" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.exceptions.ExceptionConversao">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_gnt:src:ClienteDesktopPousada:shared.exceptions.ExceptionConversao:shared.exceptions.ExceptionPersonalizada" />
+    </reference>
+  </view>
+</nodeSet>

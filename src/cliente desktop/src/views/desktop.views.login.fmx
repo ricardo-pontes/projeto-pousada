@@ -1,0 +1,420 @@
+inherited ViewLogin: TViewLogin
+  Caption = 'ViewBase2'
+  ClientWidth = 1300
+  Fill.Kind = Solid
+  WindowState = wsMaximized
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  inherited lytPrincipal: TLayout
+    Size.Width = 1300.000000000000000000
+    object Rectangle1: TRectangle
+      Align = Left
+      Fill.Color = xFF29C24F
+      Size.Width = 257.000000000000000000
+      Size.Height = 480.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object Circle1: TCircle
+        Fill.Color = claNull
+        Position.X = 6.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claSilver
+      end
+      object Circle2: TCircle
+        Fill.Color = claNull
+        Position.X = 30.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claSilver
+      end
+      object Circle3: TCircle
+        Fill.Color = claNull
+        Position.X = 54.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claSilver
+      end
+      object Circle4: TCircle
+        Fill.Color = claNull
+        Position.X = 78.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claSilver
+      end
+      object Circle5: TCircle
+        Fill.Color = claNull
+        Position.X = 6.000000000000000000
+        Position.Y = 30.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claSilver
+      end
+      object Circle6: TCircle
+        Fill.Color = claNull
+        Position.X = 30.000000000000000000
+        Position.Y = 30.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claSilver
+      end
+      object Circle7: TCircle
+        Fill.Color = claNull
+        Position.X = 54.000000000000000000
+        Position.Y = 30.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claSilver
+      end
+      object Circle8: TCircle
+        Fill.Color = claNull
+        Position.X = 6.000000000000000000
+        Position.Y = 54.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claSilver
+      end
+      object Circle9: TCircle
+        Fill.Color = claNull
+        Position.X = 30.000000000000000000
+        Position.Y = 54.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claSilver
+      end
+      object Circle10: TCircle
+        Fill.Color = claNull
+        Position.X = 6.000000000000000000
+        Position.Y = 78.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claSilver
+      end
+    end
+    object Circle11: TCircle
+      Anchors = [akRight, akBottom]
+      Fill.Color = claNull
+      Position.X = 1200.000000000000000000
+      Position.Y = 454.000000000000000000
+      Size.Width = 20.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claSilver
+    end
+    object Circle12: TCircle
+      Anchors = [akRight, akBottom]
+      Fill.Color = claNull
+      Position.X = 1248.000000000000000000
+      Position.Y = 430.000000000000000000
+      Size.Width = 20.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claSilver
+    end
+    object Circle13: TCircle
+      Anchors = [akRight, akBottom]
+      Fill.Color = claNull
+      Position.X = 1224.000000000000000000
+      Position.Y = 430.000000000000000000
+      Size.Width = 20.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claSilver
+    end
+    object Circle14: TCircle
+      Anchors = [akRight, akBottom]
+      Fill.Color = claNull
+      Position.X = 1248.000000000000000000
+      Position.Y = 406.000000000000000000
+      Size.Width = 20.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claSilver
+    end
+    object Circle15: TCircle
+      Anchors = [akRight, akBottom]
+      Fill.Color = claNull
+      Position.X = 1272.000000000000000000
+      Position.Y = 382.000000000000000000
+      Size.Width = 20.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claSilver
+    end
+    object Circle16: TCircle
+      Anchors = [akRight, akBottom]
+      Fill.Color = claNull
+      Position.X = 1272.000000000000000000
+      Position.Y = 406.000000000000000000
+      Size.Width = 20.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claSilver
+    end
+    object Circle17: TCircle
+      Anchors = [akRight, akBottom]
+      Fill.Color = claNull
+      Position.X = 1224.000000000000000000
+      Position.Y = 454.000000000000000000
+      Size.Width = 20.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claSilver
+    end
+    object Circle18: TCircle
+      Anchors = [akRight, akBottom]
+      Fill.Color = claNull
+      Position.X = 1248.000000000000000000
+      Position.Y = 454.000000000000000000
+      Size.Width = 20.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claSilver
+    end
+    object Circle19: TCircle
+      Anchors = [akRight, akBottom]
+      Fill.Color = claNull
+      Position.X = 1272.000000000000000000
+      Position.Y = 430.000000000000000000
+      Size.Width = 20.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claSilver
+    end
+    object Circle20: TCircle
+      Anchors = [akRight, akBottom]
+      Fill.Color = claNull
+      Position.X = 1272.000000000000000000
+      Position.Y = 454.000000000000000000
+      Size.Width = 20.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claSilver
+    end
+  end
+  object rectLogin: TRectangle
+    Align = Center
+    Fill.Color = claWhite
+    Padding.Right = 20.000000000000000000
+    Size.Width = 579.000000000000000000
+    Size.Height = 329.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    XRadius = 20.000000000000000000
+    YRadius = 20.000000000000000000
+    object ShadowEffect1: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.600000023841857900
+      ShadowColor = claBlack
+    end
+    object Layout1: TLayout
+      Align = Right
+      Padding.Top = 10.000000000000000000
+      Padding.Bottom = 10.000000000000000000
+      Position.X = 258.000000000000000000
+      Size.Width = 301.000000000000000000
+      Size.Height = 329.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Button1: TButton
+        Align = Scale
+        Position.X = 35.116664886474610000
+        Position.Y = 184.240020751953100000
+        Size.Width = 249.829956054687500000
+        Size.Height = 43.529235839843750000
+        Size.PlatformDefault = False
+        StyleLookup = 'button1'
+        TabOrder = 3
+        Text = 'Acessar'
+        OnClick = Button1Click
+      end
+      object EditEmail: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        StyleLookup = 'edit1'
+        TabOrder = 2
+        Text = 'ricardoshumata@gmail.com'
+        Position.X = 35.116664886474610000
+        Position.Y = 94.144615173339840000
+        Size.Width = 249.829956054687500000
+        Size.Height = 25.307693481445310000
+        Size.PlatformDefault = False
+        TextPrompt = 'Digite o seu email'
+        object Label2: TLabel
+          Align = Top
+          Margins.Top = -20.000000000000000000
+          Position.Y = -20.000000000000000000
+          Size.Width = 249.829956054687500000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'label2'
+          Text = 'Email'
+          TabOrder = 0
+        end
+      end
+      object EditSenha: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Scale
+        StyleLookup = 'edit1'
+        TabOrder = 1
+        Password = True
+        Text = '123456'
+        Position.X = 35.116664886474610000
+        Position.Y = 150.833847045898400000
+        Size.Width = 249.829956054687500000
+        Size.Height = 25.307693481445310000
+        Size.PlatformDefault = False
+        TextPrompt = 'Digite sua senha'
+        object Label3: TLabel
+          Align = Top
+          Margins.Top = -20.000000000000000000
+          Position.Y = -20.000000000000000000
+          Size.Width = 249.829956054687500000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'label2'
+          Text = 'Senha'
+          TabOrder = 0
+        end
+      end
+      object Label4: TLabel
+        Align = Bottom
+        Cursor = crHandPoint
+        Position.Y = 296.000000000000000000
+        Size.Width = 301.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'label1'
+        TextSettings.HorzAlign = Center
+        Text = 'N'#227'o lembra a senha? Clique aqui'
+        TabOrder = 4
+      end
+      object Layout2: TLayout
+        Align = Top
+        Position.Y = 10.000000000000000000
+        Size.Width = 301.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label1: TLabel
+          Align = Client
+          StyledSettings = [Family, Style, FontColor]
+          Size.Width = 301.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'label1'
+          TextSettings.Font.Size = 18.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'Login'
+          TabOrder = 0
+        end
+      end
+    end
+    object Layout3: TLayout
+      Align = Client
+      Margins.Left = 20.000000000000000000
+      Size.Width = 238.000000000000000000
+      Size.Height = 329.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Image1: TImage
+        MultiResBitmap = <
+          item
+            Width = 96
+            Height = 96
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000060000000600806000000E29877
+              38000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              01D749444154785EEDD7C14DC3401085611B2EB4E30E72A090A40A2E4880441F
+              69840325A423F0908D9448C6318B67DEC4FE3F295A07E6E0C9CBAE270D000000
+              000000E069BBDD3ED9ABBCBD2A5BFD9CEECB1A66B7DBBDB66DFBDEBF1EBBAE6B
+              0F87C367F9D7A06CF5730B0DC09AED9797E3BB1F9BB1A6B3D57B080B60A0D993
+              C1A6B3D57B090960A4D9938BA6B3D57B6ACBEA6642B3E7DECA9AA67EBFDFDBFD
+              BBB92BABA787B24E61B5D9EA5DB91F41FD36FEB0EDDC5F6E8E7FF9957DDB9EB3
+              D5976B3721CF003B4BAF347DB1D5B3D57B0A9B82469A1E6C365BBD97B000CC40
+              D3A3CD66AB5F0C9B8CCA743449B6FA3959FAD5FA9BFE2A97ABD6EF9AEACF3162
+              0CC508021023003102102300319729E83F5341661EFDB203C408408C00C40840
+              8C00C442A7A0B5D54FC10E1023003102102300310210AB7E7A1B8FA92033A6A0
+              052200B1D023686DF553B003C408408C00C408408C00C4AA9FDEC6632AC88C29
+              688108402CF4085A5BFD14EC0031021023003102102300B1EAA7B7F1980A3263
+              0A5A2002100B3D82E6AAFF2BEFFBE108BA6104204600620420460062D54F6FE3
+              31159CCB30A59C630A5A20021023003102102300310210230031021073F921B6
+              36FC10BB610420460062042046000000000000004088A6F906CDAA87449CBD98
+              E20000000049454E44AE426082}
+            FileName = 
+              'E:\Projetos\Pousada\projeto-pousada\src\imagens\hotel_building_9' +
+              '6px.png'
+          end>
+        Position.X = 71.000000000000000000
+        Position.Y = 32.000000000000000000
+        Size.Width = 96.000000000000000000
+        Size.Height = 96.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Label5: TLabel
+        StyledSettings = [Family]
+        Position.X = 59.000000000000000000
+        Position.Y = 135.000000000000000000
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claDimgray
+        TextSettings.HorzAlign = Center
+        Text = 'HabGestor'
+        TabOrder = 3
+      end
+      object Label6: TLabel
+        StyledSettings = [Family]
+        Position.X = 56.000000000000000000
+        Position.Y = 171.000000000000000000
+        Size.Width = 129.000000000000000000
+        Size.Height = 57.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = claDimgray
+        TextSettings.HorzAlign = Center
+        Text = 'Aplicativo para gest'#227'o habitacional'
+        TabOrder = 2
+      end
+      object Label7: TLabel
+        Align = Bottom
+        StyledSettings = [Family]
+        Position.Y = 288.000000000000000000
+        Size.Width = 233.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.StyleExt = {00040000000200000004000000}
+        TextSettings.FontColor = claDimgray
+        TextSettings.HorzAlign = Center
+        Text = 'v1.0.0'
+        TabOrder = 1
+      end
+      object Line1: TLine
+        Align = MostRight
+        LineType = Right
+        Margins.Top = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 233.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 5.000000000000000000
+        Size.Height = 319.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claSilver
+      end
+    end
+  end
+end

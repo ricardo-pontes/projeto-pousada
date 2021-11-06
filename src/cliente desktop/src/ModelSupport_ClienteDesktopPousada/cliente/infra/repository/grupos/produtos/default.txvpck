@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="03czbmio22r_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.grupos.produtos.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="design:view:::3u7go454hhl_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.grupos.produtos.interfaces.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.grupos.produtos.interfaces.iRepositoryGrupoProdutos" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.grupos.produtos.TRepositoryGrupoProdutos">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.infra.repository.grupos.produtos.TRepositoryGrupoProdutos.FConexao" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.grupos.produtos.TRepositoryGrupoProdutos.Create(RESTRequest4D.Request.Contract.IRequest)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.grupos.produtos.TRepositoryGrupoProdutos.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.grupos.produtos.TRepositoryGrupoProdutos.New(RESTRequest4D.Request.Contract.IRequest)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.grupos.produtos.TRepositoryGrupoProdutos.Alterar(entidades.grupoprodutos.TGrupoProduto)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.grupos.produtos.TRepositoryGrupoProdutos.BuscarPorID(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.grupos.produtos.TRepositoryGrupoProdutos.Inserir(entidades.grupoprodutos.TGrupoProduto)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.grupos.produtos.TRepositoryGrupoProdutos.BuscarPorIDEmpresa(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.grupos.produtos.TRepositoryGrupoProdutos.Ativar(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.grupos.produtos.TRepositoryGrupoProdutos.Desativar(System.string)" />
+    </reference>
+  </view>
+</nodeSet>

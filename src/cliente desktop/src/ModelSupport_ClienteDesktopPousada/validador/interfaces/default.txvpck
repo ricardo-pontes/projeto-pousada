@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="htmpx737qdj_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:validador.interfaces.iValidador">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.interfaces.iValidador.Clear()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.interfaces.iValidador.Add(validador.interfaces.TValidacaoEntidade)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.interfaces.iValidador.Add(validador.interfaces.iValidacaoEntidade)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.interfaces.iValidador.Add(System.Generics.Collections.TList&lt;validador.interfaces.TValidacaoEntidade&gt;)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.interfaces.iValidador.Executar(System.TObject)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:validador.interfaces.iValidacao">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:validador.interfaces.iValidacaoEntidade">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_gnt:src:ClienteDesktopPousada:validador.interfaces.iValidacaoEntidade:validador.interfaces.iValidacao" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.interfaces.iValidacaoEntidade.AddEntidade(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:validador.interfaces.iValidacaoEntidade.Executar()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:validador.interfaces.TValidacaoEntidade">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:validador.interfaces.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

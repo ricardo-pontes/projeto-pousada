@@ -17,15 +17,28 @@ type
     constructor Create(aRepository : iRepositoryEmpresa);
     destructor Destroy; override;
     class function New(aRepository : iRepositoryEmpresa) : iModelEmpresa;
+
+    function BuscarPorCNPJ(aCNPJ : string) : TEmpresa;
   end;
 
 implementation
 
 uses
   System.SysUtils,
-  shared.exceptions;
+  shared.exceptions, entidades.empresas.validacoes.basicas;
 
 { TModelEmpresa }
+
+function TModelEmpresa.BuscarPorCNPJ(aCNPJ: string): TEmpresa;
+begin
+  try
+    Validador.Add(TEmpresaValidacoesBasicasValidarCNPJ.New(aCNPJ));
+    Validador.Executar(nil);
+  except on E: Exception do
+    raise ExceptionValidacao.Create(E.Message);
+  end;
+  Result := FRepository.BuscarPorCNPJ(aCNPJ);
+end;
 
 constructor TModelEmpresa.Create(aRepository : iRepositoryEmpresa);
 begin

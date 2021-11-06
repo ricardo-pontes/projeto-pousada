@@ -19,6 +19,8 @@ type
     class function New(aRepository : iRepositoryGrupoProdutos) : iModelGrupoProdutos;
 
     function BuscarPorIDEmpresa(aIDEmpresa : integer) : TObjectList<TGrupoProduto>;
+    function Ativar(AID : integer) : string;
+    function Desativar(aID : integer) : string;
   end;
 
 implementation
@@ -28,6 +30,11 @@ uses
   shared.exceptions;
 
 { TModelGrupoProdutos }
+
+function TModelGrupoProdutos.Ativar(AID: integer): string;
+begin
+  Result := FRepository.Ativar(aID);
+end;
 
 function TModelGrupoProdutos.BuscarPorIDEmpresa(aIDEmpresa: integer): TObjectList<TGrupoProduto>;
 begin
@@ -44,6 +51,11 @@ constructor TModelGrupoProdutos.Create(aRepository : iRepositoryGrupoProdutos);
 begin
   FRepository := aRepository;
   inherited Create(aRepository);
+end;
+
+function TModelGrupoProdutos.Desativar(aID: integer): string;
+begin
+  Result := FRepository.Desativar(aID);
 end;
 
 destructor TModelGrupoProdutos.Destroy;

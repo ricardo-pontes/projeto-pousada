@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="53nza939ff_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.usuario.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_TABELA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_ID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_ID_EMPRESA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_NOME" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_SOBRENOME" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_CPF" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_RG" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_EMAIL" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_SENHA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_DATA_NASCIMENTO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_TELEFONE" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_DATA_CADASTRO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_LOGRADOURO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_NUMERO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_BAIRRO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_CIDADE" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_UF" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_CEP" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.@unitclass.USU_ATIVO" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.usuario.TUsuario">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.TUsuario.FSenha" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.usuario.TUsuario.FIDEmpresa" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.usuario.TUsuario.IDEmpresa" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.usuario.TUsuario.Senha" />
+    </reference>
+  </view>
+</nodeSet>

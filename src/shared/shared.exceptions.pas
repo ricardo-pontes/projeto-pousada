@@ -80,9 +80,11 @@ end;
 
 class procedure TSharedExceptionsRest.Checar(aStatusCode : integer; aMensagem : string);
 begin
-  if aStatusCode = 404 then
+  if aStatusCode = 400 then
+    raise ExceptionValidacao.Create(aMensagem)
+  else if aStatusCode = 404 then
     raise ExceptionNaoEncontrado.Create(aMensagem)
-  else if aStatusCode = 428 then
+  else if aStatusCode = 409 then
     raise ExceptionValidacao.Create(aMensagem);
 end;
 

@@ -15,6 +15,10 @@ type
     FDataCadastro: TDateTime;
     FCEP: string;
     FEmail: string;
+    FAtivo: string;
+    FWhatsapp: string;
+    FInstagram: string;
+    FFacebook: string;
   public
     property ID: integer read FID write FID;
     property Telefone: string read FTelefone write FTelefone;
@@ -26,16 +30,24 @@ type
     property UF: string read FUF write FUF;
     property CEP: string read FCEP write FCEP;
     property Email: string read FEmail write FEmail;
+    property Ativo: string read FAtivo write FAtivo;
+    property Whatsapp: string read FWhatsapp write FWhatsapp;
+    property Instagram: string read FInstagram write FInstagram;
+    property Facebook: string read FFacebook write FFacebook;
   end;
 
   TPessoaFisica = class(TPessoa)
   private
-    FNomeCompleto: string;
     FCPF: string;
     FRG: string;
     FDataNascimento: TDateTime;
+    FNome: string;
+    FSobreNome: string;
+    function GetNomeCompleto: string;
   public
-    property NomeCompleto: string read FNomeCompleto write FNomeCompleto;
+    property Nome: string read FNome write FNome;
+    property SobreNome: string read FSobreNome write FSobreNome;
+    property NomeCompleto: string read GetNomeCompleto;
     property CPF: string read FCPF write FCPF;
     property RG: string read FRG write FRG;
     property DataNascimento: TDateTime read FDataNascimento write FDataNascimento;
@@ -55,5 +67,18 @@ type
   end;
 
 implementation
+
+uses
+  System.SysUtils;
+
+{ TPessoaFisica }
+
+function TPessoaFisica.GetNomeCompleto: string;
+begin
+  if not FSobreNome.Trim.IsEmpty then
+    Result := FNome + ' ' + FSobreNome
+  else
+    Result := FNome;
+end;
 
 end.

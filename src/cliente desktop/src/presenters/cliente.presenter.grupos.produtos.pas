@@ -18,9 +18,11 @@ type
     destructor Destroy; override;
 
     procedure Alterar;
-    procedure Inserir;
-    procedure BuscarPorIDEmpresa(aID : string);
+    procedure Inserir(aID : integer);
+    procedure BuscarPorIDEmpresa(aID : integer);
     procedure BuscarPorID(aID : string);
+    procedure Ativar(aID : string);
+    procedure Desativar(aID : string);
   end;
 
 implementation
@@ -39,6 +41,11 @@ begin
   FModelGrupoProdutos.Alterar(FModelGrupoProdutos.Entidade);
 end;
 
+procedure TPresenterGrupoProdutos.Ativar(aID: string);
+begin
+  FModelGrupoProdutos.Ativar(aID.ToInteger);
+end;
+
 procedure TPresenterGrupoProdutos.BuscarPorID(aID: string);
 begin
   var lProduto := FModelGrupoProdutos.BuscarPorID(aID.ToInteger);
@@ -46,9 +53,9 @@ begin
     FBinds.Entity(lProduto).BindToView;
 end;
 
-procedure TPresenterGrupoProdutos.BuscarPorIDEmpresa(aID: string);
+procedure TPresenterGrupoProdutos.BuscarPorIDEmpresa(aID: integer);
 begin
-  var lProdutos := FModelGrupoProdutos.BuscarPorIDEmpresa(aID.ToInteger);
+  var lProdutos := FModelGrupoProdutos.BuscarPorIDEmpresa(aID);
   if Assigned(FView) then
     FView.CarregarGruposProdutos(lProdutos);
 end;
@@ -60,16 +67,22 @@ begin
   FBinds := TBinds.New.View(FView.Instancia);
 end;
 
+procedure TPresenterGrupoProdutos.Desativar(aID: string);
+begin
+  FModelGrupoProdutos.Desativar(aID.ToInteger);
+end;
+
 destructor TPresenterGrupoProdutos.Destroy;
 begin
   FModelGrupoProdutos.DisposeOf;
   inherited;
 end;
 
-procedure TPresenterGrupoProdutos.Inserir;
+procedure TPresenterGrupoProdutos.Inserir(aID : integer);
 begin
+  FModelGrupoProdutos.PrepararInsercao;
+  FModelGrupoProdutos.Entidade.IDEmpresa := aID;
   FBinds.Entity(FModelGrupoProdutos.Entidade).BindToEntity;
-  FModelGrupoProdutos.Entidade.IDEmpresa := 1;
   FModelGrupoProdutos.Inserir(FModelGrupoProdutos.Entidade);
 end;
 

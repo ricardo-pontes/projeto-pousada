@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="glqvr84amgl_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.Button1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.StyleBook1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.Button2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.TabControl1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.Button3" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.Edit1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.ComboBox1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.TabItem1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.Button4" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.Label1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.Label2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.Button5" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.ComboEdit1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.Rectangle1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.Arc1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.Arc2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.TViewStyles.Button6" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.infra.styles.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:ClienteDesktopPousada:desktop.infra.styles.@unitclass.ViewStyles" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.infra.styles.@unitclass.ViewStyles" />
+    </reference>
+  </view>
+</nodeSet>

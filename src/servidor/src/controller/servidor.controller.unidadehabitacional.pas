@@ -30,15 +30,13 @@ uses
   System.SysUtils,
   shared.exceptions,
   servidor.model.unidadehabitacional,
-  entidades.unidadehabitacional.validacoes.base.alterar,
-  entidades.unidadehabitacional.validacoes.base.inserir,
   entidades.unidadehabitacional.validacoes.base,
   servidor.infra.fabricas.repositories;
 
 function TControllerUnidadeHabitacional.Alterar(aBody: string): string;
 begin
-  FModel.Validador.Add(TUnidadeHabitacionalValidacaoBase.New);
-  FModel.Validador.Add(TUnidadeHabitacionalValidacaoBaseAlterar.New);
+  FModel.Validador.Add(TUnidadesHabitacionaisValidacoesBasicas.New);
+  FModel.Validador.Add(TUnidadesHabitacionaisValidacoesBasicasAlterar.New);
   inherited;
 end;
 
@@ -65,8 +63,8 @@ end;
 
 function TControllerUnidadeHabitacional.Inserir(aBody: string): string;
 begin
-  FModel.Validador.Add(TUnidadeHabitacionalValidacaoBase.New);
-  FModel.Validador.Add(TUnidadeHabitacionalValidacaoBaseInserir.New);
+  FModel.Validador.Add(TUnidadesHabitacionaisValidacoesBasicas.New);
+  FModel.Validador.Add(TUnidadesHabitacionaisValidacoesBasicasInserir.New);
   inherited;
 end;
 

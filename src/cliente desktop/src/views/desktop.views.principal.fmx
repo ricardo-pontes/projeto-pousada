@@ -10,6 +10,7 @@ object ViewPrincipal: TViewPrincipal
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   DesignerMasterStyle = 0
   object Layout2: TLayout
     Align = Client
@@ -33,6 +34,7 @@ object ViewPrincipal: TViewPrincipal
         object Rectangle2: TRectangle
           Align = Client
           Fill.Color = xFF29C24F
+          Padding.Left = 16.000000000000000000
           Padding.Top = 10.000000000000000000
           Padding.Right = 8.000000000000000000
           Padding.Bottom = 10.000000000000000000
@@ -40,6 +42,17 @@ object ViewPrincipal: TViewPrincipal
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           Stroke.Kind = None
+          object Button1: TButton
+            Align = Left
+            Position.X = 16.000000000000000000
+            Position.Y = 10.000000000000000000
+            Size.Width = 33.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'buttoninicio'
+            TabOrder = 0
+            OnClick = Button1Click
+          end
         end
       end
       object Rectangle4: TRectangle
@@ -85,7 +98,7 @@ object ViewPrincipal: TViewPrincipal
               Size.Height = 45.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'button2'
-              TabOrder = 1
+              TabOrder = 6
               Text = 'Produtos'
               TextSettings.Font.Size = 16.000000000000000000
               TextSettings.HorzAlign = Leading
@@ -94,12 +107,12 @@ object ViewPrincipal: TViewPrincipal
             object ButtonGrupoProdutos: TButton
               Align = Top
               StyledSettings = [Family, Style, FontColor]
-              Position.Y = 78.000000000000000000
+              Position.Y = 123.000000000000000000
               Size.Width = 228.000000000000000000
               Size.Height = 45.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'button2'
-              TabOrder = 0
+              TabOrder = 5
               Text = 'Grupos de Produtos'
               TextSettings.Font.Size = 16.000000000000000000
               TextSettings.HorzAlign = Leading
@@ -117,7 +130,77 @@ object ViewPrincipal: TViewPrincipal
               TextSettings.Font.StyleExt = {00070000000000000004000000}
               TextSettings.FontColor = claDarkslategray
               Text = 'Cadastros'
+              TabOrder = 7
+            end
+            object ButtonCaracteristicas: TButton
+              Align = Top
+              StyledSettings = [Family, Style, FontColor]
+              Position.Y = 78.000000000000000000
+              Size.Width = 228.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'button2'
+              TabOrder = 4
+              Text = 'Caracter'#237'sticas'
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.HorzAlign = Leading
+              OnClick = ButtonCaracteristicasClick
+            end
+            object ButtonUsuarios: TButton
+              Align = Top
+              StyledSettings = [Family, Style, FontColor]
+              Position.Y = 213.000000000000000000
+              Size.Width = 228.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'button2'
+              TabOrder = 3
+              Text = 'Usu'#225'rios'
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.HorzAlign = Leading
+              OnClick = ButtonUsuariosClick
+            end
+            object ButtonEmpresas: TButton
+              Align = Top
+              StyledSettings = [Family, Style, FontColor]
+              Position.Y = 168.000000000000000000
+              Size.Width = 228.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'button2'
+              TabOrder = 0
+              Text = 'Empresas'
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.HorzAlign = Leading
+              OnClick = ButtonEmpresasClick
+            end
+            object ButtonUnidadesHabitacionais: TButton
+              Align = Top
+              StyledSettings = [Family, Style, FontColor]
+              Position.Y = 258.000000000000000000
+              Size.Width = 228.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'button2'
               TabOrder = 2
+              Text = 'Unidades Habitacionais'
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.HorzAlign = Leading
+              OnClick = ButtonUnidadesHabitacionaisClick
+            end
+            object ButtonUnidadesHabitacionaisCategorias: TButton
+              Align = Top
+              StyledSettings = [Family, Style, FontColor]
+              Position.Y = 303.000000000000000000
+              Size.Width = 228.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'button2'
+              TabOrder = 1
+              Text = 'Unudades Habitacionais Categorias'
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.HorzAlign = Leading
+              OnClick = ButtonUnidadesHabitacionaisCategoriasClick
             end
           end
         end

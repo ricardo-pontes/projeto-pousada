@@ -10,7 +10,7 @@ uses
   entidades.empresa;
 
 type
-  TControllerEmpresa = class(TControllerBaseCrud<TEmpresa>, iControllerEmpresa)
+  TControllerEmpresas = class(TControllerBaseCrud<TEmpresa>, iControllerEmpresa)
   private
     FModel : iModelEmpresa;
   public
@@ -19,6 +19,7 @@ type
     class function New : iControllerEmpresa;
 
     function Alterar(aBody : string) : string; override;
+    function BuscarPorCNPJ(aCNPJ : string) : TJSONObject;
     function Inserir(aBody : string) : string; override;
   end;
 
@@ -29,35 +30,40 @@ uses
   entidades.empresas.validacoes.basicas,
   servidor.infra.fabricas.repositories;
 
-{ TControllerEmpresa }
+{ TControllerEmpresas }
 
-function TControllerEmpresa.Alterar(aBody: string): string;
+function TControllerEmpresas.Alterar(aBody: string): string;
 begin
   FModel.Validador.Add(TEmpresaValidacoesBasicas.New);
   FModel.Validador.Add(TEmpresaValidacoesBasicasAlterar.New);
   Result := inherited;
 end;
 
-constructor TControllerEmpresa.Create;
+function TControllerEmpresas.BuscarPorCNPJ(aCNPJ: string): TJSONObject;
+begin
+  Result := Resolve(FModel.BuscarPorCNPJ(aCNPJ));
+end;
+
+constructor TControllerEmpresas.Create;
 begin
   FModel := TModelEmpresa.New(TRepositories.Empresas);
   inherited Create(FModel);
 end;
 
-destructor TControllerEmpresa.Destroy;
+destructor TControllerEmpresas.Destroy;
 begin
 
   inherited;
 end;
 
-function TControllerEmpresa.Inserir(aBody: string): string;
+function TControllerEmpresas.Inserir(aBody: string): string;
 begin
   FModel.Validador.Add(TEmpresaValidacoesBasicas.New);
   FModel.Validador.Add(TEmpresaValidacoesBasicasInserir.New);
   Result := inherited;
 end;
 
-class function TControllerEmpresa.New : iControllerEmpresa;
+class function TControllerEmpresas.New : iControllerEmpresa;
 begin
   Result := Self.Create;
 end;

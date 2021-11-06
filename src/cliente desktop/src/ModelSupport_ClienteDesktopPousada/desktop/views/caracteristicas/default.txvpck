@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="evm0du1gtcn_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.caracteristicas.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:ClienteDesktopPousada:desktop.views.caracteristicas.@unitclass.ViewCaracteristicas" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.caracteristicas.@unitclass.ViewCaracteristicas" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.NumberBoxCodigo" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.EditDescricao" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.SwitchAtivo" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.Label5" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.Label2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.Label3" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.Label4" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.Label6" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.RESTClient1" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.ListViewPesquisaItemClickEx(System.TObject,System.Integer,System.Types.TPointF,FMX.ListView.Types.TListItemDrawable)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.FormCreate(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.FormDestroy(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.ButtonSalvarClick(System.TObject)" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.FPresenter" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.CarregarCaracteristicas(System.Generics.Collections.TObjectList&lt;entidades.caracteristicas.TCaracteristica&gt;)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.Instancia()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.caracteristicas.TViewCaracteristicas.Render()" />
+    </reference>
+  </view>
+</nodeSet>

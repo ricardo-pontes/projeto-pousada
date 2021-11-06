@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="ov0cfc4u1vk_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.unidadehabitacional.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.@unitclass.UH_TABELA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.@unitclass.UH_ID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.@unitclass.UH_ID_EMPRESA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.@unitclass.UH_DESCRICAO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.@unitclass.UH_ID_GRUPO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.@unitclass.UH_ATIVO" />
+    </reference>
+    <reference referencedUin="design:view:::8vbdb02jyuh_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.TUnidadeHabitacionalCaracteristica" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.unidadehabitacional.TUnidadeHabitacional">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.TUnidadeHabitacional.FID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.TUnidadeHabitacional.FIDEmpresa" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.TUnidadeHabitacional.FDescricao" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.TUnidadeHabitacional.FIDGrupo" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.TUnidadeHabitacional.FAtivo" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.unidadehabitacional.TUnidadeHabitacional.ID" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.unidadehabitacional.TUnidadeHabitacional.IDEmpresa" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.unidadehabitacional.TUnidadeHabitacional.Descricao" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.unidadehabitacional.TUnidadeHabitacional.IDGrupo" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.unidadehabitacional.TUnidadeHabitacional.Ativo" />
+    </reference>
+    <reference referencedUin="design:view:::rhtbq0xkdil_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.unidadehabitacional.categoria.TUnidadeHabitacionalCategoria" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.unidadehabitacional.categoria.@unitclass" />
+    </reference>
+  </view>
+</nodeSet>

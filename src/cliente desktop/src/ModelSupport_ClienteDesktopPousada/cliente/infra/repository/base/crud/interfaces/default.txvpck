@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="b0u6pcd9wqj_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.base.crud.interfaces.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.base.crud.interfaces.iRepositoryBaseCrud&lt;1&gt;">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.base.crud.interfaces.iRepositoryBaseCrud&lt;1&gt;.Alterar(T)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.base.crud.interfaces.iRepositoryBaseCrud&lt;1&gt;.BuscarPorID(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.base.crud.interfaces.iRepositoryBaseCrud&lt;1&gt;.Inserir(T)" />
+    </reference>
+  </view>
+</nodeSet>

@@ -47,7 +47,43 @@ uses
   desktop.views.grupos.produtos in 'views\desktop.views.grupos.produtos.pas' {ViewGrupoProdutos},
   desktop.views.produtos in 'views\desktop.views.produtos.pas' {ViewProdutos},
   desktop.views.messagebox in 'views\desktop.views.messagebox.pas' {MessageBox},
-  shared.exceptions in '..\..\shared\shared.exceptions.pas';
+  shared.exceptions in '..\..\shared\shared.exceptions.pas',
+  cliente.infra.repository.unidadehabitacional.caracteristicas.interfaces in 'infra\repository\cliente.infra.repository.unidadehabitacional.caracteristicas.interfaces.pas',
+  cliente.infra.repository.unidadehabitacional.caracteristicas in 'infra\repository\cliente.infra.repository.unidadehabitacional.caracteristicas.pas',
+  entidades.caracteristicas in '..\..\entidades\entidades.caracteristicas.pas',
+  entidades.caracteristicas.validacoes.basicas in '..\..\entidades\validacoes\entidades.caracteristicas.validacoes.basicas.pas',
+  cliente.infra.repository.caracteristicas.interfaces in 'infra\repository\cliente.infra.repository.caracteristicas.interfaces.pas',
+  cliente.infra.repository.caracteristicas in 'infra\repository\cliente.infra.repository.caracteristicas.pas',
+  cliente.model.caracteristicas in 'model\cliente.model.caracteristicas.pas',
+  cliente.presenter.caracteristicas.interfaces in 'presenters\cliente.presenter.caracteristicas.interfaces.pas',
+  cliente.presenter.caracteristicas in 'presenters\cliente.presenter.caracteristicas.pas',
+  desktop.views.caracteristicas in 'views\desktop.views.caracteristicas.pas' {ViewCaracteristicas},
+  desktop.views.inicio in 'views\desktop.views.inicio.pas' {ViewInicio},
+  desktop.views.empresa in 'views\desktop.views.empresa.pas' {ViewEmpresas},
+  desktop.views.login in 'views\desktop.views.login.pas' {ViewLogin},
+  cliente.infra.repository.usuarios.interfaces in 'infra\repository\cliente.infra.repository.usuarios.interfaces.pas',
+  cliente.infra.repository.usuarios in 'infra\repository\cliente.infra.repository.usuarios.pas',
+  cliente.model.usuarios in 'model\cliente.model.usuarios.pas',
+  entidades.usuarios.validacoes.basicas in '..\..\entidades\validacoes\entidades.usuarios.validacoes.basicas.pas',
+  cliente.presenter.usuarios in 'presenters\cliente.presenter.usuarios.pas',
+  cliente.presenter.usuarios.interfaces in 'presenters\cliente.presenter.usuarios.interfaces.pas',
+  desktop.views.usuario in 'views\desktop.views.usuario.pas' {ViewUsuarios},
+  cliente.infra.repository.empresas.interfaces in 'infra\repository\cliente.infra.repository.empresas.interfaces.pas',
+  cliente.infra.repository.empresas in 'infra\repository\cliente.infra.repository.empresas.pas',
+  cliente.model.empresas in 'model\cliente.model.empresas.pas',
+  entidades.empresas.validacoes.basicas in '..\..\entidades\validacoes\entidades.empresas.validacoes.basicas.pas',
+  cliente.presenter.empresas in 'presenters\cliente.presenter.empresas.pas',
+  cliente.presenter.empresas.interfaces in 'presenters\cliente.presenter.empresas.interfaces.pas',
+  cliente.infra.repository.unidadehabitacional.interfaces in 'infra\repository\cliente.infra.repository.unidadehabitacional.interfaces.pas',
+  cliente.infra.repository.unidadehabitacional in 'infra\repository\cliente.infra.repository.unidadehabitacional.pas',
+  cliente.model.unidadeshabitacionais in 'model\cliente.model.unidadeshabitacionais.pas',
+  entidades.unidadehabitacional.validacoes.base in '..\..\entidades\validacoes\entidades.unidadehabitacional.validacoes.base.pas',
+  cliente.presenter.unidadeshabitacionais.interfaces in 'presenters\cliente.presenter.unidadeshabitacionais.interfaces.pas',
+  cliente.presenter.unidadeshabitacionais in 'presenters\cliente.presenter.unidadeshabitacionais.pas',
+  desktop.views.unidadeshabitacionais in 'views\desktop.views.unidadeshabitacionais.pas' {ViewUnidadesHabitacionais},
+  cliente.infra.repository.unidadehabitacional.categorias.interfaces in 'infra\repository\cliente.infra.repository.unidadehabitacional.categorias.interfaces.pas',
+  cliente.infra.repository.unidadehabitacional.categorias in 'infra\repository\cliente.infra.repository.unidadehabitacional.categorias.pas',
+  desktop.views.unidadeshabitacionais.categorias in 'views\desktop.views.unidadeshabitacionais.categorias.pas' {ViewUnidadesHabitacionaisCategorias};
 
 {$R *.res}
 
@@ -55,9 +91,11 @@ begin
   ReportMemoryLeaksOnShutdown := True;
   Application.Initialize;
 
-  Application.CreateForm(TViewPrincipal, ViewPrincipal);
+  Application.CreateForm(TViewLogin, ViewLogin);
   Application.CreateForm(TViewStyles, ViewStyles);
-  Application.CreateForm(TMessageBox, MessageBox);
-  //  Application.CreateForm(TMessageWarning, MessageWarning);
+  Application.CreateForm(TViewPrincipal, ViewPrincipal);
+  Application.CreateForm(TViewUsuarios, ViewUsuarios);
+  Application.CreateForm(TViewUnidadesHabitacionais, ViewUnidadesHabitacionais);
+  Application.CreateForm(TViewUnidadesHabitacionaisCategorias, ViewUnidadesHabitacionaisCategorias);
   Application.Run;
 end.

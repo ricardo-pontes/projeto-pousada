@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="rs21s7f6xpo_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.unidadehabitacional.caracteristicas.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.unidadehabitacional.caracteristicas.TRepositoryUnidadeHabitacionalCaracteristicasRest">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:cliente.infra.repository.unidadehabitacional.caracteristicas.TRepositoryUnidadeHabitacionalCaracteristicasRest.FConexao" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.unidadehabitacional.caracteristicas.TRepositoryUnidadeHabitacionalCaracteristicasRest.Create(RESTRequest4D.Request.Contract.IRequest)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.unidadehabitacional.caracteristicas.TRepositoryUnidadeHabitacionalCaracteristicasRest.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.unidadehabitacional.caracteristicas.TRepositoryUnidadeHabitacionalCaracteristicasRest.New(RESTRequest4D.Request.Contract.IRequest)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.unidadehabitacional.caracteristicas.TRepositoryUnidadeHabitacionalCaracteristicasRest.Alterar(entidades.unidadehabitacional.caracteristicas.TUnidadeHabitacionalCaracteristica)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.unidadehabitacional.caracteristicas.TRepositoryUnidadeHabitacionalCaracteristicasRest.BuscarPorID(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.unidadehabitacional.caracteristicas.TRepositoryUnidadeHabitacionalCaracteristicasRest.BuscarPorIDUnidadeHabitacional(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.repository.unidadehabitacional.caracteristicas.TRepositoryUnidadeHabitacionalCaracteristicasRest.Inserir(entidades.unidadehabitacional.caracteristicas.TUnidadeHabitacionalCaracteristica)" />
+    </reference>
+    <reference referencedUin="design:view:::3jj4lp7zoig_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.unidadehabitacional.caracteristicas.interfaces.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.repository.unidadehabitacional.caracteristicas.interfaces.iRepositoryUnidadeHabitacionalCaracteristicas" />
+    </reference>
+  </view>
+</nodeSet>

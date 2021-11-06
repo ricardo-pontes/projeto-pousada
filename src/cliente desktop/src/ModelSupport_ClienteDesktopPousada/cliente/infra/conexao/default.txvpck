@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="yvub77c50iq_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::vf35v7pclwf_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.conexao.interfaces.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.conexao.interfaces.iConexoes" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.conexao.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:cliente.infra.conexao.TConexoes">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.conexao.TConexoes.Create()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.conexao.TConexoes.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.conexao.TConexoes.New()" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:cliente.infra.conexao.TConexoes.Conexao()" />
+    </reference>
+  </view>
+</nodeSet>

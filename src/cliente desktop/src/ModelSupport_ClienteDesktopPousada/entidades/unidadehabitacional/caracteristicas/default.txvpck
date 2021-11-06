@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="8vbdb02jyuh_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.@unitclass.UHCAR_TABELA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.@unitclass.UHCAR_ID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.@unitclass.UHCAR_IDCARACTERISTICA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.@unitclass.UHCAR_IDEMPRESA" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.@unitclass.UHCAR_DESCRICAO" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.@unitclass.UHCAR_ATIVO" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.TUnidadeHabitacionalCaracteristica">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.TUnidadeHabitacionalCaracteristica.FID" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.TUnidadeHabitacionalCaracteristica.FIDEmpresa" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.TUnidadeHabitacionalCaracteristica.FDescricao" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.TUnidadeHabitacionalCaracteristica.FAtivo" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.TUnidadeHabitacionalCaracteristica.FIDCaracteristica" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.TUnidadeHabitacionalCaracteristica.ID" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.TUnidadeHabitacionalCaracteristica.IDCaracteristica" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.TUnidadeHabitacionalCaracteristica.IDEmpresa" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.TUnidadeHabitacionalCaracteristica.Descricao" />
+      <reference referencedUin="delphi:e_property:src:ClienteDesktopPousada:entidades.unidadehabitacional.caracteristicas.TUnidadeHabitacionalCaracteristica.Ativo" />
+    </reference>
+  </view>
+</nodeSet>

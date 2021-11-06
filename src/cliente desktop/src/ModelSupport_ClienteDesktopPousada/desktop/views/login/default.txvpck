@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="esfo569r30p_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.login.TViewLogin">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Rectangle1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.rectLogin" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.ShadowEffect1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Layout1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Button1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.EditEmail" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Label2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.EditSenha" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Label3" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Label4" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Layout2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Label1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Layout3" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Image1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Label5" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Label6" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Label7" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle1" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle2" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle3" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle4" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle5" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle6" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle7" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle8" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle9" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle10" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle11" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle12" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle13" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle14" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle15" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle16" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle17" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle18" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle19" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Circle20" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Line1" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.FormCreate(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Button1Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.CarregarUsuarios(System.Generics.Collections.TObjectList&lt;entidades.usuario.TUsuario&gt;)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:desktop.views.login.TViewLogin.Instancia()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:desktop.views.login.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:ClienteDesktopPousada:desktop.views.login.@unitclass.ViewLogin" />
+      <reference referencedUin="delphi:e_field:src:ClienteDesktopPousada:desktop.views.login.@unitclass.ViewLogin" />
+    </reference>
+  </view>
+</nodeSet>

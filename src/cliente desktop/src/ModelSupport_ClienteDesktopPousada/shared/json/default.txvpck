@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="jqwfh5jl2qo_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.json.TJSONConverter">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:shared.json.TJSONConverter.InternaObjectToJSON(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:shared.json.TJSONConverter.JsonToObject&lt;1&gt;(System.JSON.TJSONObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:shared.json.TJSONConverter.JsonToObject&lt;1&gt;(System.string)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:shared.json.TJSONConverter.JsonToObjectList&lt;1&gt;(System.UTF8String)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:shared.json.TJSONConverter.ObjectToJson(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:shared.json.TJSONConverter.ObjectoJsonString(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:shared.json.TJSONConverter.ObjectListToJson&lt;1&gt;(System.Generics.Collections.TObjectList&lt;1&gt;)" />
+      <reference referencedUin="delphi:e_method:src:ClienteDesktopPousada:shared.json.TJSONConverter.ObjectListToJsonString&lt;1&gt;(System.Generics.Collections.TObjectList&lt;1&gt;)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:ClienteDesktopPousada:shared.json.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

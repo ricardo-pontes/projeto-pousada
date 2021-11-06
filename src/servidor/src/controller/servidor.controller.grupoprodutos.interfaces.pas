@@ -11,6 +11,8 @@ type
   iControllerGrupoProdutos = interface(iControllerBaseCrud<TGrupoProduto>)
     ['{5F34D9A6-EDE7-4A1C-B811-C26DA7EA9F00}']
     function BuscarPorIDEmpresa(aIDEmpresa : string) : TJSONArray;
+    function Ativar(aID : string) : string;
+    function Desativar(aID : string) : string;
   end;
 implementation
 
